@@ -3,83 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Wspr</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #1d1d1f;
-            background: #fff;
-            line-height: 1.6;
-        }
-        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
-        h1 { font-size: 2em; font-weight: 700; margin-bottom: 8px; }
-        .updated { color: #86868b; margin-bottom: 32px; font-size: 0.9em; }
-        h2 { font-size: 1.3em; margin-top: 32px; margin-bottom: 12px; }
-        p { margin-bottom: 16px; color: #333; }
-        ul { margin: 12px 0 16px 24px; }
-        li { margin-bottom: 6px; color: #333; }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e5e7; }
-        footer { margin-top: 48px; color: #86868b; font-size: 0.85em; }
-    </style>
+    <title>Privacy Policy — Wspr</title>
+    <meta name="description" content="Wspr's privacy policy. All speech transcription happens on your Mac. No data collection, no tracking, no cloud audio processing. Your audio never leaves your device.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://matpb.github.io/wspr-app/privacy.html">
+
+    <meta property="og:title" content="Privacy Policy — Wspr">
+    <meta property="og:description" content="Wspr processes everything on your Mac. No servers, no analytics, no tracking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matpb.github.io/wspr-app/privacy.html">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: March 1, 2026</p>
 
-        <p>Wspr is designed with privacy as a core principle. This policy explains how the app handles your data.</p>
-
-        <h2>Data Collection</h2>
-        <p>Wspr does not collect, store, or transmit any personal data to us. We have no servers, no analytics, no crash reporting, and no user accounts.</p>
-
-        <h2>Audio Processing</h2>
-        <p>All speech-to-text transcription is performed entirely on your Mac using WhisperKit and the Apple Neural Engine. Your audio recordings are processed locally and are never sent to any external server. Temporary audio files are deleted immediately after transcription.</p>
-
-        <h2>AI Text Rewriting</h2>
-        <p>Wspr offers optional AI text rewriting through:</p>
-        <ul>
-            <li><strong>Apple Intelligence</strong> &mdash; Processed on-device by macOS. No data leaves your Mac.</li>
-            <li><strong>Cloud AI providers (OpenAI, Anthropic, Google Gemini)</strong> &mdash; If you choose to use a cloud provider, your transcribed text is sent directly from your device to the provider's API using your own API key. Wspr does not route this data through any intermediary server. Your use of these services is subject to the respective provider's privacy policy.</li>
-        </ul>
-
-        <h2>API Keys</h2>
-        <p>API keys you enter for cloud AI providers are stored securely in your Mac's Keychain. They are never transmitted to us or any third party. They are used solely to authenticate your requests directly with the AI provider you selected.</p>
-
-        <h2>Local Storage</h2>
-        <p>Wspr stores the following data locally on your Mac:</p>
-        <ul>
-            <li>App preferences and settings (via UserDefaults)</li>
-            <li>Transcription history (stored locally)</li>
-            <li>Usage counts for the free tier (via UserDefaults)</li>
-            <li>Whisper models you download (in Application Support)</li>
-        </ul>
-        <p>None of this data is transmitted off your device.</p>
-
-        <h2>In-App Purchases</h2>
-        <p>Purchases are handled entirely by Apple through the App Store. We do not process or have access to your payment information.</p>
-
-        <h2>Third-Party Services</h2>
-        <p>Wspr does not include any third-party analytics, advertising, or tracking SDKs.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>Wspr does not knowingly collect any data from children or anyone else.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>If this privacy policy changes, the updated version will be posted on this page with a revised date.</p>
-
-        <h2>Contact</h2>
-        <p>If you have questions about this privacy policy, please visit our <a href="support.html">support page</a>.</p>
-
-        <div class="back">
-            <a href="index.html">&larr; Back to Wspr</a>
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
         </div>
-
-        <footer>
-            <p>&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
-        </footer>
     </div>
+</nav>
+
+<main class="page-container">
+    <h1>Privacy Policy</h1>
+    <p class="page-updated">Last updated: March 1, 2026</p>
+
+    <p>Wspr is designed with privacy as a core principle. This policy explains how the app handles your data.</p>
+
+    <h2>Data Collection</h2>
+    <p>Wspr does not collect, store, or transmit any personal data to us. We have no servers, no analytics, no crash reporting, and no user accounts.</p>
+
+    <h2>Audio Processing</h2>
+    <p>All speech-to-text transcription is performed entirely on your Mac using WhisperKit and the Apple Neural Engine. Your audio recordings are processed locally and are never sent to any external server. Temporary audio files are deleted immediately after transcription.</p>
+
+    <h2>AI Text Rewriting</h2>
+    <p>Wspr offers optional AI text rewriting through:</p>
+    <ul>
+        <li><strong>Apple Intelligence</strong> — Processed on-device by macOS. No data leaves your Mac.</li>
+        <li><strong>Cloud AI providers (OpenAI, Anthropic, Google Gemini)</strong> — If you choose to use a cloud provider, your transcribed text is sent directly from your device to the provider's API using your own API key. Wspr does not route this data through any intermediary server. Your use of these services is subject to the respective provider's privacy policy.</li>
+    </ul>
+
+    <h2>API Keys</h2>
+    <p>API keys you enter for cloud AI providers are stored securely in your Mac's Keychain. They are never transmitted to us or any third party. They are used solely to authenticate your requests directly with the AI provider you selected.</p>
+
+    <h2>Local Storage</h2>
+    <p>Wspr stores the following data locally on your Mac:</p>
+    <ul>
+        <li>App preferences and settings (via UserDefaults)</li>
+        <li>Transcription history (stored locally)</li>
+        <li>Usage counts for the free tier (via UserDefaults)</li>
+        <li>Whisper models you download (in Application Support)</li>
+    </ul>
+    <p>None of this data is transmitted off your device.</p>
+
+    <h2>In-App Purchases</h2>
+    <p>Purchases are handled entirely by Apple through the App Store. We do not process or have access to your payment information.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>Wspr does not include any third-party analytics, advertising, or tracking SDKs.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Wspr does not knowingly collect any data from children or anyone else.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this privacy policy changes, the updated version will be posted on this page with a revised date.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, please visit our <a href="support.html">support page</a>.</p>
+
+    <a href="index.html" class="back-link">&larr; Back to Wspr</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

@@ -3,88 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Wspr</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #1d1d1f;
-            background: #fff;
-            line-height: 1.6;
-        }
-        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
-        h1 { font-size: 2em; font-weight: 700; margin-bottom: 32px; }
-        h2 { font-size: 1.3em; margin-top: 32px; margin-bottom: 12px; }
-        p { margin-bottom: 16px; color: #333; }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .faq { margin-top: 16px; }
-        .faq details { margin-bottom: 16px; }
-        .faq summary {
-            font-weight: 600;
-            cursor: pointer;
-            padding: 8px 0;
-        }
-        .faq details p { margin-top: 8px; }
-        .contact {
-            margin-top: 40px;
-            padding: 24px;
-            background: #f5f5f7;
-            border-radius: 12px;
-        }
-        .back { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e5e7; }
-        footer { margin-top: 48px; color: #86868b; font-size: 0.85em; }
-    </style>
+    <title>Support & FAQ — Wspr</title>
+    <meta name="description" content="Get help with Wspr voice-to-text for macOS. FAQs about transcription, whisper models, AI rewriting, privacy, and troubleshooting.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://matpb.github.io/wspr-app/support.html">
+
+    <meta property="og:title" content="Support & FAQ — Wspr">
+    <meta property="og:description" content="Frequently asked questions and support for Wspr voice-to-text on macOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matpb.github.io/wspr-app/support.html">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I start transcribing with Wspr?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "First, download a Whisper model in Settings > Whisper. Then press Option+Space (or your custom hotkey) to start recording. Press it again to stop, and your speech will be transcribed and pasted or copied to your clipboard."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which Whisper model should I choose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start with Small (~460 MB) for a good balance of speed and accuracy. Use Base (~140 MB) if you want faster results. Medium and Large-v3 offer better accuracy but use more memory and processing time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does AI rewriting work in Wspr?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "After transcription, Wspr can optionally rewrite your text to fix grammar, adjust tone, or match a style. You can use Apple Intelligence (free, on-device) or cloud providers like OpenAI, Anthropic, or Gemini (requires your own API key and Wspr Pro)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my audio sent to the cloud?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All speech-to-text transcription happens entirely on your Mac using WhisperKit and the Apple Neural Engine. Audio never leaves your device. Cloud AI is only used for optional text rewriting (not transcription) and only if you choose to configure it."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I restore my Wspr Pro purchase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open Wspr, go to Settings, and click Restore Purchases in the General tab. Your Wspr Pro purchase is tied to your Apple ID and can be restored on any Mac."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "The app isn't transcribing correctly",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Try a larger model (Small or Medium) for better accuracy. Make sure your microphone is working and selected correctly in System Settings. Speaking clearly and minimizing background noise also helps."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What languages does Wspr support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wspr supports 99 languages through OpenAI's Whisper models, including English, French, Spanish, German, Japanese, Chinese, Arabic, and many more. Language is detected automatically, or you can set a preferred language in Settings."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Support</h1>
 
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-            <details>
-                <summary>How do I start transcribing?</summary>
-                <p>First, download a Whisper model in Settings &gt; Whisper. Then press Option+Space (or your custom hotkey) to start recording. Press it again to stop, and your speech will be transcribed and pasted or copied to your clipboard.</p>
-            </details>
-
-            <details>
-                <summary>Which model should I choose?</summary>
-                <p>Start with <strong>Base</strong> for a good balance of speed and accuracy. If you need better accuracy for difficult audio, try <strong>Small</strong> or <strong>Medium</strong>. The <strong>Large</strong> model is the most accurate but requires more memory and processing time.</p>
-            </details>
-
-            <details>
-                <summary>How does AI rewriting work?</summary>
-                <p>After transcription, Wspr can optionally rewrite your text to fix grammar, adjust tone, or match a style. You can use Apple Intelligence (free, on-device) or cloud providers like OpenAI, Anthropic, or Gemini (requires your own API key and Wspr Pro).</p>
-            </details>
-
-            <details>
-                <summary>Is my audio sent to the cloud?</summary>
-                <p>No. All speech-to-text transcription happens entirely on your Mac. Audio never leaves your device. Cloud AI is only used for optional text rewriting (not transcription) and only if you choose to configure it.</p>
-            </details>
-
-            <details>
-                <summary>How do I restore my purchase?</summary>
-                <p>Open Wspr, go to Settings, and click "Restore Purchases" in the General tab. Your Wspr Pro purchase is tied to your Apple ID and can be restored on any Mac.</p>
-            </details>
-
-            <details>
-                <summary>The app isn't transcribing correctly</summary>
-                <p>Try a larger model (Small or Medium) for better accuracy. Make sure your microphone is working and selected correctly in System Settings. Speaking clearly and minimizing background noise also helps.</p>
-            </details>
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
         </div>
-
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>If you need further help, have feedback, or want to report a bug, please open an issue on our <a href="https://github.com/matpb/wspr-app/issues">GitHub page</a>.</p>
-        </div>
-
-        <div class="back">
-            <a href="index.html">&larr; Back to Wspr</a>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
-        </footer>
     </div>
+</nav>
+
+<main class="page-container">
+    <h1>Support</h1>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        <details>
+            <summary>How do I start transcribing?</summary>
+            <p>First, download a Whisper model in Settings &gt; Whisper. Then press Option+Space (or your custom hotkey) to start recording. Press it again to stop, and your speech will be transcribed and pasted or copied to your clipboard.</p>
+        </details>
+
+        <details>
+            <summary>Which model should I choose?</summary>
+            <p>Start with <strong>Small</strong> (~460 MB) for a good balance of speed and accuracy. <strong>Base</strong> (~140 MB) is faster but slightly less accurate. <strong>Medium</strong> (~1.5 GB) and <strong>Large-v3</strong> (~3 GB) offer the best accuracy but require more memory and processing time.</p>
+        </details>
+
+        <details>
+            <summary>How does AI rewriting work?</summary>
+            <p>After transcription, Wspr can optionally rewrite your text to fix grammar, adjust tone, or match a style. You can use Apple Intelligence (free, on-device) or cloud providers like OpenAI, Anthropic, or Gemini (requires your own API key and Wspr Pro).</p>
+        </details>
+
+        <details>
+            <summary>Is my audio sent to the cloud?</summary>
+            <p>No. All speech-to-text transcription happens entirely on your Mac using WhisperKit and the Apple Neural Engine. Audio never leaves your device. Cloud AI is only used for optional text rewriting (not transcription) and only if you choose to configure it.</p>
+        </details>
+
+        <details>
+            <summary>How do I restore my purchase?</summary>
+            <p>Open Wspr, go to Settings, and click "Restore Purchases" in the General tab. Your Wspr Pro purchase is tied to your Apple ID and can be restored on any Mac.</p>
+        </details>
+
+        <details>
+            <summary>The app isn't transcribing correctly</summary>
+            <p>Try a larger model (Small or Medium) for better accuracy. Make sure your microphone is working and selected correctly in System Settings. Speaking clearly and minimizing background noise also helps.</p>
+        </details>
+
+        <details>
+            <summary>What languages does Wspr support?</summary>
+            <p>Wspr supports 99 languages through OpenAI's Whisper models, including English, French, Spanish, German, Japanese, Chinese, Arabic, and many more. Language is detected automatically, or you can set a preferred language in Settings.</p>
+        </details>
+    </div>
+
+    <div class="contact-card">
+        <h2>Contact</h2>
+        <p>If you need further help, have feedback, or want to report a bug, please open an issue on our <a href="https://github.com/matpb/wspr-app/issues">GitHub page</a>.</p>
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Wspr</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

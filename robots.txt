@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matpb.github.io/wspr-app/sitemap.xml
