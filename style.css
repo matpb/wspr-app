@@ -137,6 +137,20 @@ a:hover { color: var(--accent-hover); }
   color: #000;
 }
 .hero-cta svg { flex-shrink: 0; }
+.hero-cta.coming-soon {
+  background: var(--text-tertiary);
+  cursor: default;
+  opacity: 0.7;
+}
+.hero-cta.coming-soon:hover {
+  transform: none;
+  opacity: 0.7;
+}
+.coming-soon-note {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+}
 .hero-screenshot {
   max-width: 700px;
   margin: 60px auto 0;
