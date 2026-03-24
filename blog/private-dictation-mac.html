@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Dictate on Mac Without Sending Your Voice to the Cloud — Wspr</title>
+    <meta name="description" content="Learn how on-device voice-to-text works on Mac using WhisperKit and Apple Neural Engine. Keep your audio private with local speech recognition. No cloud required.">
+    <meta name="keywords" content="offline dictation mac, private voice to text mac, local speech to text mac, on-device transcription mac, whisperkit, apple neural engine speech">
+    <meta name="author" content="Mathieu-Philippe Bourgeois">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getwspr.com/blog/private-dictation-mac.html">
+
+    <meta property="og:title" content="How to Dictate on Mac Without Sending Your Voice to the Cloud">
+    <meta property="og:description" content="Most dictation apps send your audio to remote servers. Here's how on-device transcription works and why it matters for your privacy.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getwspr.com/blog/private-dictation-mac.html">
+    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:site_name" content="Wspr">
+    <meta property="article:published_time" content="2026-03-22">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Dictate on Mac Without Sending Your Voice to the Cloud">
+    <meta name="twitter:description" content="On-device voice-to-text is real. Here's how WhisperKit and Apple Neural Engine keep your dictation private.">
+    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Dictate on Mac Without Sending Your Voice to the Cloud",
+        "description": "Learn how on-device voice-to-text works on Mac using WhisperKit and Apple Neural Engine. Keep your audio private with local speech recognition.",
+        "datePublished": "2026-03-22",
+        "author": {
+            "@type": "Person",
+            "name": "Mathieu-Philippe Bourgeois"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Wspr",
+            "url": "https://getwspr.com"
+        },
+        "mainEntityOfPage": "https://getwspr.com/blog/private-dictation-mac.html"
+    }
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="page-container article-container">
+    <p class="article-date">March 22, 2026</p>
+    <h1>How to Dictate on Mac Without Sending Your Voice to the Cloud</h1>
+    <p class="article-subtitle">Your voice is biometric data. Most dictation apps upload it to servers you don't control. Here's how on-device transcription works, what makes it possible, and which apps actually keep your audio local.</p>
+
+    <h2>The Problem: Your Voice Goes Everywhere</h2>
+
+    <p>When you use a cloud-based dictation app, here's what happens: your Mac records your voice, compresses the audio, sends it over the internet to a remote server, that server processes it with a speech recognition model, and sends text back to your computer. Your raw audio &mdash; or a processed version of it &mdash; exists on someone else's infrastructure, at least temporarily.</p>
+
+    <p>This is how most dictation has worked for years. Google, Amazon, and most third-party dictation apps use this approach. Even Apple's built-in dictation can send audio to Apple's servers depending on your settings and which features you enable.</p>
+
+    <p>The privacy implications are real. Your voice is uniquely identifiable biometric data. Dictation captures your unfiltered thoughts &mdash; drafts of emails, private messages, journal entries, medical notes, legal communications. If that audio lives on a server, it's subject to that company's data retention policies, potential breaches, and legal requests.</p>
+
+    <h2>What Changed: Apple Silicon and Whisper</h2>
+
+    <p>Two developments made private, on-device dictation practical.</p>
+
+    <p><strong>Apple Silicon's Neural Engine.</strong> Every M-series chip (M1 through M4 and beyond) includes a dedicated Neural Engine &mdash; hardware specifically designed to run machine learning models efficiently. It can process speech recognition models at near-real-time speed while using minimal battery. Before this, running high-quality speech models locally meant maxing out your CPU and draining your battery.</p>
+
+    <p><strong>OpenAI's Whisper.</strong> In 2022, OpenAI released Whisper, an open-source speech recognition model trained on 680,000 hours of multilingual audio. Whisper matches or exceeds commercial cloud speech APIs in accuracy across 99 languages. Because it's open-source, developers can run it locally instead of sending audio to OpenAI's servers.</p>
+
+    <p>The combination of powerful on-device hardware and a world-class open model created a new category: dictation apps that never need the internet.</p>
+
+    <h2>How WhisperKit Works</h2>
+
+    <p>WhisperKit is a Swift framework that optimizes Whisper models specifically for Apple Silicon. It converts the models into Apple's Core ML format so they run directly on the Neural Engine rather than the CPU or GPU. The result is fast transcription with low power consumption.</p>
+
+    <p>When you speak into an app that uses WhisperKit:</p>
+
+    <ol>
+        <li>Your Mac's microphone captures audio</li>
+        <li>The audio is processed into a spectrogram (a visual representation of sound frequencies)</li>
+        <li>The Whisper model, running on the Neural Engine, converts the spectrogram into text</li>
+        <li>The text appears in your app</li>
+    </ol>
+
+    <p>Every step happens on your Mac. The audio never touches a network interface. There's no server, no API call, no internet connection required. You could transcribe on a plane with Wi-Fi turned off.</p>
+
+    <h2>On-Device AI Rewriting with Apple Intelligence</h2>
+
+    <p>Raw transcription output isn't always clean. You might say "um" or repeat yourself. You might want to rephrase something more professionally. This is where AI rewriting comes in.</p>
+
+    <p>Most apps that offer AI rewriting send your transcribed text to OpenAI's API or a similar cloud service. Your words leave your device a second time &mdash; not as audio, but as text.</p>
+
+    <p>Apple Intelligence changes this. Built into macOS 15 and later, Apple Intelligence provides on-device language models that can rewrite, summarize, and adjust text without any cloud connection. When an app like <a href="../index.html">Wspr</a> uses Apple Intelligence for rewriting, the entire pipeline stays local:</p>
+
+    <ul>
+        <li><strong>Step 1:</strong> Voice captured locally by microphone</li>
+        <li><strong>Step 2:</strong> Speech transcribed locally by WhisperKit on the Neural Engine</li>
+        <li><strong>Step 3:</strong> Text rewritten locally by Apple Intelligence</li>
+        <li><strong>Step 4:</strong> Final text pasted into your app</li>
+    </ul>
+
+    <p>Zero network requests. Zero data exfiltration. The entire voice-to-polished-text pipeline runs on your Mac.</p>
+
+    <h2>What Stays Local vs. What Hits the Cloud</h2>
+
+    <p>Not all "private" dictation apps are equally private. Here's a breakdown of what data goes where across the major options.</p>
+
+    <div class="compare-table-wrap">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th class="highlight">Wspr</th>
+                    <th>Wispr Flow</th>
+                    <th>Superwhisper</th>
+                    <th>Apple Dictation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Audio recording</td>
+                    <td class="highlight">Local only</td>
+                    <td>Sent to cloud</td>
+                    <td>Local only</td>
+                    <td>Sometimes cloud</td>
+                </tr>
+                <tr>
+                    <td>Speech-to-text processing</td>
+                    <td class="highlight">Local (WhisperKit)</td>
+                    <td>Cloud servers</td>
+                    <td>Local (Whisper)</td>
+                    <td>Local or cloud</td>
+                </tr>
+                <tr>
+                    <td>AI text rewriting</td>
+                    <td class="highlight">Local (Apple Intelligence) or cloud (your choice)</td>
+                    <td>Cloud (proprietary)</td>
+                    <td>Cloud (OpenAI)</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>API keys</td>
+                    <td class="highlight">macOS Keychain</td>
+                    <td>Managed by vendor</td>
+                    <td>App storage</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Analytics/telemetry</td>
+                    <td class="highlight">None</td>
+                    <td>Yes</td>
+                    <td>Minimal</td>
+                    <td>Apple telemetry</td>
+                </tr>
+                <tr>
+                    <td>Account required</td>
+                    <td class="highlight">No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Apple ID</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>The key distinction: with Wspr, you <em>can</em> use cloud AI providers for rewriting if you want to &mdash; but you never have to. Apple Intelligence gives you a fully private rewriting option at no extra cost. And even if you do use a cloud provider, your <em>audio</em> never leaves your Mac. Only the transcribed text is sent, directly from your device to the provider's API using your own key.</p>
+
+    <h2>Why This Matters More Than You Think</h2>
+
+    <p>Consider what you dictate. Emails to colleagues. Messages to your partner. Journal entries. Medical notes. Legal memos. Creative writing. Business strategy. Job applications.</p>
+
+    <p>Cloud dictation services aggregate this data across millions of users. Even with good intentions, that creates a target. Data breaches happen. Subpoenas happen. Policy changes happen. Companies get acquired.</p>
+
+    <p>On-device transcription eliminates the entire category of risk. If your audio never leaves your Mac, it can't be intercepted, breached, subpoenaed from a third party, or used to train someone else's model. The data simply doesn't exist anywhere but your computer.</p>
+
+    <h2>How to Set Up Private Dictation on Your Mac</h2>
+
+    <p>Getting started with fully private voice-to-text takes about two minutes:</p>
+
+    <ol>
+        <li><a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip"><strong>Download Wspr</strong></a> and open it. No account required.</li>
+        <li>Open Settings and download a Whisper model. Start with <strong>Small</strong> (~460 MB) for the best balance of speed and accuracy.</li>
+        <li>Set your preferred global hotkey (Option+Space by default).</li>
+        <li>For AI rewriting, select <strong>Apple Intelligence</strong> as your provider. This keeps everything on-device.</li>
+        <li>Press your hotkey, speak, and your text appears &mdash; transcribed and polished, without a single byte leaving your Mac.</li>
+    </ol>
+
+    <p>The free tier gives you 50 transcriptions to verify that the quality meets your needs. If it does, <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Wspr Pro</a> unlocks unlimited everything for a one-time $14.99 payment.</p>
+
+    <div class="cta-buttons" style="margin-top: 40px;">
+        <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip" class="hero-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Wspr Free
+        </a>
+        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
+            Buy Pro &mdash; $14.99
+        </a>
+    </div>
+
+    <p style="margin-top: 32px;"><strong>Related:</strong> <a href="best-voice-to-text-mac-2026.html">Best Voice-to-Text Apps for Mac in 2026</a> | <a href="no-subscription-dictation.html">Why I Stopped Paying $15/Month for Dictation</a></p>
+
+    <a href="../blog/" class="back-link">&larr; More articles</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

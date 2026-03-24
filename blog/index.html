@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Wspr | Voice to Text for macOS</title>
+    <meta name="description" content="Articles about voice-to-text on macOS, dictation privacy, speech recognition, and getting the most out of Wspr.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getwspr.com/blog/">
+
+    <meta property="og:title" content="Blog — Wspr">
+    <meta property="og:description" content="Articles about voice-to-text on macOS, dictation privacy, and speech recognition.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getwspr.com/blog/">
+    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Wspr">
+    <meta name="twitter:description" content="Articles about voice-to-text on macOS, dictation privacy, and speech recognition.">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .blog-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: background 0.3s, border-color 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        .blog-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(255,255,255,0.12);
+        }
+        .blog-card-date {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin-bottom: 8px;
+        }
+        .blog-card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .blog-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .blog-card .read-more {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="page-container">
+    <h1>Blog</h1>
+    <p class="page-updated">Voice-to-text tips, comparisons, and updates from the Wspr team.</p>
+
+    <div class="blog-grid">
+        <a href="best-voice-to-text-mac-2026.html" class="blog-card fade-in">
+            <p class="blog-card-date">March 24, 2026</p>
+            <h2>Best Voice-to-Text Apps for Mac in 2026: A Complete Comparison</h2>
+            <p>We compared Wspr, Wispr Flow, Superwhisper, MacWhisper, and Apple Dictation across price, privacy, accuracy, and features. Here's how they stack up.</p>
+            <span class="read-more">Read article &rarr;</span>
+        </a>
+
+        <a href="private-dictation-mac.html" class="blog-card fade-in">
+            <p class="blog-card-date">March 22, 2026</p>
+            <h2>How to Dictate on Mac Without Sending Your Voice to the Cloud</h2>
+            <p>Most dictation apps send your audio to remote servers. Here's how on-device transcription works with WhisperKit and Apple Neural Engine, and why it matters.</p>
+            <span class="read-more">Read article &rarr;</span>
+        </a>
+
+        <a href="no-subscription-dictation.html" class="blog-card fade-in">
+            <p class="blog-card-date">March 20, 2026</p>
+            <h2>Why I Stopped Paying $15/Month for Mac Dictation</h2>
+            <p>I spent $180/year on Wispr Flow before I found a $14.99 alternative that does everything I need. Here's why I switched and never looked back.</p>
+            <span class="read-more">Read article &rarr;</span>
+        </a>
+    </div>
+
+    <a href="../index.html" class="back-link">&larr; Back to Wspr</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
