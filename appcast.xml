@@ -6,6 +6,25 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
+      <title>Version 3.0.2</title>
+      <pubDate>Tue, 24 Mar 2026 15:30:00 +0000</pubDate>
+      <sparkle:version>302</sparkle:version>
+      <sparkle:shortVersionString>3.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h2>What's New in Wspr 3.0.2</h2>
+        <ul>
+          <li>Buy Pro during onboarding now opens checkout and advances to next step</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip"
+        type="application/octet-stream"
+        sparkle:edSignature="zinZ5AAOsY7EftOwuWHmxR28M0IZN32ZgYldJg1wT1Nv6GbZaiuc7YkNIkRHU+i3fjPe+diLP4aueGZTmKtVBA=="
+        length="5103169"
+      />
+    </item>
+    <item>
       <title>Version 3.0.1</title>
       <pubDate>Tue, 24 Mar 2026 15:15:36 +0000</pubDate>
       <sparkle:version>301</sparkle:version>
