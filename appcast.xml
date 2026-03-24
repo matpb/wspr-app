@@ -6,6 +6,29 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
+      <title>Version 3.0.1</title>
+      <pubDate>Tue, 24 Mar 2026 15:15:36 +0000</pubDate>
+      <sparkle:version>301</sparkle:version>
+      <sparkle:shortVersionString>3.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h2>What's New in Wspr 3.0.1</h2>
+        <ul>
+          <li>Improved permission handling — microphone and accessibility prompts work reliably</li>
+          <li>Text insertion is now the default output mode</li>
+          <li>Updated onboarding with permission setup and shortcut guide</li>
+          <li>Permission warnings are now clickable to open System Settings</li>
+          <li>Fixed Sparkle auto-update configuration</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://github.com/matpb/wspr-app/releases/download/v3.0.1/Wspr-3.0.1.zip"
+        type="application/octet-stream"
+        sparkle:edSignature="fwDybdeFbfxSQTNm5+jXCFNKA1bxgksbfBqSCmnV2GeFQvFN5tTGOpEBbN8iSbcPE5CRCqzWiBla33ZaaYP+Ag=="
+        length="5103114"
+      />
+    </item>
+    <item>
       <title>Version 3.0.0</title>
       <pubDate>Tue, 24 Mar 2026 14:06:02 +0000</pubDate>
       <sparkle:version>300</sparkle:version>
