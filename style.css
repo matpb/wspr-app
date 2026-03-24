@@ -137,19 +137,26 @@ a:hover { color: var(--accent-hover); }
   color: #000;
 }
 .hero-cta svg { flex-shrink: 0; }
-.hero-cta.coming-soon {
-  background: var(--text-tertiary);
-  cursor: default;
-  opacity: 0.7;
-}
-.hero-cta.coming-soon:hover {
-  transform: none;
-  opacity: 0.7;
-}
-.coming-soon-note {
+.hero-meta {
   font-size: 0.9rem;
   color: var(--text-tertiary);
   margin-top: 12px;
+}
+.hero-cta-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.hero-cta-secondary:hover {
+  color: var(--text);
+  background: var(--bg-card-hover);
+  border-color: rgba(255,255,255,0.2);
+}
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .hero-screenshot {
   max-width: 700px;
@@ -539,6 +546,69 @@ footer {
 }
 .article-container .compare-table {
   min-width: 700px;
+}
+
+/* Thank You Page */
+.thank-you-page {
+  text-align: center;
+}
+.thank-you-icon {
+  margin-bottom: 24px;
+}
+.thank-you-page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+.thank-you-page > p {
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+.steps {
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.step-number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.step p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.thank-you-download {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 0;
+}
+.thank-you-download p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
 }
 
 /* Fade-in animation */

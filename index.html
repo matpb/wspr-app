@@ -25,8 +25,6 @@
     <meta name="twitter:description" content="On-device speech-to-text for Mac. AI rewriting. No cloud, no tracking.">
     <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
 
-    <!-- Apple Smart Banner (update app-id once approved) -->
-    <!-- <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID"> -->
 
     <link rel="stylesheet" href="style.css">
 
@@ -108,7 +106,7 @@
             "@type": "Person",
             "name": "Mathieu-Philippe Bourgeois"
         },
-        "softwareVersion": "2.7",
+        "softwareVersion": "3.0.0",
         "featureList": "On-device transcription, AI text rewriting, Global hotkey, File transcription, 99 languages, Menu bar app, Privacy-first"
     }
     </script>
@@ -152,12 +150,11 @@
     <h1>Voice to Text, Privately.</h1>
     <p class="tagline">On-device speech transcription for macOS</p>
     <p class="description">Press a hotkey, speak, and your words appear as text. All processing happens locally on your Mac using Apple Neural Engine. No cloud. No accounts. No tracking.</p>
-    <!-- TODO: Replace with actual Mac App Store link once approved -->
-    <span class="hero-cta coming-soon" id="app-store-link">
-        <svg width="20" height="24" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        Coming Soon to the Mac App Store
-    </span>
-    <p class="coming-soon-note">Currently in App Store review — check back soon.</p>
+    <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.0/Wspr-3.0.0.zip" class="hero-cta" id="download-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for macOS
+    </a>
+    <p class="hero-meta">Free to start. Requires macOS 15.6+ and Apple Silicon.</p>
     <img src="images/menu_bar.png" alt="Wspr menu bar app showing real-time voice transcription on macOS" class="hero-screenshot" width="700" loading="eager" fetchpriority="high">
 </header>
 
@@ -486,13 +483,17 @@
 
 <!-- Final CTA -->
 <section class="cta-section">
-    <h2 class="section-title">Wspr is almost here.</h2>
-    <p class="section-desc">Currently in App Store review. Check back soon to download for free.</p>
-    <!-- TODO: Replace with actual Mac App Store link once approved -->
-    <span class="hero-cta coming-soon">
-        <svg width="20" height="24" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        Coming Soon to the Mac App Store
-    </span>
+    <h2 class="section-title">Try Wspr for free.</h2>
+    <p class="section-desc">Download now and get 50 free transcriptions. Upgrade to Pro for $14.99 — one-time, forever.</p>
+    <div class="cta-buttons">
+        <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.0/Wspr-3.0.0.zip" class="hero-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for macOS
+        </a>
+        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
+            Buy Pro — $14.99
+        </a>
+    </div>
 </section>
 
 <!-- Footer -->
