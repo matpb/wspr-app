@@ -154,7 +154,7 @@
 
     <p>I found <a href="../index.html">Wspr</a> while looking for alternatives. It does the same core job: press a hotkey, speak, get text. But the architecture is completely different.</p>
 
-    <p>Wspr runs WhisperKit models directly on my Mac's Neural Engine. No audio goes to the cloud. Transcription happens locally, in real time. For AI rewriting, I use Apple Intelligence, which also runs on-device. The entire pipeline &mdash; voice to polished text &mdash; happens without a network connection.</p>
+    <p>Wspr runs whisper.cpp with GPU acceleration directly on my computer. No audio goes to the cloud. Transcription happens locally, in real time. For AI rewriting, I use my own OpenAI API key &mdash; the text goes directly to the provider, no middleman. And rewriting is optional; without it, the entire pipeline stays fully offline.</p>
 
     <p>The accuracy is comparable to what I got from Wispr Flow. Not identical &mdash; they use different models and approaches &mdash; but close enough that I stopped noticing the difference within a week. Wspr also handles file transcription (drag in a meeting recording, get a transcript), which Wispr Flow doesn't offer at all.</p>
 
@@ -166,16 +166,16 @@
 
     <ul>
         <li><strong>Context-aware rewriting.</strong> Wispr Flow's AI reads what's on your screen and adjusts its output to match. If you're in Slack, it writes casually. If you're in a formal email, it writes formally. Wspr's rewriting is style-based (you pick a preset or create your own) rather than context-aware.</li>
-        <li><strong>Intel Mac support.</strong> Wispr Flow works on Intel Macs because processing happens in the cloud. Wspr requires Apple Silicon (M1 or later) for the Neural Engine.</li>
+        <li><strong>Platform reach.</strong> Wispr Flow works on Intel Macs because processing happens in the cloud. Wspr runs on macOS, Windows, and Linux with GPU acceleration, but requires a reasonably modern GPU for best performance.</li>
     </ul>
 
-    <p>For me, neither of these was a dealbreaker. I set up a "professional" rewrite style in Wspr for emails and a "minimal" style for messages, which covers 95% of my use. And I've been on Apple Silicon since 2021.</p>
+    <p>For me, neither of these was a dealbreaker. I set up a "professional" rewrite style in Wspr for emails and a "minimal" style for messages, which covers 95% of my use.</p>
 
     <h2>What I Gained</h2>
 
     <ul>
         <li><strong>$165/year back in my pocket</strong> (and growing every year)</li>
-        <li><strong>Complete privacy.</strong> My voice never leaves my Mac. Not for transcription, not for rewriting, not for anything.</li>
+        <li><strong>Complete privacy.</strong> My voice never leaves my device. Not for transcription, not ever. AI rewriting sends only the transcribed text, directly to the provider I choose.</li>
         <li><strong>No internet dependency.</strong> I dictate on flights, in areas with bad Wi-Fi, in coffee shops where I don't trust the network. It always works.</li>
         <li><strong>File transcription.</strong> I drop meeting recordings into Wspr and get transcripts. This alone would have justified the switch.</li>
         <li><strong>Choice of AI providers.</strong> When I do want cloud AI (for longer documents where I want GPT-4 or Claude), I use my own API key. No middleman.</li>
@@ -183,7 +183,7 @@
 
     <h2>The Takeaway</h2>
 
-    <p>If you're paying a monthly subscription for Mac dictation, ask yourself: is the convenience worth $180/year when a $14.99 one-time app does the same job, on your own hardware, without sending your voice to someone else's servers?</p>
+    <p>If you're paying a monthly subscription for dictation, ask yourself: is the convenience worth $180/year when a $14.99 one-time app does the same job, on your own hardware, without sending your voice to someone else's servers?</p>
 
     <p>For me, the answer was obvious. I cancelled Wispr Flow the same day I tried Wspr. Eight months later, I haven't missed it.</p>
 

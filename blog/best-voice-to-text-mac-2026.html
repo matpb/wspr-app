@@ -75,7 +75,7 @@
     <h1>Best Voice-to-Text Apps for Mac in 2026: A Complete Comparison</h1>
     <p class="article-subtitle">We tested every serious Mac dictation app so you don't have to. Here's how Wspr, Wispr Flow, Superwhisper, MacWhisper, and Apple Dictation compare on price, privacy, accuracy, and features.</p>
 
-    <p>Voice-to-text on macOS has matured significantly. Apple Silicon's Neural Engine made on-device speech recognition practical, and OpenAI's Whisper models gave third-party developers a world-class transcription engine to build on. The result: several compelling dictation apps that go far beyond what Apple's built-in dictation offers.</p>
+    <p>Voice-to-text has matured significantly across desktop platforms. GPU acceleration made on-device speech recognition practical, and OpenAI's Whisper models gave third-party developers a world-class transcription engine to build on. The result: several compelling dictation apps that go far beyond what built-in dictation offers.</p>
 
     <p>But they differ wildly in pricing, privacy, and approach. Some send your audio to the cloud. Some charge monthly subscriptions. Some only transcribe files, not live speech. We broke down the five most popular options to help you pick the right one.</p>
 
@@ -112,7 +112,7 @@
                 </tr>
                 <tr>
                     <td>Transcription</td>
-                    <td class="highlight">On-device (WhisperKit)</td>
+                    <td class="highlight">On-device (whisper.cpp)</td>
                     <td>Cloud</td>
                     <td>On-device (Whisper)</td>
                     <td>On-device (Whisper)</td>
@@ -136,19 +136,19 @@
                 </tr>
                 <tr>
                     <td>AI text rewriting</td>
-                    <td class="highlight">Apple Intelligence + 3 cloud providers</td>
+                    <td class="highlight">OpenAI, Anthropic, or Gemini (user's own key)</td>
                     <td>Proprietary AI</td>
                     <td>OpenAI</td>
                     <td>OpenAI</td>
                     <td>&#10007;</td>
                 </tr>
                 <tr>
-                    <td>On-device AI rewriting</td>
-                    <td class="highlight">&#10003; (Apple Intelligence)</td>
-                    <td>&#10007;</td>
-                    <td>&#10007;</td>
-                    <td>&#10007;</td>
-                    <td>&#10007;</td>
+                    <td>Cross-platform</td>
+                    <td class="highlight">&#10003; (macOS, Windows, Linux)</td>
+                    <td>&#10007; (macOS only)</td>
+                    <td>&#10007; (macOS only)</td>
+                    <td>&#10007; (macOS only)</td>
+                    <td>&#10007; (macOS only)</td>
                 </tr>
                 <tr>
                     <td>Languages</td>
@@ -180,16 +180,16 @@
 
     <h2>1. Wspr &mdash; Best Overall Value</h2>
 
-    <p>Wspr is a menu bar app that uses WhisperKit to run OpenAI's Whisper models directly on Apple Silicon's Neural Engine. Press a global hotkey, speak, and your transcription is pasted into whatever app you're using. It also handles file transcription for audio and video files.</p>
+    <p>Wspr is a cross-platform app that uses whisper.cpp with GPU acceleration to run OpenAI's Whisper models directly on your device. Press a global hotkey, speak, and your transcription is pasted into whatever app you're using. It also handles file transcription for audio and video files. Available on macOS, Windows, and Linux.</p>
 
-    <p>What sets Wspr apart is the combination of on-device privacy, AI rewriting flexibility, and price. It's the only app that supports Apple Intelligence for fully on-device text rewriting, plus OpenAI, Anthropic, and Google Gemini if you want cloud AI options. And the whole thing costs $14.99, once, forever.</p>
+    <p>What sets Wspr apart is the combination of on-device privacy, cross-platform support, AI rewriting flexibility, and price. It supports AI rewriting via OpenAI, Anthropic, and Google Gemini using your own API key. And the whole thing costs $14.99, once, forever.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
         <li>$14.99 one-time &mdash; no subscription, no recurring costs</li>
-        <li>100% on-device transcription via Apple Neural Engine</li>
-        <li>Apple Intelligence rewriting (free, on-device, no API key needed)</li>
-        <li>Supports OpenAI, Anthropic, and Gemini for cloud AI rewriting</li>
+        <li>100% on-device transcription via whisper.cpp with GPU acceleration</li>
+        <li>Cross-platform: macOS (Apple Silicon &amp; Intel), Windows, and Linux</li>
+        <li>AI rewriting with OpenAI, Anthropic, or Gemini using your own API key</li>
         <li>Both live dictation and file transcription</li>
         <li>99 languages with automatic detection</li>
         <li>Free tier with 50 transcriptions to try before buying</li>
@@ -197,7 +197,6 @@
 
     <p><strong>Cons:</strong></p>
     <ul>
-        <li>Requires macOS 15.6+ and Apple Silicon</li>
         <li>Newer app, smaller community</li>
     </ul>
 
@@ -205,7 +204,7 @@
 
     <h2>2. Wispr Flow &mdash; Best Cloud-Based Option</h2>
 
-    <p>Wispr Flow takes a fundamentally different approach: it sends your audio to the cloud for transcription and rewriting. The upside is that it works on any Mac regardless of processor, and its proprietary AI is trained specifically for dictation context. The downside is that every word you speak leaves your computer.</p>
+    <p>Wispr Flow takes a fundamentally different approach: it sends your audio to the cloud for transcription and rewriting. The upside is that it works on any Mac regardless of processor, and its proprietary AI is trained specifically for dictation context. The downside is that every word you speak leaves your device.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
@@ -237,7 +236,7 @@
     <p><strong>Cons:</strong></p>
     <ul>
         <li>~$10/month subscription ($120/year)</li>
-        <li>Only supports OpenAI for rewriting (no Apple Intelligence, no Anthropic, no Gemini)</li>
+        <li>Only supports OpenAI for rewriting (no Anthropic, no Gemini)</li>
         <li>No file transcription</li>
     </ul>
 
@@ -282,11 +281,11 @@
 
     <h2>The Verdict</h2>
 
-    <p>If privacy and value matter to you, <strong>Wspr is the clear winner</strong>. It gives you on-device transcription, the widest AI rewriting options (including the only on-device option via Apple Intelligence), both live and file transcription, and 99-language support &mdash; all for $14.99 once. That's less than a single month of Wispr Flow.</p>
+    <p>If privacy and value matter to you, <strong>Wspr is the clear winner</strong>. It gives you on-device transcription, AI rewriting with your choice of OpenAI, Anthropic, or Gemini, both live and file transcription, cross-platform support for macOS, Windows, and Linux, and 99-language support &mdash; all for $14.99 once. That's less than a single month of Wispr Flow.</p>
 
-    <p>Wispr Flow is worth considering if you specifically want cloud-based contextual AI and don't mind the subscription or privacy tradeoff. MacWhisper is the right choice if you only need file transcription and never plan to dictate live. And Apple Dictation is there if you just need something basic for free.</p>
+    <p>Wspr is also the only app in this comparison that runs on Windows and Linux, making it the clear choice if you work across platforms. Wispr Flow is worth considering if you specifically want cloud-based contextual AI and don't mind the subscription or privacy tradeoff. MacWhisper is the right choice if you only need file transcription and never plan to dictate live. And Apple Dictation is there if you just need something basic for free.</p>
 
-    <p>But for most Mac users who want to turn voice into text &mdash; privately, affordably, and with AI polish &mdash; Wspr gets the job done better than anything else available in 2026.</p>
+    <p>But for most users who want to turn voice into text &mdash; privately, affordably, and with AI polish &mdash; Wspr gets the job done better than anything else available in 2026.</p>
 
     <div class="cta-buttons" style="margin-top: 40px;">
         <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip" class="hero-cta">

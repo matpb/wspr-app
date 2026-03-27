@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Dictate on Mac Without Sending Your Voice to the Cloud — Wspr</title>
-    <meta name="description" content="Learn how on-device voice-to-text works on Mac using WhisperKit and Apple Neural Engine. Keep your audio private with local speech recognition. No cloud required.">
-    <meta name="keywords" content="offline dictation mac, private voice to text mac, local speech to text mac, on-device transcription mac, whisperkit, apple neural engine speech">
+    <meta name="description" content="Learn how on-device voice-to-text works on Mac, Windows, and Linux using whisper.cpp with GPU acceleration. Keep your audio private with local speech recognition. No cloud required.">
+    <meta name="keywords" content="offline dictation mac, private voice to text mac, local speech to text mac, on-device transcription mac, whisper.cpp, gpu accelerated speech recognition">
     <meta name="author" content="Mathieu-Philippe Bourgeois">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getwspr.com/blog/private-dictation-mac.html">
@@ -20,7 +20,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How to Dictate on Mac Without Sending Your Voice to the Cloud">
-    <meta name="twitter:description" content="On-device voice-to-text is real. Here's how WhisperKit and Apple Neural Engine keep your dictation private.">
+    <meta name="twitter:description" content="On-device voice-to-text is real. Here's how whisper.cpp with GPU acceleration keeps your dictation private.">
     <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
 
     <link rel="stylesheet" href="../style.css">
@@ -30,7 +30,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Dictate on Mac Without Sending Your Voice to the Cloud",
-        "description": "Learn how on-device voice-to-text works on Mac using WhisperKit and Apple Neural Engine. Keep your audio private with local speech recognition.",
+        "description": "Learn how on-device voice-to-text works on Mac, Windows, and Linux using whisper.cpp with GPU acceleration. Keep your audio private with local speech recognition.",
         "datePublished": "2026-03-22",
         "author": {
             "@type": "Person",
@@ -77,53 +77,53 @@
 
     <h2>The Problem: Your Voice Goes Everywhere</h2>
 
-    <p>When you use a cloud-based dictation app, here's what happens: your Mac records your voice, compresses the audio, sends it over the internet to a remote server, that server processes it with a speech recognition model, and sends text back to your computer. Your raw audio &mdash; or a processed version of it &mdash; exists on someone else's infrastructure, at least temporarily.</p>
+    <p>When you use a cloud-based dictation app, here's what happens: your computer records your voice, compresses the audio, sends it over the internet to a remote server, that server processes it with a speech recognition model, and sends text back to your computer. Your raw audio &mdash; or a processed version of it &mdash; exists on someone else's infrastructure, at least temporarily.</p>
 
     <p>This is how most dictation has worked for years. Google, Amazon, and most third-party dictation apps use this approach. Even Apple's built-in dictation can send audio to Apple's servers depending on your settings and which features you enable.</p>
 
     <p>The privacy implications are real. Your voice is uniquely identifiable biometric data. Dictation captures your unfiltered thoughts &mdash; drafts of emails, private messages, journal entries, medical notes, legal communications. If that audio lives on a server, it's subject to that company's data retention policies, potential breaches, and legal requests.</p>
 
-    <h2>What Changed: Apple Silicon and Whisper</h2>
+    <h2>What Changed: GPU Acceleration and Whisper</h2>
 
     <p>Two developments made private, on-device dictation practical.</p>
 
-    <p><strong>Apple Silicon's Neural Engine.</strong> Every M-series chip (M1 through M4 and beyond) includes a dedicated Neural Engine &mdash; hardware specifically designed to run machine learning models efficiently. It can process speech recognition models at near-real-time speed while using minimal battery. Before this, running high-quality speech models locally meant maxing out your CPU and draining your battery.</p>
+    <p><strong>GPU acceleration.</strong> Modern GPUs &mdash; whether from Apple, NVIDIA, or AMD &mdash; can run machine learning models efficiently at near-real-time speed with minimal power consumption. Before this, running high-quality speech models locally meant maxing out your CPU and draining your battery.</p>
 
     <p><strong>OpenAI's Whisper.</strong> In 2022, OpenAI released Whisper, an open-source speech recognition model trained on 680,000 hours of multilingual audio. Whisper matches or exceeds commercial cloud speech APIs in accuracy across 99 languages. Because it's open-source, developers can run it locally instead of sending audio to OpenAI's servers.</p>
 
     <p>The combination of powerful on-device hardware and a world-class open model created a new category: dictation apps that never need the internet.</p>
 
-    <h2>How WhisperKit Works</h2>
+    <h2>How whisper.cpp Works</h2>
 
-    <p>WhisperKit is a Swift framework that optimizes Whisper models specifically for Apple Silicon. It converts the models into Apple's Core ML format so they run directly on the Neural Engine rather than the CPU or GPU. The result is fast transcription with low power consumption.</p>
+    <p>whisper.cpp is a high-performance C/C++ implementation of Whisper that runs with GPU acceleration on macOS, Windows, and Linux. It leverages your device's GPU to deliver fast transcription with low power consumption &mdash; no cloud connection needed.</p>
 
-    <p>When you speak into an app that uses WhisperKit:</p>
+    <p>When you speak into an app that uses whisper.cpp:</p>
 
     <ol>
-        <li>Your Mac's microphone captures audio</li>
+        <li>Your device's microphone captures audio</li>
         <li>The audio is processed into a spectrogram (a visual representation of sound frequencies)</li>
-        <li>The Whisper model, running on the Neural Engine, converts the spectrogram into text</li>
+        <li>The Whisper model, running on your GPU, converts the spectrogram into text</li>
         <li>The text appears in your app</li>
     </ol>
 
-    <p>Every step happens on your Mac. The audio never touches a network interface. There's no server, no API call, no internet connection required. You could transcribe on a plane with Wi-Fi turned off.</p>
+    <p>Every step happens on your device. The audio never touches a network interface. There's no server, no API call, no internet connection required. You could transcribe on a plane with Wi-Fi turned off.</p>
 
-    <h2>On-Device AI Rewriting with Apple Intelligence</h2>
+    <h2>AI Rewriting with OpenAI, Anthropic, or Gemini</h2>
 
     <p>Raw transcription output isn't always clean. You might say "um" or repeat yourself. You might want to rephrase something more professionally. This is where AI rewriting comes in.</p>
 
-    <p>Most apps that offer AI rewriting send your transcribed text to OpenAI's API or a similar cloud service. Your words leave your device a second time &mdash; not as audio, but as text.</p>
+    <p>Most apps that offer AI rewriting route your text through their own servers as a middleman. With <a href="../index.html">Wspr</a>, you connect directly to OpenAI, Anthropic, or Google Gemini using your own API key. Your text goes straight from your device to the provider you choose &mdash; no intermediary, no vendor lock-in.</p>
 
-    <p>Apple Intelligence changes this. Built into macOS 15 and later, Apple Intelligence provides on-device language models that can rewrite, summarize, and adjust text without any cloud connection. When an app like <a href="../index.html">Wspr</a> uses Apple Intelligence for rewriting, the entire pipeline stays local:</p>
+    <p>Here's how the pipeline works:</p>
 
     <ul>
         <li><strong>Step 1:</strong> Voice captured locally by microphone</li>
-        <li><strong>Step 2:</strong> Speech transcribed locally by WhisperKit on the Neural Engine</li>
-        <li><strong>Step 3:</strong> Text rewritten locally by Apple Intelligence</li>
+        <li><strong>Step 2:</strong> Speech transcribed locally by whisper.cpp on your GPU</li>
+        <li><strong>Step 3:</strong> Text optionally rewritten by your chosen AI provider using your own API key</li>
         <li><strong>Step 4:</strong> Final text pasted into your app</li>
     </ul>
 
-    <p>Zero network requests. Zero data exfiltration. The entire voice-to-polished-text pipeline runs on your Mac.</p>
+    <p>Your audio never leaves your device. If you enable AI rewriting, only the transcribed text is sent &mdash; directly to the provider you trust, using your own credentials. And rewriting is entirely optional; you can skip it and keep everything 100% local.</p>
 
     <h2>What Stays Local vs. What Hits the Cloud</h2>
 
@@ -150,21 +150,21 @@
                 </tr>
                 <tr>
                     <td>Speech-to-text processing</td>
-                    <td class="highlight">Local (WhisperKit)</td>
+                    <td class="highlight">Local (whisper.cpp)</td>
                     <td>Cloud servers</td>
                     <td>Local (Whisper)</td>
                     <td>Local or cloud</td>
                 </tr>
                 <tr>
                     <td>AI text rewriting</td>
-                    <td class="highlight">Local (Apple Intelligence) or cloud (your choice)</td>
+                    <td class="highlight">Cloud (your own API key, your choice of provider)</td>
                     <td>Cloud (proprietary)</td>
                     <td>Cloud (OpenAI)</td>
                     <td>N/A</td>
                 </tr>
                 <tr>
                     <td>API keys</td>
-                    <td class="highlight">macOS Keychain</td>
+                    <td class="highlight">Stored locally on your device</td>
                     <td>Managed by vendor</td>
                     <td>App storage</td>
                     <td>N/A</td>
@@ -187,7 +187,7 @@
         </table>
     </div>
 
-    <p>The key distinction: with Wspr, you <em>can</em> use cloud AI providers for rewriting if you want to &mdash; but you never have to. Apple Intelligence gives you a fully private rewriting option at no extra cost. And even if you do use a cloud provider, your <em>audio</em> never leaves your Mac. Only the transcribed text is sent, directly from your device to the provider's API using your own key.</p>
+    <p>The key distinction: with Wspr, your <em>audio</em> never leaves your device. If you use AI rewriting, only the transcribed text is sent &mdash; directly from your device to the provider's API using your own key. No middleman. No vendor-controlled servers processing your voice. And rewriting is entirely optional.</p>
 
     <h2>Why This Matters More Than You Think</h2>
 
@@ -195,21 +195,21 @@
 
     <p>Cloud dictation services aggregate this data across millions of users. Even with good intentions, that creates a target. Data breaches happen. Subpoenas happen. Policy changes happen. Companies get acquired.</p>
 
-    <p>On-device transcription eliminates the entire category of risk. If your audio never leaves your Mac, it can't be intercepted, breached, subpoenaed from a third party, or used to train someone else's model. The data simply doesn't exist anywhere but your computer.</p>
+    <p>On-device transcription eliminates the entire category of risk. If your audio never leaves your device, it can't be intercepted, breached, subpoenaed from a third party, or used to train someone else's model. The data simply doesn't exist anywhere but your computer.</p>
 
-    <h2>How to Set Up Private Dictation on Your Mac</h2>
+    <h2>How to Set Up Private Dictation on Your Computer</h2>
 
     <p>Getting started with fully private voice-to-text takes about two minutes:</p>
 
     <ol>
-        <li><a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip"><strong>Download Wspr</strong></a> and open it. No account required.</li>
+        <li><a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip"><strong>Download Wspr</strong></a> and open it. No account required. Available on macOS, Windows, and Linux.</li>
         <li>Open Settings and download a Whisper model. Start with <strong>Small</strong> (~460 MB) for the best balance of speed and accuracy.</li>
-        <li>Set your preferred global hotkey (Option+Space by default).</li>
-        <li>For AI rewriting, select <strong>Apple Intelligence</strong> as your provider. This keeps everything on-device.</li>
-        <li>Press your hotkey, speak, and your text appears &mdash; transcribed and polished, without a single byte leaving your Mac.</li>
+        <li>Set your preferred global hotkey (Ctrl+Shift+Space by default).</li>
+        <li>For AI rewriting, add your own API key for OpenAI, Anthropic, or Gemini. Or skip this step to keep everything 100% local.</li>
+        <li>Press your hotkey, speak, and your text appears &mdash; transcribed without a single byte of audio leaving your device.</li>
     </ol>
 
-    <p>The free tier gives you 50 transcriptions to verify that the quality meets your needs. If it does, <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Wspr Pro</a> unlocks unlimited everything for a one-time $14.99 payment.</p>
+    <p>The free tier gives you 50 transcriptions to verify that the quality meets your needs. If it does, <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Wspr Pro</a> unlocks unlimited everything for a one-time $14.99 purchase via Polar.sh.</p>
 
     <div class="cta-buttons" style="margin-top: 40px;">
         <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip" class="hero-cta">

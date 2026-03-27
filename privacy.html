@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Wspr</title>
-    <meta name="description" content="Wspr's privacy policy. All speech transcription happens on your Mac. No data collection, no tracking, no cloud audio processing. Your audio never leaves your device.">
+    <meta name="description" content="Wspr's privacy policy. All speech transcription happens on your device. No data collection, no tracking, no cloud audio processing. Your audio never leaves your computer.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getwspr.com/privacy.html">
 
     <meta property="og:title" content="Privacy Policy — Wspr">
-    <meta property="og:description" content="Wspr processes everything on your Mac. No servers, no analytics, no tracking.">
+    <meta property="og:description" content="Wspr processes everything on your device. No servers, no analytics, no tracking.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://getwspr.com/privacy.html">
 
@@ -41,7 +41,7 @@
 
 <main class="page-container">
     <h1>Privacy Policy</h1>
-    <p class="page-updated">Last updated: March 1, 2026</p>
+    <p class="page-updated">Last updated: March 27, 2026</p>
 
     <p>Wspr is designed with privacy as a core principle. This policy explains how the app handles your data.</p>
 
@@ -49,30 +49,29 @@
     <p>Wspr does not collect, store, or transmit any personal data to us. We have no servers, no analytics, no crash reporting, and no user accounts.</p>
 
     <h2>Audio Processing</h2>
-    <p>All speech-to-text transcription is performed entirely on your Mac using WhisperKit and the Apple Neural Engine. Your audio recordings are processed locally and are never sent to any external server. Temporary audio files are deleted immediately after transcription.</p>
+    <p>All speech-to-text transcription is performed entirely on your device using whisper.cpp with GPU acceleration. Your audio recordings are processed locally and are never sent to any external server. Temporary audio files are deleted immediately after transcription.</p>
 
     <h2>AI Text Rewriting</h2>
     <p>Wspr offers optional AI text rewriting through:</p>
     <ul>
-        <li><strong>Apple Intelligence</strong> — Processed on-device by macOS. No data leaves your Mac.</li>
         <li><strong>Cloud AI providers (OpenAI, Anthropic, Google Gemini)</strong> — If you choose to use a cloud provider, your transcribed text is sent directly from your device to the provider's API using your own API key. Wspr does not route this data through any intermediary server. Your use of these services is subject to the respective provider's privacy policy.</li>
     </ul>
 
     <h2>API Keys</h2>
-    <p>API keys you enter for cloud AI providers are stored securely in your Mac's Keychain. They are never transmitted to us or any third party. They are used solely to authenticate your requests directly with the AI provider you selected.</p>
+    <p>API keys you enter for cloud AI providers are stored securely in your system's credential store (macOS Keychain, Windows Credential Manager, or Linux Secret Service). They are never transmitted to us or any third party. They are used solely to authenticate your requests directly with the AI provider you selected.</p>
 
     <h2>Local Storage</h2>
-    <p>Wspr stores the following data locally on your Mac:</p>
+    <p>Wspr stores the following data locally on your device:</p>
     <ul>
-        <li>App preferences and settings (via UserDefaults)</li>
+        <li>App preferences and settings (config.json)</li>
         <li>Transcription history (stored locally)</li>
-        <li>Usage counts for the free tier (via UserDefaults)</li>
-        <li>Whisper models you download (in Application Support)</li>
+        <li>Usage counts for the free tier</li>
+        <li>Whisper models you download</li>
     </ul>
     <p>None of this data is transmitted off your device.</p>
 
     <h2>In-App Purchases</h2>
-    <p>Purchases are handled entirely by Apple through the App Store. We do not process or have access to your payment information.</p>
+    <p>Purchases are handled through Polar.sh. We do not process or have access to your payment information. License keys are delivered via email and activated in the app.</p>
 
     <h2>Third-Party Services</h2>
     <p>Wspr does not include any third-party analytics, advertising, or tracking SDKs.</p>
