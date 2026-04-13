@@ -1,0 +1,15 @@
+{
+  "version": "5.0.1",
+  "notes": "Auto-updater test release.",
+  "pub_date": "2026-04-13T01:54:52Z",
+  "platforms": {
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3F6WG80T1dJazZJSE93bURTVDU3eUl5VzRYMFE3bno4cktPZjV2dGZwU2xUZlN3eVpJMU1IL2xGMXJUa052UWZzVFdsMG1YOHVUdVNjUnpQZFJGOUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MDQ1MjgxCWZpbGU6V3Nwcl81LjAuMV9hbWQ2NC5BcHBJbWFnZQp4WFQzMjlhamJ2WmI2MW9hOWtkS3BPeDczdloyRytHa3FTTlJDQnlCVjZEQ0xValFQUEVKUGgyeVZnWUEzT3hXQUFoaXE1ZXJlaFYzYldsaUw1dk9DZz09Cg==",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.1/Wspr_5.0.1_amd64.AppImage"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3Y5aDMzK2Y0U1FvekZVczBSU25GQXRBUG9CajIxbGR6SjhOMWI4OURBcTlySXZWdGRJTUh1Ti9iTnRuZHRBMXo0ZDVKWldTQ0UvK1ZMNEJQaWVxSHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MDQ1MjI1CWZpbGU6V3Nwci5hcHAudGFyLmd6Cmo4ZlFxQVV6TUNSaERBejB6S2prRVM2SkZhOVh3MTRhSGU5QlVEM1RwbStCeFlvUUJQNnVlb1I1Wk40Q285TkFXSVlPSFgwRnM0NkJCdDBiVmtqNkNnPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.1/Wspr.app.tar.gz"
+    }
+  }
+}
