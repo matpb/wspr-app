@@ -1,19 +1,22 @@
 {
-  "version": "5.0.2",
-  "notes": "Auto-update check + Check for Updates menu item.",
-  "pub_date": "2026-04-13T02:05:32Z",
+  "version": "5.0.3",
+  "notes": "",
+  "pub_date": "2026-04-14T19:21:33Z",
   "platforms": {
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2dEaEMzaW8ya2lFdzdkTlFNQUtibnBscjZyM3ZiOUZ0bENVQU4ya2ZDVnZ5OWR1L2IvNXZSdTJZcnZYVWpLOTcxcHdtYnlrV2dIMUtCQm0vYndlQ2c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MDQ1OTE4CWZpbGU6V3Nwcl81LjAuMl9hbWQ2NC5BcHBJbWFnZQpqVzlXTmdYOUdXcGhOS2RHTUY4eExkZy9KMWpmS1dQa0Z2WUlickt1aFRrcUJGMThLbVAyQTZKdkNhYXBJeXp2dSt5b1BnUG1VeWhNVkdzVlphR1pBQT09Cg==",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.2/Wspr_5.0.2_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a245SUpzdHBVNUxSMVM3eDZiNnNsUVFpd2w4NjAwSWdXZTBBTnVBSzZ6c2t0Y3pzbHUrbTNmYXBUWnFlaHAxVzBuaVpzcGUwdzFWeWpIcHFOYkEyRkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkyCWZpbGU6V3Nwcl81LjAuM19hbWQ2NC5BcHBJbWFnZQpubzBYbUxCMWpMT3RpZmRyNnA4ZGZkbnhQc0NOMURlOUp5d3Bpb0ZSaGtnSXlTQzFtK2d3bm9rK25Nb2lyT3g1SThMYnY0YzRxTWl2WGNWN3dJT0pDZz09Cg==",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_amd64.AppImage"
     },
     "linux-x86_64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3FMMi90bmRybEdUS3RBMkl1UEJDU3FHV05lWExNM0dNM2FlbzVyL2NjbDB6ZVo2TkdaOWRERUpzcHArMHdxRWZab1U3UzdFUkw1OVF6K2RraFRLS3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MDQ2NzE1CWZpbGU6V3Nwcl81LjAuMl9hbWQ2NC5kZWIKbG9seUxDamtPeGE2Q0Yxa3NoOHlacWJLaVNEYnRiTWY1RkgvUG5zbEF6Zlh5TTNXdHFBMUVvVHMwZ2F6bWc2akR1UUxZUFgxNHg4Tkc1bndGR3ZGQ1E9PQo=",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.2/Wspr_5.0.2_amd64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3VuMDVMQ3RPZkdqTU1xSnphQVE5U3QvSEo5Q2tFOEV6SjJzckpHQkNiUUFZeFI1TVZRWXBRZTc3VnVoWDNEazNhcS8wcndkOFA0S1pHQVhoZ2xxOWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkyCWZpbGU6V3Nwcl81LjAuM19hbWQ2NC5kZWIKQUF4U0JDTFdOR2RhM2V3VW9WTmViZXFSbUJzREt1RFVDSVJYTkR0dzNUMldOSzNlUGVrUlZHTnJOQUZ1QndTMk9tUCthS0oyeE9SR1ZpeWRMQkFNQmc9PQo=",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_amd64.deb"
+    },    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3VoRi8vQ0M5SVRzdmhVdHJFZklzOXJaQmdOU2NBUkNZTFR4ZnVKR016cHBxekJ3OHFZYXBRNTJiUW44cW9kUDQxdFdFQTRtbGxUSm0vRnVMM2R4V3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkyCWZpbGU6V3Nwci5hcHAudGFyLmd6Ck4xQ1RQVWovMXhrUmhoVE9KaXFGSzZQVDFPc2l3OXpaOHV3R1h4RHVMRHpaM3dhdFR0TGxLUzl5UWlWQ1dCNzlqYlNSWENVQ3NGL0ZLV2VCVFhqSEJBPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr.app.tar.gz"
     },
-    "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2t0ejZYZXhvY0JUUjFoQnJIZDREMWgrTGlQN2lNcjJ3UzdwOGQwekdYeEMwQk5WTUxHTEVpakRHNzFkeCtuK3pPcVBIKzhwWlpFQWtFYkR5eEtvUUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MDQ1ODc1CWZpbGU6V3Nwci5hcHAudGFyLmd6Cnh1RnNteHkzWllVc0hsSjRvcWNCYm9zd2xzN1EvTnlPMldOaXBGdFdDaVl5a1BFNXR2S0NwSkc4cXBhejBKZmNoSGRLWGFMZDBQUmR5YXJHTUltRUR3PT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.2/Wspr.app.tar.gz"
+    windows-x86_64: {
+      signature: dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3ExSVdqTnhtZENaVlpqeXlhTEZMK0M5cmw0MUhYbS9Da0FsM2xCd2xSNVBpb0cvQmRGcTBndU9PNXJ4ZWYvYTFFa3VjUU9rUDRQTjdLMTVUWDM0VkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkzCWZpbGU6V3Nwcl81LjAuM194NjQtc2V0dXAuZXhlCndvcklZMVpUd0tReVN6YjcvaUhnUWNCVmRsdWcyM3dCSVV5cDFSM0FQRjYyMEdNMFZMb0I4UVRSSkFjcHhuWUtRS3pzcnBFaTROQm1FcE9uNlFOYkJBPT0K,
+      url: https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_x64-setup.exe
     }
   }
 }
