@@ -10,13 +10,14 @@
     "linux-x86_64-deb": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3VuMDVMQ3RPZkdqTU1xSnphQVE5U3QvSEo5Q2tFOEV6SjJzckpHQkNiUUFZeFI1TVZRWXBRZTc3VnVoWDNEazNhcS8wcndkOFA0S1pHQVhoZ2xxOWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkyCWZpbGU6V3Nwcl81LjAuM19hbWQ2NC5kZWIKQUF4U0JDTFdOR2RhM2V3VW9WTmViZXFSbUJzREt1RFVDSVJYTkR0dzNUMldOSzNlUGVrUlZHTnJOQUZ1QndTMk9tUCthS0oyeE9SR1ZpeWRMQkFNQmc9PQo=",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_amd64.deb"
-    },    "darwin-aarch64": {
+    },
+    "darwin-aarch64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3VoRi8vQ0M5SVRzdmhVdHJFZklzOXJaQmdOU2NBUkNZTFR4ZnVKR016cHBxekJ3OHFZYXBRNTJiUW44cW9kUDQxdFdFQTRtbGxUSm0vRnVMM2R4V3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkyCWZpbGU6V3Nwci5hcHAudGFyLmd6Ck4xQ1RQVWovMXhrUmhoVE9KaXFGSzZQVDFPc2l3OXpaOHV3R1h4RHVMRHpaM3dhdFR0TGxLUzl5UWlWQ1dCNzlqYlNSWENVQ3NGL0ZLV2VCVFhqSEJBPT0K",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr.app.tar.gz"
     },
-    windows-x86_64: {
-      signature: dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3ExSVdqTnhtZENaVlpqeXlhTEZMK0M5cmw0MUhYbS9Da0FsM2xCd2xSNVBpb0cvQmRGcTBndU9PNXJ4ZWYvYTFFa3VjUU9rUDRQTjdLMTVUWDM0VkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkzCWZpbGU6V3Nwcl81LjAuM194NjQtc2V0dXAuZXhlCndvcklZMVpUd0tReVN6YjcvaUhnUWNCVmRsdWcyM3dCSVV5cDFSM0FQRjYyMEdNMFZMb0I4UVRSSkFjcHhuWUtRS3pzcnBFaTROQm1FcE9uNlFOYkJBPT0K,
-      url: https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_x64-setup.exe
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3ExSVdqTnhtZENaVlpqeXlhTEZMK0M5cmw0MUhYbS9Da0FsM2xCd2xSNVBpb0cvQmRGcTBndU9PNXJ4ZWYvYTFFa3VjUU9rUDRQTjdLMTVUWDM0VkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2MTk0NDkzCWZpbGU6V3Nwcl81LjAuM194NjQtc2V0dXAuZXhlCndvcklZMVpUd0tReVN6YjcvaUhnUWNCVmRsdWcyM3dCSVV5cDFSM0FQRjYyMEdNMFZMb0I4UVRSSkFjcHhuWUtRS3pzcnBFaTROQm1FcE9uNlFOYkJBPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.0.3/Wspr_5.0.3_x64-setup.exe"
     }
   }
 }
