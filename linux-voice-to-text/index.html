@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-to-Text for Linux in 2026: The Missing Dictation App for GNOME, KDE, Hyprland &amp; More</title>
+    <meta name="description" content="Linux has almost no good native dictation apps — until now. Wspr runs Whisper on-device with GPU acceleration on Ubuntu, Fedora, Arch, Pop!_OS, and any x86_64 Linux desktop. $14.99 once, private, offline, 99 languages.">
+    <meta name="keywords" content="linux voice to text, linux dictation app, speech to text linux, voice typing linux, ubuntu voice to text, fedora dictation, arch linux dictation, gnome voice to text, kde dictation, pop os voice to text, whisper linux, offline dictation linux">
+    <meta name="author" content="Mathieu-Philippe Bourgeois">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getwspr.com/linux-voice-to-text/">
+
+    <meta property="og:title" content="Voice-to-Text for Linux in 2026: Finally, a Real Dictation App">
+    <meta property="og:description" content="Wspr brings on-device Whisper-powered dictation to Linux — works on Ubuntu, Fedora, Arch, Pop!_OS, and more. $14.99 once, no cloud, no subscription.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getwspr.com/linux-voice-to-text/">
+    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:site_name" content="Wspr">
+    <meta property="article:published_time" content="2026-04-16">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Voice-to-Text for Linux in 2026">
+    <meta name="twitter:description" content="On-device Whisper dictation for any x86_64 Linux desktop. One-time purchase.">
+    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Voice-to-Text for Linux in 2026: The Missing Dictation App",
+        "description": "How to get on-device, private, subscription-free voice-to-text working on Linux desktops in 2026.",
+        "datePublished": "2026-04-16",
+        "author": {
+            "@type": "Person",
+            "name": "Mathieu-Philippe Bourgeois"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Wspr",
+            "url": "https://getwspr.com"
+        },
+        "mainEntityOfPage": "https://getwspr.com/linux-voice-to-text/"
+    }
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="page-container article-container">
+    <p class="article-date">Updated April 16, 2026</p>
+    <h1>Voice-to-Text for Linux in 2026</h1>
+    <p class="article-subtitle">Linux has been the forgotten platform for dictation for two decades. Here's where things actually stand in 2026 — and how to get modern, on-device, Whisper-powered voice typing working on any Linux desktop.</p>
+
+    <p>If you've tried to set up dictation on Linux in the past, you know the story. The desktop ecosystem has always trailed macOS and Windows on accessibility tooling, and voice input has been the most glaring gap. The options have historically been: wrestle with half-abandoned open-source projects, run a cloud service that sends every word to someone else's server, or just give up and type.</p>
+
+    <p>In 2026, that's finally changing. Whisper-class models are small enough to run on consumer laptops, whisper.cpp has matured into a production-ready inference engine, and GPU acceleration is available on basically every modern Linux machine via Vulkan and CUDA. The pieces all exist &mdash; they just hadn't been packaged into a real desktop app. Now they have.</p>
+
+    <h2>The State of Dictation on Linux</h2>
+
+    <p>Historically, Linux users looking for voice input have had three rough options, none of them great:</p>
+
+    <ul>
+        <li><strong>DIY open-source stacks</strong> like nerd-dictation, wtype scripts around whisper.cpp, or Vosk-based tools. These can work well for a tinkerer, but they're CLI-first, require manual setup per desktop environment, and don't give you a packaged app with a UI.</li>
+        <li><strong>Cloud APIs</strong> like the OpenAI Whisper API or Google Speech-to-Text, wrapped in custom scripts. Accurate, but your audio leaves your machine and you pay per minute.</li>
+        <li><strong>Desktop-built-in accessibility tools</strong>. Useful for some workflows but typically limited in accuracy, languages, and customization.</li>
+    </ul>
+
+    <p>What's been missing is a packaged, installable desktop app that runs Whisper locally with GPU acceleration, has a proper UI, and Just Works on a modern Linux install. That's the gap Wspr is built to fill.</p>
+
+    <h2>Why Linux Has Been Underserved</h2>
+
+    <p>Three structural reasons:</p>
+
+    <p><strong>Market size.</strong> Commercial dictation vendors (Dragon, Wispr Flow, Superwhisper, MacWhisper) build for Mac, Windows, and in some cases mobile &mdash; because that's where the paying users are. Linux is a rounding error on their revenue spreadsheet, so it stays unsupported.</p>
+
+    <p><strong>Desktop fragmentation.</strong> GNOME, KDE Plasma, Hyprland, Sway, XFCE, Cinnamon &mdash; same kernel, six different ways to paste text into the focused window. Any serious Linux dictation tool has to handle X11 and Wayland, ibus and fcitx, xdotool and wtype. It's non-trivial and most vendors don't bother.</p>
+
+    <p><strong>Audio stack churn.</strong> ALSA, PulseAudio, PipeWire &mdash; capturing microphone input on Linux has been a moving target for years. PipeWire finally stabilized that in 2023-2024, which is part of why this kind of app is feasible now.</p>
+
+    <h2>What Wspr Does on Linux</h2>
+
+    <p>Wspr is a native Linux app. It runs the same whisper.cpp engine as on macOS and Windows, with GPU acceleration where available and CPU fallback when it isn't.</p>
+
+    <p>The user flow on Linux is the same as everywhere else:</p>
+
+    <ol>
+        <li>Press your configured global hotkey.</li>
+        <li>Speak.</li>
+        <li>Release the hotkey. Wspr transcribes locally and pastes into the focused window.</li>
+        <li>Optionally trigger an AI rewrite &mdash; "make this a bullet list", "translate to French", "fix grammar" &mdash; routed to OpenAI, Anthropic, or Gemini using your own API key.</li>
+    </ol>
+
+    <p>It also does file transcription: drop an audio or video file in, get a transcript out. Good for meeting recordings, voice memos, and podcast clips.</p>
+
+    <h2>Distro and Desktop Support</h2>
+
+    <p>Wspr ships as a Linux build for x86_64 systems. It's been validated on mainstream distros including Ubuntu and its derivatives &mdash; other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior.</p>
+
+    <p>Both X11 and Wayland sessions are supported. PipeWire is used for audio capture. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue and we'll look at it.</p>
+
+    <h2>Privacy: This Is the Part Linux Users Care About</h2>
+
+    <p>A big reason people use Linux in the first place is because they don't want a vendor-controlled pipe between them and their computer. A dictation app that streams every word to a cloud service undoes that in one install.</p>
+
+    <p>Wspr never sends audio anywhere. The Whisper model lives on your disk, runs on your GPU, and produces text that's pasted directly into your focused application. No telemetry, no account, no cloud dependency for core transcription. AI rewriting is the only step that optionally calls out to a provider &mdash; and only the text you explicitly rewrite, using your own API key, routed directly from your machine to the provider you chose.</p>
+
+    <h2>Performance</h2>
+
+    <p>Whisper "small" and "medium" models run comfortably in real-time on a mid-range Linux laptop with integrated graphics. On a discrete GPU, you can run "large-v3" and get near-instant transcription of multi-minute recordings. Wspr downloads models on first run; you pick the one that fits your hardware.</p>
+
+    <h2>Pricing</h2>
+
+    <p>$14.99. Once. That's the whole pricing page.</p>
+
+    <p>No subscription, no account, no tiered "Pro" that gates normal functionality. The free download includes 50 live transcriptions so you can actually test that it works on your exact setup before paying. Pro is a one-time unlock that removes the cap &mdash; and removes it forever.</p>
+
+    <h2>Try It</h2>
+
+    <p>Linux has needed a real dictation app for a long time. Wspr is that app. It's private, it runs Whisper locally with GPU acceleration where available, and it costs $14.99 once. Grab the free build and see if it fits your workflow.</p>
+
+    <div class="cta-buttons" style="margin-top: 40px;">
+        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Wspr for Linux
+        </a>
+        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
+            Buy Pro &mdash; $14.99
+        </a>
+    </div>
+
+    <a href="../index.html" class="back-link">&larr; Back to Wspr</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../support.html">Support</a>
+            <a href="../blog/">Blog</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mathieu-Philippe Bourgeois. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

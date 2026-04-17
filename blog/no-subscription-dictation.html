@@ -23,6 +23,14 @@
     <meta name="twitter:description" content="$180/year for dictation vs $14.99 once. The math isn't complicated.">
     <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+
     <link rel="stylesheet" href="../style.css">
 
     <script type="application/ld+json">
@@ -93,7 +101,7 @@
 
     <h2>The Math Is Simple</h2>
 
-    <p>Let me lay it out plainly.</p>
+    <p>Let me lay it out plainly. These numbers assume the $15/month plan I was on. Wispr Flow's annual plan works out to about $12/month ($144/year) if you pay upfront, so the savings shrink a bit on that path &mdash; but the structural difference stays the same.</p>
 
     <div class="compare-table-wrap">
         <table class="compare-table">
@@ -156,7 +164,7 @@
 
     <p>Wspr runs whisper.cpp with GPU acceleration directly on my computer. No audio goes to the cloud. Transcription happens locally, in real time. For AI rewriting, I use my own OpenAI API key &mdash; the text goes directly to the provider, no middleman. And rewriting is optional; without it, the entire pipeline stays fully offline.</p>
 
-    <p>The accuracy is comparable to what I got from Wispr Flow. Not identical &mdash; they use different models and approaches &mdash; but close enough that I stopped noticing the difference within a week. Wspr also handles file transcription (drag in a meeting recording, get a transcript), which Wispr Flow doesn't offer at all.</p>
+    <p>The accuracy is comparable to what I got from Wispr Flow. Not identical &mdash; they use different models and approaches &mdash; but close enough that I stopped noticing the difference within a week. Wspr also handles file transcription (drag in a meeting recording, get a transcript), which isn't something Wispr Flow advertises.</p>
 
     <p>And it costs $14.99. Once. No subscription. No renewal. No "your trial has expired" pop-ups. I paid less than one month of Wispr Flow and I'm set for life.</p>
 
@@ -166,7 +174,7 @@
 
     <ul>
         <li><strong>Context-aware rewriting.</strong> Wispr Flow's AI reads what's on your screen and adjusts its output to match. If you're in Slack, it writes casually. If you're in a formal email, it writes formally. Wspr's rewriting is style-based (you pick a preset or create your own) rather than context-aware.</li>
-        <li><strong>Platform reach.</strong> Wispr Flow works on Intel Macs because processing happens in the cloud. Wspr requires Apple Silicon on macOS but also runs on Windows and Linux with GPU acceleration.</li>
+        <li><strong>Mobile apps.</strong> Wispr Flow has native iOS and Android apps in addition to Mac and Windows. Wspr is desktop-only &mdash; but it also runs on Linux, which Wispr Flow doesn't.</li>
     </ul>
 
     <p>For me, neither of these was a dealbreaker. I set up a "professional" rewrite style in Wspr for emails and a "minimal" style for messages, which covers 95% of my use.</p>
@@ -188,7 +196,7 @@
     <p>For me, the answer was obvious. I cancelled Wispr Flow the same day I tried Wspr. Eight months later, I haven't missed it.</p>
 
     <div class="cta-buttons" style="margin-top: 40px;">
-        <a href="https://github.com/matpb/wspr-app/releases/download/v3.0.2/Wspr-3.0.2.zip" class="hero-cta">
+        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Try Wspr Free
         </a>

@@ -25,6 +25,14 @@
     <meta name="twitter:description" content="Honest comparison of the top 8 Mac voice-to-text apps.">
     <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+
     <link rel="stylesheet" href="../style.css">
 
     <!-- Article Structured Data -->
@@ -105,26 +113,26 @@
                 </tr>
                 <tr>
                     <td>Wispr Flow</td>
-                    <td>$15/month</td>
+                    <td>$12–$15/month</td>
                     <td>&#10007; (Cloud)</td>
                     <td>Proprietary AI</td>
                     <td>&#10003;</td>
-                    <td>&#10007;</td>
+                    <td>Not advertised</td>
                 </tr>
                 <tr>
                     <td>Superwhisper</td>
-                    <td>~$10/month</td>
+                    <td>Subscription or Lifetime</td>
                     <td>&#10003;</td>
-                    <td>OpenAI</td>
+                    <td>OpenAI, Claude, Gemini, Llama, etc.</td>
                     <td>&#10003;</td>
-                    <td>&#10007;</td>
+                    <td>&#10003;</td>
                 </tr>
                 <tr>
                     <td>MacWhisper</td>
-                    <td>$30–$80 lifetime</td>
+                    <td>$29–$80 lifetime</td>
                     <td>&#10003;</td>
                     <td>ChatGPT, Claude</td>
-                    <td>&#10007;</td>
+                    <td>&#10003;</td>
                     <td>&#10003;</td>
                 </tr>
                 <tr>
@@ -165,31 +173,31 @@
 
     <h2>1. Wspr — Best Value Overall</h2>
     <p><strong>Price:</strong> Free (50 transcriptions) / $14.99 lifetime Pro</p>
-    <p>Wspr is a menu bar app that uses WhisperKit and the Apple Neural Engine for on-device transcription. Press a global hotkey, speak, and your words appear as text in any app. What sets it apart is the combination of features at this price point:</p>
+    <p>Wspr is a cross-platform desktop app that uses whisper.cpp with GPU acceleration to run OpenAI's Whisper models directly on your device. Press a global hotkey, speak, and your words appear as text in the focused app. What sets it apart is the combination of features at this price point:</p>
     <ul>
-        <li>100% on-device transcription — your audio never leaves your Mac</li>
-        <li>Apple Intelligence rewriting — free, on-device (macOS 26+)</li>
-        <li>OpenAI, Anthropic, and Google Gemini support for cloud AI rewriting</li>
+        <li>100% on-device transcription — your audio never leaves your machine</li>
+        <li>Runs on macOS (Apple Silicon), Windows (x64), and Linux (x64)</li>
+        <li>OpenAI, Anthropic, and Google Gemini support for AI rewriting with your own API key</li>
         <li>Custom rewrite styles and vocabulary hints</li>
         <li>File transcription (MP3, WAV, MP4, MOV, etc.)</li>
         <li>99 languages with auto-detection</li>
     </ul>
     <p><strong>Verdict:</strong> The most feature-complete option at the lowest price. One month of Wispr Flow costs the same as a lifetime of Wspr.</p>
 
-    <h2>2. Wispr Flow — Best for Enterprise</h2>
-    <p><strong>Price:</strong> Free (2,000 words/week) / $15/month Pro</p>
-    <p>Wispr Flow is the most well-funded player ($81M raised). It uses proprietary cloud AI for transcription and post-processing, which means higher accuracy for some languages but no offline capability. Best suited for enterprise teams with budget for subscriptions.</p>
-    <p><strong>Pros:</strong> Polished UX, auto-formatting, enterprise features (SSO, HIPAA). <strong>Cons:</strong> Cloud-only, $15/month is steep for individuals, no file transcription.</p>
+    <h2>2. Wispr Flow — Best for Enterprise and Mobile</h2>
+    <p><strong>Price:</strong> Free (2,000 words/week) / $15/mo monthly or $12/mo annual on Pro</p>
+    <p>Wispr Flow is the most well-funded player in the space. It uses proprietary cloud AI for transcription and post-processing, which means higher accuracy for some use cases but no offline capability. Runs natively on Mac, Windows, iOS, and Android — broad coverage if you want dictation on your phone too.</p>
+    <p><strong>Pros:</strong> Polished UX, auto-formatting, enterprise features (SSO, HIPAA), real mobile apps. <strong>Cons:</strong> Cloud-only (every word goes to their servers), subscription pricing, no Linux support, file transcription isn't advertised as a feature.</p>
 
-    <h2>3. Superwhisper — Best Community</h2>
-    <p><strong>Price:</strong> ~$10/month subscription</p>
-    <p>Superwhisper is bootstrapped by Neil Chudleigh and has a passionate community. On-device processing, good customization, active Discord. The subscription model is the main drawback — over a year, you'll pay 8x more than Wspr for similar functionality.</p>
-    <p><strong>Pros:</strong> Active development, strong community, offline. <strong>Cons:</strong> Subscription-based, no Apple Intelligence, no file transcription.</p>
+    <h2>3. Superwhisper — Best Mature On-Device App</h2>
+    <p><strong>Price:</strong> Subscription (Pro) or Lifetime option; see <a href="https://superwhisper.com/">superwhisper.com</a> for current rates</p>
+    <p>Superwhisper is a mature on-device dictation app with a passionate community. Runs transcription locally, supports file transcription on the Pro tier, and includes meeting recording. Works offline. Available on macOS, Windows, and iOS — no Linux build.</p>
+    <p><strong>Pros:</strong> Active development, broad AI provider menu (OpenAI, Claude, Gemini, Llama, Grok, etc.) with your own API key, meeting recording, file transcription, offline-capable, iOS app. <strong>Cons:</strong> Subscription pricing (Lifetime tier costs more up front), no Linux support.</p>
 
     <h2>4. MacWhisper — Best for File Transcription</h2>
-    <p><strong>Price:</strong> Free (basic models) / $30–$80 Pro lifetime</p>
-    <p>MacWhisper by Jordi Bruin excels at batch file transcription — drop audio/video files and get accurate transcripts. It's the tool of choice for podcasters, journalists, and researchers. However, it doesn't do live dictation (real-time voice typing into apps).</p>
-    <p><strong>Pros:</strong> Excellent batch processing, many export formats, one-time purchase. <strong>Cons:</strong> No live dictation, pricier than Wspr, file-focused only.</p>
+    <p><strong>Price:</strong> Free (basic models) / ~$29 on Gumroad, up to ~$79 Pro lifetime on the Mac App Store</p>
+    <p>MacWhisper by Jordi Bruin excels at batch file transcription — drop audio/video files and get accurate transcripts. It's the tool of choice for podcasters, journalists, and researchers. It also includes system-wide dictation, though file transcription remains its strongest feature.</p>
+    <p><strong>Pros:</strong> Excellent batch processing, many export formats, one-time purchase, on-device. <strong>Cons:</strong> macOS only, live-dictation experience is secondary to file work, AI integrations center on OpenAI/Claude.</p>
 
     <h2>5. VoiceInk — Best Open Source</h2>
     <p><strong>Price:</strong> ~$15 (or build from source for free)</p>
