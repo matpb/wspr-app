@@ -368,6 +368,8 @@ footer {
 .footer-links a { color: var(--text-tertiary); font-size: 0.85rem; }
 .footer-links a:hover { color: var(--text); }
 .footer-copy { color: var(--text-tertiary); font-size: 0.85rem; }
+.footer-copy a { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.footer-copy a:hover { color: var(--text); text-decoration-style: solid; }
 
 /* Page styles (privacy, support) */
 .page-container {
