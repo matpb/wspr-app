@@ -195,7 +195,10 @@ a:hover { color: var(--accent-hover); }
 }
 
 .hero-screenshot {
+  display: block;
+  width: 100%;
   max-width: 700px;
+  height: auto;
   margin: 60px auto 0;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 80px rgba(0,113,227,0.15), 0 0 0 1px rgba(255,255,255,0.05);
