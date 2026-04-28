@@ -128,7 +128,9 @@
 
     <p>Wspr ships as a Linux build for x86_64 systems. It's been validated on mainstream distros including Ubuntu and its derivatives &mdash; other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior.</p>
 
-    <p>Both X11 and Wayland sessions are supported. PipeWire is used for audio capture. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue and we'll look at it.</p>
+    <p><strong>Session support, plainly:</strong> X11 sessions are fully supported and tested daily. Wayland sessions running XWayland (the Ubuntu/GNOME/KDE default) work via XWayland — Wspr forces <code>GDK_BACKEND=x11</code> and pastes via <code>xdotool</code> against the XWayland server. <strong>Pure-Wayland setups (Sway, Hyprland with no XWayland) are not supported yet</strong> — paste depends on xdotool today. Native Wayland support (libei / wlr-virtual-keyboard) is on the roadmap.</p>
+
+    <p>Audio capture goes through <code>cpal</code>, which speaks whatever audio system your distro exposes &mdash; PipeWire on modern setups, PulseAudio on older ones. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue and we'll look at it.</p>
 
     <h2>Privacy: This Is the Part Linux Users Care About</h2>
 
