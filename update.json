@@ -10,8 +10,9 @@
     "linux-x86_64-deb": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3Q0clVFSys2THVBUHFFdWlNVXpUd3JhdkhSNkZCY3YzWG92blN5TGZIRFN2K0phSTdmdlpUVnBzTFIzcC9XOExjaENrWGpORnFOdEZUSWNyaVp4d0FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3NDIxNzQ0CWZpbGU6V3Nwcl81LjEuMV9hbWQ2NC5kZWIKK0puNkFiUHJSQXpEWGswQk8yYmJqS1BTcEV2ajNVbXVDRi8zbHNKWEhRMm1ZOCszWXdpcUtsWUxVQVZSTWd2RU1nOWRzL3JoUG5JKzJ1d2hhdjkyRFE9PQo=",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.1/Wspr_5.1.1_amd64.deb"
-    },    "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3NUdS9uUDBlb0pYYmNYM3pDMnlIT0RHSUpRV05QLzFuTjQzemwwRlYvdUNrSVU1R2dMZml2QlpDOVd2Smp2Z2k0RUk5RlFiU2RmRmVmVkQ2d3FTS0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3NDIxNzQ2CWZpbGU6V3Nwci5hcHAudGFyLmd6CkcrT1JVQUwwc240dHVuUXlsRDd1WW5rNzhibVVSMllzbjZlVXVNcFpwSVFIbjRXa1RLOUlLZEcyUUJGV3dRMkJyN2hCNzk4bExMODFOODlWOGtmaUF3PT0K",
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3ZGcVA3UGpEMnA2M0FCd2N5ZG9YQkMxL3FZbER2eHptTVFPR3lNWGFrZ2orbTdWeHJsRys2bjloWjJ3TWdBZ2grcjc5VUYvMVZDeE8wemZmSzlsd3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3NDIzNDM1CWZpbGU6V3Nwci5hcHAudGFyLmd6CmRJYmZRd2d6cVc3VHRCSUY0YVplU3JQcmtJelhrN2pNWmRDUyt1QU85eHpYMFFOa3dyYnpUTi9YYU1PbzZSbmJja1lnU1BsQll5cmpKVm0rVjg4QUR3PT0K",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.1/Wspr.app.tar.gz"
     },
     "windows-x86_64": {
