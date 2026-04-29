@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wspr — Models section illustration (880×660)</title>
+<link rel="stylesheet" href="_card-base.css">
+<style>
+    .card {
+        background:
+            radial-gradient(140% 100% at 75% 15%, rgba(10, 132, 255, 0.18) 0%, rgba(10, 132, 255, 0) 50%),
+            #0a0a0a;
+        padding: 48px 56px;
+    }
+
+    .stage {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 22px;
+    }
+    .header .title {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text);
+    }
+    .header .legend {
+        display: flex;
+        gap: 18px;
+        font-size: 11px;
+        color: var(--tertiary);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+    }
+    .header .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .header .legend .swatch { width: 10px; height: 10px; border-radius: 2px; }
+    .header .legend .speed { background: linear-gradient(90deg, #34c759, #30d158); }
+    .header .legend .acc { background: linear-gradient(90deg, var(--blue-bright), var(--blue)); }
+
+    .models {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex: 1;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 200px 70px 1fr 1fr;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        backdrop-filter: blur(20px);
+    }
+    .row.recommended {
+        background: linear-gradient(90deg, rgba(10, 132, 255, 0.12) 0%, rgba(10, 132, 255, 0.04) 100%);
+        border-color: rgba(10, 132, 255, 0.4);
+        box-shadow: 0 12px 40px rgba(10, 132, 255, 0.15);
+    }
+
+    .row .name {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--text);
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .row .badge {
+        font-size: 10px;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 6px;
+        background: var(--blue);
+        color: #fff;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .row .size {
+        font-size: 13px;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
+    }
+
+    .meter-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .meter {
+        flex: 1;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    }
+    .meter .fill {
+        height: 100%;
+        border-radius: 4px;
+    }
+    .meter.speed .fill { background: linear-gradient(90deg, #34c759, #30d158); box-shadow: 0 0 8px rgba(48, 209, 88, 0.4); }
+    .meter.acc .fill { background: linear-gradient(90deg, var(--blue-bright), var(--blue)); box-shadow: 0 0 8px rgba(10, 132, 255, 0.5); }
+
+    .meter-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--tertiary);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        width: 40px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 13px;
+        color: var(--tertiary);
+    }
+    .footer .right {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-weight: 500;
+    }
+    .footer svg { color: var(--blue-bright); }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="glow blue" style="right:-200px;top:-200px;"></div>
+
+    <div class="stage">
+        <div class="header">
+            <div class="title">5 Whisper models, one click.</div>
+            <div class="legend">
+                <span><span class="swatch speed"></span>Speed</span>
+                <span><span class="swatch acc"></span>Accuracy</span>
+            </div>
+        </div>
+
+        <div class="models">
+            <div class="row">
+                <div class="name">Tiny</div>
+                <div class="size">75 MB</div>
+                <div class="meter-group">
+                    <div class="meter speed"><div class="fill" style="width: 100%;"></div></div>
+                    <span class="meter-label">100%</span>
+                </div>
+                <div class="meter-group">
+                    <div class="meter acc"><div class="fill" style="width: 30%;"></div></div>
+                    <span class="meter-label">30%</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="name">Base</div>
+                <div class="size">140 MB</div>
+                <div class="meter-group">
+                    <div class="meter speed"><div class="fill" style="width: 85%;"></div></div>
+                    <span class="meter-label">85%</span>
+                </div>
+                <div class="meter-group">
+                    <div class="meter acc"><div class="fill" style="width: 50%;"></div></div>
+                    <span class="meter-label">50%</span>
+                </div>
+            </div>
+
+            <div class="row recommended">
+                <div class="name">Small <span class="badge">Recommended</span></div>
+                <div class="size">460 MB</div>
+                <div class="meter-group">
+                    <div class="meter speed"><div class="fill" style="width: 65%;"></div></div>
+                    <span class="meter-label">65%</span>
+                </div>
+                <div class="meter-group">
+                    <div class="meter acc"><div class="fill" style="width: 75%;"></div></div>
+                    <span class="meter-label">75%</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="name">Medium</div>
+                <div class="size">1.5 GB</div>
+                <div class="meter-group">
+                    <div class="meter speed"><div class="fill" style="width: 40%;"></div></div>
+                    <span class="meter-label">40%</span>
+                </div>
+                <div class="meter-group">
+                    <div class="meter acc"><div class="fill" style="width: 90%;"></div></div>
+                    <span class="meter-label">90%</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="name">Large&#x2011;v3</div>
+                <div class="size">3 GB</div>
+                <div class="meter-group">
+                    <div class="meter speed"><div class="fill" style="width: 22%;"></div></div>
+                    <span class="meter-label">22%</span>
+                </div>
+                <div class="meter-group">
+                    <div class="meter acc"><div class="fill" style="width: 100%;"></div></div>
+                    <span class="meter-label">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Pick speed or accuracy. Switch anytime.</span>
+            <span class="right">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                One-click download in-app
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

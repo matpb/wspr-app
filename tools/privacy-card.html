@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wspr — Privacy section illustration (880×660)</title>
+<link rel="stylesheet" href="_card-base.css">
+<style>
+    .card {
+        background:
+            radial-gradient(140% 100% at 75% 15%, rgba(48, 209, 88, 0.18) 0%, rgba(48, 209, 88, 0) 50%),
+            #0a0a0a;
+        padding: 56px 64px;
+    }
+
+    .stage {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* "Cloud blocked" indicator floating top-right */
+    .cloud-blocked {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        color: var(--tertiary);
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .cloud-blocked svg { display: block; }
+    .cloud-blocked .strike {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+    }
+    .cloud-blocked .strike::after {
+        content: '';
+        position: absolute;
+        left: -3px;
+        right: -3px;
+        top: 50%;
+        height: 2px;
+        background: #ff453a;
+        transform: rotate(-20deg);
+        border-radius: 2px;
+    }
+
+    /* Central "device vault" — rounded glass window with audio inside */
+    .vault {
+        margin: 30px auto 0;
+        width: 580px;
+        height: 360px;
+        position: relative;
+        background:
+            radial-gradient(120% 90% at 50% 20%, rgba(48, 209, 88, 0.18) 0%, rgba(48, 209, 88, 0) 60%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.03) 100%);
+        border: 1px solid rgba(48, 209, 88, 0.35);
+        border-radius: 28px;
+        box-shadow:
+            0 0 0 6px rgba(48, 209, 88, 0.06),
+            0 30px 80px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(40px);
+        overflow: hidden;
+    }
+
+    /* Vault title bar */
+    .vault-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .vault-bar .dot.r { background: #ff5f57; }
+    .vault-bar .dot.y { background: #febc2e; }
+    .vault-bar .dot.g { background: #28c840; }
+    .vault-bar .dot { width: 11px; height: 11px; }
+    .vault-bar .label {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--tertiary);
+        margin-right: 36px; /* visual balance with dots */
+    }
+    .vault-bar .lock {
+        position: absolute;
+        right: 18px;
+        top: 13px;
+        color: var(--green);
+        opacity: 0.9;
+    }
+
+    /* Vault inside */
+    .vault-body {
+        padding: 36px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    .mic-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, rgba(48, 209, 88, 0.18), rgba(48, 209, 88, 0.05));
+        border: 1px solid rgba(48, 209, 88, 0.35);
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        box-shadow: 0 0 40px rgba(48, 209, 88, 0.25);
+    }
+    .waveform {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 80px;
+    }
+    .waveform .bar {
+        width: 8px;
+        border-radius: 4px;
+        background: linear-gradient(180deg, #34de60 0%, #1f9c41 100%);
+        box-shadow: 0 0 12px rgba(48, 209, 88, 0.5);
+    }
+    .vault-caption {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
+        letter-spacing: -0.015em;
+    }
+    .vault-caption span { color: var(--green); }
+
+    /* Bottom chip row */
+    .chips {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: auto;
+        padding-top: 36px;
+    }
+    .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 500;
+    }
+    .chip svg { display: block; color: var(--green); }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="glow green" style="left:-200px;top:-200px;"></div>
+
+    <div class="stage">
+        <!-- Floating "no cloud" indicator -->
+        <div class="cloud-blocked">
+            <span class="strike">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </span>
+            no cloud
+        </div>
+
+        <!-- Central device "vault" -->
+        <div class="vault">
+            <div class="vault-bar">
+                <span class="dot r"></span>
+                <span class="dot y"></span>
+                <span class="dot g"></span>
+                <span class="label">your device</span>
+                <svg class="lock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+            </div>
+            <div class="vault-body">
+                <div class="mic-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="2" width="6" height="13" rx="3"/>
+                        <path d="M19 11a7 7 0 0 1-14 0"/>
+                        <line x1="12" y1="18" x2="12" y2="22"/>
+                    </svg>
+                </div>
+                <div class="waveform">
+                    <div class="bar" style="height: 24px;"></div>
+                    <div class="bar" style="height: 48px;"></div>
+                    <div class="bar" style="height: 64px;"></div>
+                    <div class="bar" style="height: 76px;"></div>
+                    <div class="bar" style="height: 56px;"></div>
+                    <div class="bar" style="height: 38px;"></div>
+                    <div class="bar" style="height: 60px;"></div>
+                    <div class="bar" style="height: 72px;"></div>
+                    <div class="bar" style="height: 50px;"></div>
+                    <div class="bar" style="height: 30px;"></div>
+                    <div class="bar" style="height: 44px;"></div>
+                    <div class="bar" style="height: 64px;"></div>
+                    <div class="bar" style="height: 32px;"></div>
+                    <div class="bar" style="height: 22px;"></div>
+                </div>
+                <div class="vault-caption">Audio stays <span>on your device.</span></div>
+            </div>
+        </div>
+
+        <!-- Bottom chips -->
+        <div class="chips">
+            <div class="chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                100% local
+            </div>
+            <div class="chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No accounts
+            </div>
+            <div class="chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Zero tracking
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

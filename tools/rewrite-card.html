@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wspr — AI Rewrite section illustration (880×660)</title>
+<link rel="stylesheet" href="_card-base.css">
+<style>
+    .card {
+        background:
+            radial-gradient(140% 100% at 25% 15%, rgba(255, 159, 10, 0.18) 0%, rgba(255, 159, 10, 0) 50%),
+            radial-gradient(120% 80% at 80% 85%, rgba(191, 90, 242, 0.12) 0%, rgba(191, 90, 242, 0) 50%),
+            #0a0a0a;
+        padding: 56px 48px;
+    }
+
+    .stage {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .pair {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        position: relative;
+    }
+
+    .bubble {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        padding: 24px 26px;
+        backdrop-filter: blur(40px);
+        position: relative;
+    }
+    .bubble.before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+    }
+    .bubble.after {
+        background: linear-gradient(180deg, rgba(255, 159, 10, 0.10) 0%, rgba(255, 159, 10, 0.03) 100%);
+        border-color: rgba(255, 159, 10, 0.28);
+        box-shadow: 0 20px 60px rgba(255, 159, 10, 0.12);
+    }
+
+    .bubble-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    .bubble.before .bubble-tag {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+    }
+    .bubble.after .bubble-tag {
+        background: rgba(255, 159, 10, 0.16);
+        color: var(--orange);
+    }
+
+    .bubble-text {
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--text);
+        font-weight: 400;
+    }
+    .bubble.before .bubble-text {
+        color: var(--muted);
+    }
+    .bubble.before .bubble-text s {
+        text-decoration: line-through;
+        text-decoration-color: rgba(255, 69, 58, 0.7);
+        color: var(--tertiary);
+    }
+    .bubble.before .filler {
+        color: var(--tertiary);
+        font-style: italic;
+    }
+    .bubble.after .bubble-text { font-weight: 500; }
+
+    /* Center arrow with sparkle */
+    .arrow {
+        position: relative;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), #ff6a00);
+        box-shadow: 0 0 60px rgba(255, 159, 10, 0.55), 0 8px 30px rgba(255, 106, 0, 0.4);
+        color: #0a0a0a;
+    }
+    .arrow svg { display: block; }
+    .arrow .sparkle {
+        position: absolute;
+        color: var(--orange);
+        filter: drop-shadow(0 0 8px rgba(255, 159, 10, 0.6));
+    }
+    .arrow .sparkle.s1 { top: -10px; right: -8px; }
+    .arrow .sparkle.s2 { bottom: -6px; left: -10px; }
+
+    /* Bottom: style chips + provider row */
+    .footer {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .styles {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .style-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+    }
+    .style-chip.active {
+        background: rgba(255, 159, 10, 0.14);
+        border-color: rgba(255, 159, 10, 0.36);
+        color: var(--orange);
+    }
+    .style-chip .dot { width: 6px; height: 6px; }
+    .style-chip.active .dot { background: var(--orange); box-shadow: 0 0 8px rgba(255, 159, 10, 0.6); }
+    .style-chip:not(.active) .dot { background: rgba(255, 255, 255, 0.3); }
+
+    .providers {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        color: var(--tertiary);
+        font-weight: 500;
+    }
+    .providers .label { letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; }
+    .provider-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 12.5px;
+        font-weight: 500;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="glow orange" style="left:-200px;top:-300px;"></div>
+
+    <div class="stage">
+        <div class="pair">
+            <div class="bubble before">
+                <span class="bubble-tag">Raw transcript</span>
+                <p class="bubble-text">
+                    <span class="filler">um,</span> so like <s>i think</s> the meeting <s>uh</s> is at <s>three</s> 3 PM <s>tomorrow tomorrow</s> tomorrow <span class="filler">you know</span>
+                </p>
+            </div>
+
+            <div class="arrow">
+                <svg class="sparkle s1" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+                <svg class="sparkle s2" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z"/></svg>
+            </div>
+
+            <div class="bubble after">
+                <span class="bubble-tag">Polished</span>
+                <p class="bubble-text">The meeting is at 3 PM tomorrow.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="styles">
+                <div class="style-chip active"><span class="dot"></span>Professional</div>
+                <div class="style-chip"><span class="dot"></span>Minimal</div>
+                <div class="style-chip"><span class="dot"></span>Concise</div>
+                <div class="style-chip"><span class="dot"></span>Custom</div>
+            </div>
+            <div class="providers">
+                <span class="label">Powered by your key:</span>
+                <span class="provider-pill">OpenAI</span>
+                <span class="provider-pill">Anthropic</span>
+                <span class="provider-pill">Gemini</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

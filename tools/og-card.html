@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wspr — OG Card (1200×630)</title>
+<style>
+    :root {
+        --bg: #0a0a0a;
+        --bg-2: #111;
+        --blue: #0071e3;
+        --blue-glow: #0a84ff;
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --card-w: 1200px;
+        --card-h: 630px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+        background: #1c1c1e;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body { padding: 0; margin: 0; }
+
+    /* Card sits at 0,0 so a 1200x630 headless screenshot captures it cleanly.
+       Instructions appear below the card for humans browsing the file. */
+    .instructions {
+        max-width: var(--card-w);
+        margin: 24px auto;
+        color: #999;
+        font-size: 13px;
+        line-height: 1.6;
+        padding: 12px 18px;
+        border-radius: 8px;
+        background: #2c2c2e;
+    }
+    .instructions code {
+        background: #000;
+        color: #f5f5f7;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 12px;
+        word-break: break-all;
+    }
+
+    .card {
+        width: var(--card-w);
+        height: var(--card-h);
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(120% 90% at 80% 10%, #0a3a8a 0%, #061a3f 35%, var(--bg) 70%);
+        display: grid;
+        grid-template-rows: 80px 1fr 80px;
+        padding: 48px 72px;
+        gap: 28px;
+    }
+
+    /* Soft blue halo behind headline */
+    .glow {
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        left: -200px;
+        top: -200px;
+        background: radial-gradient(circle, rgba(10, 132, 255, 0.35) 0%, rgba(10, 132, 255, 0) 60%);
+        filter: blur(20px);
+        pointer-events: none;
+    }
+    .glow-2 {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        right: -100px;
+        bottom: -200px;
+        background: radial-gradient(circle, rgba(0, 113, 227, 0.25) 0%, rgba(0, 113, 227, 0) 60%);
+        filter: blur(20px);
+        pointer-events: none;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+        z-index: 2;
+        align-self: start;
+    }
+    .top svg { display: block; }
+    .wordmark {
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text);
+    }
+
+    .middle {
+        position: relative;
+        z-index: 2;
+        align-self: center;
+    }
+
+    .headline {
+        font-size: 88px;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        line-height: 0.98;
+        color: var(--text);
+        margin-bottom: 22px;
+    }
+    .headline .accent {
+        background: linear-gradient(90deg, #0a84ff 0%, #5ac8fa 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .subtitle {
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+        color: var(--muted);
+        max-width: 900px;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        align-self: end;
+    }
+
+    .platforms {
+        display: flex;
+        gap: 14px;
+    }
+    .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        font-size: 19px;
+        font-weight: 500;
+        color: var(--text);
+        backdrop-filter: blur(12px);
+    }
+    .pill svg { display: block; }
+
+    .price-tag {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 14px 24px;
+        background: var(--blue);
+        border-radius: 14px;
+        font-weight: 600;
+        color: #fff;
+        box-shadow: 0 10px 40px rgba(10, 132, 255, 0.45);
+    }
+    .price-tag .price { font-size: 24px; letter-spacing: -0.01em; }
+    .price-tag .price-meta { font-size: 16px; opacity: 0.85; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="card" id="card">
+    <div class="glow"></div>
+    <div class="glow-2"></div>
+
+    <!-- Top: wordmark -->
+    <div class="top">
+        <svg width="56" height="56" viewBox="0 0 80 80" fill="none">
+            <rect x="8" y="30" width="9" height="20" rx="4.5" fill="#0a84ff"/>
+            <rect x="22" y="16" width="9" height="48" rx="4.5" fill="#0a84ff"/>
+            <rect x="36" y="8" width="9" height="64" rx="4.5" fill="#0a84ff"/>
+            <rect x="50" y="18" width="9" height="44" rx="4.5" fill="#0a84ff"/>
+            <rect x="64" y="32" width="9" height="16" rx="4.5" fill="#0a84ff"/>
+        </svg>
+        <span class="wordmark">Wspr</span>
+    </div>
+
+    <!-- Middle: headline + subtitle -->
+    <div class="middle">
+        <h1 class="headline">Voice to Text,<br><span class="accent">Privately.</span></h1>
+        <p class="subtitle">On-device speech transcription for macOS, Windows &amp; Linux. No cloud. No accounts.</p>
+    </div>
+
+    <!-- Bottom: platforms + price -->
+    <div class="bottom">
+        <div class="platforms">
+            <div class="pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></svg>
+                macOS
+            </div>
+            <div class="pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></svg>
+                Windows
+            </div>
+            <div class="pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#0a0a0a"/><circle cx="13.6" cy="6" r="1.1" fill="#0a0a0a"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></svg>
+                Linux
+            </div>
+        </div>
+
+        <div class="price-tag">
+            <span class="price">$14.99</span>
+            <span class="price-meta">one-time · no subscription</span>
+        </div>
+    </div>
+</div>
+
+<div class="instructions">
+    <strong>Render to PNG (1200×630):</strong>
+    <code>google-chrome --headless --window-size=1200,630 --hide-scrollbars --virtual-time-budget=3000 --screenshot=images/og-card.png file://$PWD/og-card.html</code>
+    &nbsp;The card sits at 0,0 so a 1200×630 window captures it perfectly.
+</div>
+
+</body>
+</html>

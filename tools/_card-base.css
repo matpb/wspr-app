@@ -1,0 +1,66 @@
+/* Shared design tokens for the three section illustrations.
+   Matches getwspr.com brand: pure black, Apple-blue accent, SF Pro typography. */
+:root {
+    --bg: #0a0a0a;
+    --text: #f5f5f7;
+    --muted: #a1a1a6;
+    --tertiary: #6e6e73;
+    --card: rgba(255, 255, 255, 0.045);
+    --card-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --blue: #0071e3;
+    --blue-bright: #0a84ff;
+    --green: #30d158;
+    --orange: #ff9f0a;
+    --purple: #bf5af2;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: var(--bg); }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+.card {
+    width: 880px;
+    height: 660px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.glow {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    filter: blur(20px);
+    pointer-events: none;
+    z-index: 0;
+}
+.glow.tl { left: -250px; top: -250px; }
+.glow.br { right: -250px; bottom: -250px; }
+.glow.green { background: radial-gradient(circle, rgba(48, 209, 88, 0.25) 0%, rgba(48, 209, 88, 0) 60%); }
+.glow.orange { background: radial-gradient(circle, rgba(255, 159, 10, 0.22) 0%, rgba(255, 159, 10, 0) 60%); }
+.glow.blue { background: radial-gradient(circle, rgba(10, 132, 255, 0.28) 0%, rgba(10, 132, 255, 0) 60%); }
+
+.layer { position: relative; z-index: 1; }
+
+/* Reusable glass surface */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(40px);
+}
+
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
