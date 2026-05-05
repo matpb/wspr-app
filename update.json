@@ -1,26 +1,26 @@
 {
-  "version": "5.1.2",
-  "notes": "Linux: the per-launch \"Control input devices\" prompt on KDE Plasma 6 and GNOME 45+ Wayland is gone — text injection now goes through the XDG RemoteDesktop portal. Settings window also widened so it fits on denser desktop fonts. Mac and Windows unchanged.",
-  "pub_date": "2026-05-05T01:06:13Z",
+  "version": "5.1.3",
+  "notes": "",
+  "pub_date": "2026-05-05T17:40:35Z",
   "platforms": {
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a24wN1lKZ0tkcDJvNVkyeFJOUXViWmM2UnNSZVlaa1VTVCtKTXZhSG95dU1SY3VFdXZrVlBoaGlNOCsrSTNMWGsvT0dKR2RFUDRRUFBRN0ZtbXZUcFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQzMTY4CWZpbGU6V3Nwcl81LjEuMl9hbWQ2NC5BcHBJbWFnZQpFaVJxOWo5UUJnVXZrMmc0QzhvdVFNdFlrdkZBZUptcmtxQzE0bURCdDhPa1M5YVBNTDl6VzUyYTQ2VGgyR1FjOVhFWlVyZHNucThGblJPTlY5ZDFCdz09Cg==",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.2/Wspr_5.1.2_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3BDYkg5NG5qTk41UG9WVWRYQVdZb3B3aDRaRFUycUtHN2pzOG0vaWZCVHZPZ1h4bWFldmh6NlFSVFVjaDlQS1I0VEVRaW5QbGJ6Z01MdGd0dU5VNlFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDAyODI5CWZpbGU6V3Nwcl81LjEuM19hbWQ2NC5BcHBJbWFnZQpGbnFPR3Q3NVlrb0hIUjl0ZWVYelE1VXAwZVJCRjRQUXozc2RNY0oxU2JIR0xsQWh5VGlWMGFMQ3hndzhaMG90bS9hVkxnWHRQbnBEamtvYXZWdW9DZz09Cg==",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.3/Wspr_5.1.3_amd64.AppImage"
     },
     "linux-x86_64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3RVRzNKREN6MTF1LzU5Y3Vqa2pwbWxRenQyNmdoMTk5aHAvaW9TMUhhajNYdjBFc09XY09oOFpobDdLb0RXeEd1UWJ4OHdrWE8za0Y1TFd3SkxXeVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQzMTY4CWZpbGU6V3Nwcl81LjEuMl9hbWQ2NC5kZWIKSEFvNVpRTTA1ZlpGNHJjTVRMclJqOFk5SUJvazVEcUxvM3MxS0tYVURzWjlxNjZYQW54SHh0RUZJN3hrblptV3ArR3Q1SHlKNWE3UnR5ZE4vMC96QlE9PQo=",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.2/Wspr_5.1.2_amd64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3BXU2JNN3B5Ri9aTlV6b04yVS84dk81VnNlRW1ROXFxRUVpSSsxcGtWWnBHai9LSTFRa0xsZ0R2bXVMRHljQ2FmZWJVZHovSDZpdkZGTHo2UEx5TlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDAyODMwCWZpbGU6V3Nwcl81LjEuM19hbWQ2NC5kZWIKMkkzaDJWMmg1SENxd1FzUGovK2JQeUV0dUJWamYydUk5VnNTcStYUmE0NjJQYThoM2g3b1BzbGRSbkcyTEZ2cVdpMjEwUUlKdTRHUXNOYkwrdFBKQlE9PQo=",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.3/Wspr_5.1.3_amd64.deb"
     },    "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3JsOUlndWpHMlU4eGJiQXhYSW1FcFRXZWNqK1dyM0p0WnhkOUMxUW5oVDhKSGMvcVZ4aWFOQTNTR1h6akdhVFNLU3c0TjJjZXUxYnozWEVrak1jQ1E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQzMTcxCWZpbGU6V3Nwci5hcHAudGFyLmd6CjdKT0llcjhCTEUxVGNBbkdVTFFhL0JsckdWVmczM2l2VWt1SVdqY2hBRmNia3hrNW1yaVZ4eE5hcnRQY0VmNWxuLzcvTi9PaEZjMlIwRDg3ZkszdEJ3PT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.2/Wspr.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3Fjdk1iaW1rWWg1VkdtWkwvd3dRT3BwZVVXNzdQWnhhS2V0MHk3cHV4NTkyOEtYVDZ6eGY0M1VTeEZkVlBPMkRRK3VmaUZkbGVDU0c1SDYwLytrelFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDAyODMzCWZpbGU6V3Nwci5hcHAudGFyLmd6CkxvajFFQWhZbkhFN2tjRW5VVURISTZ2dGF3V25mTndNNkRpakFGa2NNT3FkTldBYlIxQTVTVXZKeTFIMzhqSWNzNTJlSzdaN0cxQ3ZKWDh1Q2xVakNRPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.3/Wspr.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3JsOUlndWpHMlU4eGJiQXhYSW1FcFRXZWNqK1dyM0p0WnhkOUMxUW5oVDhKSGMvcVZ4aWFOQTNTR1h6akdhVFNLU3c0TjJjZXUxYnozWEVrak1jQ1E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQzMTcxCWZpbGU6V3Nwci5hcHAudGFyLmd6CjdKT0llcjhCTEUxVGNBbkdVTFFhL0JsckdWVmczM2l2VWt1SVdqY2hBRmNia3hrNW1yaVZ4eE5hcnRQY0VmNWxuLzcvTi9PaEZjMlIwRDg3ZkszdEJ3PT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.2/Wspr.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3Fjdk1iaW1rWWg1VkdtWkwvd3dRT3BwZVVXNzdQWnhhS2V0MHk3cHV4NTkyOEtYVDZ6eGY0M1VTeEZkVlBPMkRRK3VmaUZkbGVDU0c1SDYwLytrelFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDAyODMzCWZpbGU6V3Nwci5hcHAudGFyLmd6CkxvajFFQWhZbkhFN2tjRW5VVURISTZ2dGF3V25mTndNNkRpakFGa2NNT3FkTldBYlIxQTVTVXZKeTFIMzhqSWNzNTJlSzdaN0cxQ3ZKWDh1Q2xVakNRPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.3/Wspr.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a25TcURrYUpLL1BDUXF1cTE1QXZxVGdqTVlZRUZ2YkhzWWY2Q1R5YXUwWmxKM1ZPbENaMm9MMEVaWjd5YXAwbUxwbStuWEI3ZXBRVkk5RnNpdElLdGdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQzMTczCWZpbGU6V3Nwcl81LjEuMl94NjQtc2V0dXAuZXhlCkdVbnJxdnRxTTQ1TExFbU5ta2Z0dHI4T0xaZnVwUkdUQXVoU29zWXhqQXhwZFBDdW42Wk1UN2lYSzJDSjZyZVJrZ0Z3NUZWalNkTGJkc3l6Vit5SEJnPT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.2/Wspr_5.1.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3NzME1PQUNiWTZwMFp5VEJZVXZpdHY2ZTFpWm92V1FGYjFsN0JkNkdHM1hJYVFWdldBWVQwOURqOW8vWll2WE9VVzNZUUxaZGVnTitBemxRZlg3d1FNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDAyODM1CWZpbGU6V3Nwcl81LjEuM194NjQtc2V0dXAuZXhlCkxUNU9UY1FnNXBTSnhIeXh4aVRXNENNem1pUFlML2kxV2thMS80Qmc4N2UxRkpJSmhxQU5hWDF6dW1lV1JkSWIxMDdWL1RVOUpzei9GZUJMVWVmQURRPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.1.3/Wspr_5.1.3_x64-setup.exe"
     }
   }
 }
