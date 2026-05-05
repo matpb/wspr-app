@@ -1,6 +1,6 @@
 {
   "version": "5.1.3",
-  "notes": "",
+  "notes": "macOS: Wspr is now menu-bar-only — the Dock icon and Cmd-Tab entry are gone. As a side effect, Settings and About windows now come to front when you open them from the menu instead of staying behind your current app. Linux and Windows are unchanged.",
   "pub_date": "2026-05-05T17:40:35Z",
   "platforms": {
     "linux-x86_64": {
