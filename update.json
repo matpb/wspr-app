@@ -17,6 +17,10 @@
     "darwin-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a25kV1BrRW5RM0tDSUk1L0wrVTRIbXVlOWJJNXpxWGx0WWhoVG9hYmhHZWVydXN4ekRSNCtTZ0l4ZHpmL216MXBaZjBVZUZzY1EwZ24vN0dnTnVRZmdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MTI1Njc5CWZpbGU6V3Nwci5hcHAudGFyLmd6Cms0WnArQUNYSEk1UVhtODBHWko5WkwrNjZTbldoWlhXNDdxZStPWXVlMDJKNXl4ZHBFRnJwZEN6K05mVFFZMnlQNVhOdkpqcUViZVBobk1uMGJPWkJ3PT0K",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.2.0/Wspr.app.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3RMa2FEdU5OeTBBQ3lhbHJhQ2dscnorOGdWcHVjcGFpVDBIcWt0WjJ6VWdxQUtXZkFjRnRsWWNoc1V1WnQ3V3NCTlRuQ2FxUDg3Z3p3SHlHd0hRYkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc5ODA2MDQwCWZpbGU6V3Nwcl81LjIuMF94NjQtc2V0dXAuZXhlCkpqWGNKZ1pYWWhoSFQ5N3F5VzZqTXpOSjl4MVhFS291bGtqdVdSRGJlVVlUQUpMNFZuZ2k2OVNSVXYyekxFTEkrMFlaWFFjTFZKbXRZUm0xeHRtRUNnPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.2.0/Wspr_5.2.0_x64-setup.exe"
     }
   }
 }
