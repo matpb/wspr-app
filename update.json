@@ -19,7 +19,7 @@
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.2.0/Wspr.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3RMa2FEdU5OeTBBQ3lhbHJhQ2dscnorOGdWcHVjcGFpVDBIcWt0WjJ6VWdxQUtXZkFjRnRsWWNoc1V1WnQ3V3NCTlRuQ2FxUDg3Z3p3SHlHd0hRYkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc5ODA2MDQwCWZpbGU6V3Nwcl81LjIuMF94NjQtc2V0dXAuZXhlCkpqWGNKZ1pYWWhoSFQ5N3F5VzZqTXpOSjl4MVhFS291bGtqdVdSRGJlVVlUQUpMNFZuZ2k2OVNSVXYyekxFTEkrMFlaWFFjTFZKbXRZUm0xeHRtRUNnPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2tmYVl5ZFpCSG12OFRWa1k3bURwTzlNZ1owaTE4cS9Ud1p5d2hzMXBkQzlKRUZyaGsxTHBKUUdiVGR2Z2g1a1VWTml3ZmQ4YVhHM3VzeXJ2czVHUUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNjkxNjM5CWZpbGU6V3Nwcl81LjIuMF94NjQtc2V0dXAuZXhlCklwVEtEWnZKNkFxV1J2Q2wrYkg5UVdGbmVvSDlkdThLdkppTDI0WGtRNmJhSWF6ODh6S1R0TkZlUmQ3QVpUYmxUTzNnOFR5VytpUk8xMjRyVlZmMEJBPT0K",
       "url": "https://github.com/matpb/wspr-app/releases/download/v5.2.0/Wspr_5.2.0_x64-setup.exe"
     }
   }
