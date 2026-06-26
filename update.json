@@ -1,27 +1,27 @@
 {
-  "version": "5.3.0",
+  "version": "5.3.1",
   "notes": "",
-  "pub_date": "2026-06-18T20:11:54Z",
+  "pub_date": "2026-06-26T16:46:05Z",
   "platforms": {
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3RnTkI1MnRKRjI2bmFTem5qZklkQjh5cVVmNnptMTZSTGhSNHpEQ2pmekYwWkdtajVpY0VZRVowdk5PSnB4TVlIaEVRMERTL3pLdjgvNjZSeEdFc2d3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxODE0Mzg5CWZpbGU6V3Nwcl81LjMuMF9hbWQ2NC5BcHBJbWFnZQptWEZzQXFaYTJPL0ZrR2dnaXVRVjhLV0FVeUNvb0pWQ28rMzFhSGJJZTRlVWk2MkVQZUhjWXd6WWhsbHRyUnhvd2JXR1V2a2pUYXhqZlI3U1dCckVBQT09Cg==",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.0/Wspr_5.3.0_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3IrTnhxalhDVDZzUmQyWUhKUGNTVmcvWU44eW9oM3dmSFdDMm1YMC9HMlNIaUNDbzlyTEZzNnZGaDFEdWVzNVBVZ2M5aDNhOXJFajR6ZHQ5ckgraFFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNDkyMzYwCWZpbGU6V3Nwcl81LjMuMV9hbWQ2NC5BcHBJbWFnZQpxNlUvNlBoamVTVXR6Tm9nMzVyYU9wcFlKdTRvanM4ZlprczNGTmdxNWVqS1gyU3RpaWVLTVUrUTJDRXJIdVk1VUljSUoxeGtRMXkzVjhLNVh5NEZDZz09Cg==",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.1/Wspr_5.3.1_amd64.AppImage"
     },
     "linux-x86_64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2docFEyUE1TbjVZQ3FxMHUxYUhONDZxU3AzbjFxeEpHUnkvRnRYNnRaYkdsUXVWNEY5RXlBanJWME9pVlJzNzR5eTNabnhuK0J0WWZJRlhxZFBsVVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxODEzNTA5CWZpbGU6V3Nwcl81LjMuMF9hbWQ2NC5kZWIKV0RjRkF2QnV2ZzlYWjdLcXlUZ0tiTE4xTWNoa2Y2NUhwMW9sQzF1b051czNyRHRYSFVuK0Rja3h6ZlR0TmRyanJBZlpRVXc1OEFzVU5hRmk5eW5EQlE9PQo=",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.0/Wspr_5.3.0_amd64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a29CTlFKZTkvQ1NmaThXTVZnWFVQK3lUNnZOMVcxNStOWldnMUVrVDQ3THFxa3FIbTRja0lyTHUwemZEaWN1WnRVczBobnFvYzFzUFBUd2FkeHVkY2dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNDkyMzYwCWZpbGU6V3Nwcl81LjMuMV9hbWQ2NC5kZWIKR2xHTVBVSFBubWlOTlExZk1JeGZqZVRzT3VqZmtRamp6Q0FUcVdqdEJvY0NENngrS1B2WExFUHdlTnYzTHpkKzg4WHhpYWY5alRxTUtTbDNNTHo5Q0E9PQo=",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.1/Wspr_5.3.1_amd64.deb"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a29qQkJrd2RSNGdTQUUwYWIwQUpSS0V5M1A5MGtnS2hHeTFubTA5RHFROFRwUW9nUzVmdXZwakpYSW1BdGlVUnJuNkp3OTg1RnlUSEVnbzhVVXVEdHdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxODEzNTEzCWZpbGU6V3Nwci5hcHAudGFyLmd6CjBaQTBoSUdpZUE2bUxkYlBLaldTZGVYUXpaUWdDUDNHckZIS1FHTHUwS1ptaVRpNjRzVGsyRFB5QVNpY1RRdHpRU3ZvR2QzOEt2SmNDWDJYWFY2MkRnPT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.0/Wspr.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2dEeXFJYWpWd3l5WmpRVFZhTERmN05TVVYwUnVnSExjM2VyYXBHeTFsTU9oMjJVT3M3OFNhSFlNU2k0VzdSVnpUeEJsSzgzRlBhaFF3UFVJdkNrMkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNDkyMzY0CWZpbGU6V3Nwci5hcHAudGFyLmd6ClhEVml5aWdMdHBUWEJxd0dQVCtubjE0L0hKMEhXNWZkQlhMMlIxSG1lSTAxK0YxV2hteldWMnpjRHhqblI5cDBtQ0hIRFc3dHZ1aVJYWlFZY1JIQUFBPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.1/Wspr.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a29qQkJrd2RSNGdTQUUwYWIwQUpSS0V5M1A5MGtnS2hHeTFubTA5RHFROFRwUW9nUzVmdXZwakpYSW1BdGlVUnJuNkp3OTg1RnlUSEVnbzhVVXVEdHdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxODEzNTEzCWZpbGU6V3Nwci5hcHAudGFyLmd6CjBaQTBoSUdpZUE2bUxkYlBLaldTZGVYUXpaUWdDUDNHckZIS1FHTHUwS1ptaVRpNjRzVGsyRFB5QVNpY1RRdHpRU3ZvR2QzOEt2SmNDWDJYWFY2MkRnPT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.0/Wspr.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2dEeXFJYWpWd3l5WmpRVFZhTERmN05TVVYwUnVnSExjM2VyYXBHeTFsTU9oMjJVT3M3OFNhSFlNU2k0VzdSVnpUeEJsSzgzRlBhaFF3UFVJdkNrMkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNDkyMzY0CWZpbGU6V3Nwci5hcHAudGFyLmd6ClhEVml5aWdMdHBUWEJxd0dQVCtubjE0L0hKMEhXNWZkQlhMMlIxSG1lSTAxK0YxV2hteldWMnpjRHhqblI5cDBtQ0hIRFc3dHZ1aVJYWlFZY1JIQUFBPT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.1/Wspr.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a3ZUMGNnVnQ1RFdTSlNDamxObkFrNlRWVXVibUwyOENkNTQrREJ0NnpGVDhmWG92MkRJRHA0WWZPaUxsR0hDT0wwcmM2Vm40U2hwS2Q4T0dYQnNUYVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxODEzNTE0CWZpbGU6V3Nwcl81LjMuMF94NjQtc2V0dXAuZXhlCkg1VzM2MnI2emg5ZnlXbGw1dDdiTWhhc29rYnBWM2ZQUTllcFI3VVpGcHlXQjF6N0pMaEpQNzFJVHJkZjFoTllsTkJSQmN6Y0h5L3p6bFBBMW9la0N3PT0K",
-      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.0/Wspr_5.3.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWFJrdDJrV0I3a2lBOG5hdjdQSWJybUVGUERhNDZIQ3ZrYWtzMSttamJucmZRVGpOeTYxMFdsS3UvWjRFVndvL3J2aVQrVmxWV2w3SkxEZmVXS2lGU1JsS2hUWWozdHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNDkyMzY1CWZpbGU6V3Nwcl81LjMuMV94NjQtc2V0dXAuZXhlClZiYTNEelBBc1h5eC9JTlVtMWdJcHlGSGlzVXdqVU12UTRJcDVQL3AzejE1RFJKaWVZUS9OYWp1YUNNeEh1UGkxVkJkdFN0eEhQaTB3dWdkdU1PQUJ3PT0K",
+      "url": "https://github.com/matpb/wspr-app/releases/download/v5.3.1/Wspr_5.3.1_x64-setup.exe"
     }
   }
 }
