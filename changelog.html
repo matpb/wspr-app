@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog — Wspr</title>
+    <meta name="description" content="Every user-facing change to Wspr, the privacy-first voice-to-text app for macOS, Windows, and Linux. Release notes for every version.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getwspr.com/changelog.html">
+
+    <meta property="og:title" content="Changelog — Wspr">
+    <meta property="og:description" content="Every user-facing change to Wspr, release by release.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getwspr.com/changelog.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="support.html">Support</a>
+            <a href="changelog.html">Changelog</a>
+            <a href="blog/">Blog</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="page-container">
+    <h1>Changelog</h1>
+    <p class="page-updated">Every user-facing change to Wspr. Versions before 5.1.0 predate this changelog — see the full history on <a href="https://github.com/matpb/wspr-app/releases">GitHub Releases</a>.</p>
+
+    <!-- CHANGELOG:START -->
+    <section class="changelog-entry">
+        <h2>5.4.0 <span class="changelog-date">— July 12, 2026</span></h2>
+        <p>A codebase-wide quality-and-hardening pass (internal audit). The focus is reliability, error visibility, and safer releases.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li>Hardened error handling throughout the engine — silent failures and several reachable crash paths now surface a clear notification instead of failing quietly or aborting.</li>
+            <li>Transcribing a WAV file that isn't 16 kHz mono (e.g. a normal 44.1/48 kHz recording) now converts it properly instead of producing garbage output.</li>
+            <li>Tightened the recording state machine and webview/download handling for more predictable behaviour under edge cases (rapid hotkey presses, device disconnects mid-recording, very long recordings).</li>
+        </ul>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li>Errors during dictation ("No speech detected", transcription failures) now show a system notification, so they're visible even with no Wspr window open.</li>
+            <li>Log files under the app data directory (<code>logs/</code>), making problems diagnosable after the fact.</li>
+        </ul>
+
+        <h3 class="changelog-label changed">Changed</h3>
+        <ul>
+            <li>Overhauled the release pipeline for safer, more reproducible builds: the macOS build now refuses to sign or ship a partial/stale app bundle, the updater manifest is verified and published as a confirmed step (so a release can't be silently stranded), signing keys are no longer exposed on process command lines, and the Windows cross-compile toolchain is tracked in-repo (with a reproducible fetch step for the Vulkan SDK). Build docs were rewritten to match the actual build system.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.3.1 <span class="changelog-date">— June 26, 2026</span></h2>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Linux AppImage: crash when opening the window on Wayland.</strong> On modern Wayland sessions with a recent Mesa (e.g. Fedora 44 / Mesa 26), clicking the tray icon to open the window crashed instantly with <code>Could not create default EGL display: EGL_BAD_PARAMETER</code> — while hotkey dictation kept working, since that path never creates a window. The AppImage was shipping its own older Wayland client libraries, and the version mismatch against the host's Mesa broke EGL initialisation in the WebKit renderer. Those libraries are now stripped from the AppImage so the host's are used, which is where Wayland client libraries are meant to come from (thanks Nat for the detailed report).</li>
+            <li><strong>Linux AppImage: SIGABRT on launch on GLib 2.80+ distros.</strong> The bundled GLib stack (2.72) shadowed the host's newer GLib while the host's tray libraries expected GLib 2.80+ symbols, aborting the app on startup on Fedora 40+ and Ubuntu 24.04+. The bundled GLib closure is now unbundled so the host's GLib is used.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.3.0 <span class="changelog-date">— June 18, 2026</span></h2>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Linux: glibc-portable bundles and working Wayland global hotkey.</strong> Linux release bundles are now built against an older glibc so they launch on current LTS distros, and the global dictation hotkey works correctly under Wayland.</li>
+            <li><strong>Settings dropdowns unreadable in light mode.</strong> Forced a dark color-scheme so the Settings dropdown menus stay legible regardless of the system light/dark preference.</li>
+            <li><strong>Windows: removed the <code>msvcp140.dll</code> dependency.</strong> The MSVC C runtime is now statically linked, so Wspr no longer fails to start on machines without the Visual C++ redistributable installed.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.2.0 <span class="changelog-date">— May 6, 2026</span></h2>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Custom rewrite styles (Pro).</strong> Settings &rarr; Rewrite now has a "Custom styles" section where Pro users can create, edit, and delete their own rewrite prompts. Each custom style appears in the Default style dropdown alongside the built-ins (Minimal, Professional, Concise). Custom styles persist across launches and are picked up automatically by the rewrite hotkey and the recording-pill style picker.
+                <br><br>
+                This feature was advertised on the pricing page since v5.0 but the UI hadn't been wired up during the Rust+Tauri rewrite — fixed now (thanks Frank Drewett for the report).</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.1.3 <span class="changelog-date">— May 5, 2026</span></h2>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>macOS: menu-bar-only behaviour.</strong> Wspr now installs as an Accessory app (no Dock icon), and the Settings window reliably comes to the front when invoked from the tray menu — matching the behaviour of other menu-bar apps like Rectangle and Bartender.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.1.2 <span class="changelog-date">— May 4, 2026</span></h2>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Linux Wayland (KDE Plasma 6, GNOME 45+):</strong> the "Control input devices" permission prompt that appeared on every launch is gone. Wspr now uses the XDG RemoteDesktop portal via libei to inject text, so the compositor remembers the grant. You'll see a single "Started Remote Desktop" toast on first launch (or first paste of a session), then nothing afterwards. Wayland users on wlroots compositors (Sway, Hyprland) and X11 users are unchanged — the previous xdotool path remains as a fallback.</li>
+            <li><strong>Linux settings window:</strong> widened and lengthened so that on Fedora KDE (and other systems with denser default fonts) the General tab fits without scrollbars and the About tab doesn't clip off the right edge.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.1.1 <span class="changelog-date">— April 29, 2026</span></h2>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Overlay transparency on macOS and Windows.</strong> The recording HUD pill was being rendered inside a white window background since v5.0.3 — a transparency setting had been accidentally gated to Linux only during a refactor. Restored to all three platforms.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
+        <h2>5.1.0 <span class="changelog-date">— April 28, 2026</span></h2>
+        <p>First release covered by this changelog. Earlier versions are documented in the <a href="https://github.com/matpb/wspr-app/releases">GitHub Releases</a> history.</p>
+    </section>
+    <!-- CHANGELOG:END -->
+
+    <a href="index.html" class="back-link">&larr; Back to Wspr</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+            <a href="changelog.html">Changelog</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
