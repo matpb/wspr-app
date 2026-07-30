@@ -55,6 +55,32 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.5.0 <span class="changelog-date">— July 30, 2026</span></h2>
+        <p>Fixes a defect that silently destroyed parts of long transcriptions, plus the language setting that never worked.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Long recordings no longer get stuck repeating a phrase.</strong> Transcribing a long file could make Whisper latch onto a sentence and repeat it dozens or hundreds of times, replacing minutes of real speech — in the worst case we found, 75% of a transcript. Whisper feeds each 30-second window its own previous output as context, so one repeat could reinforce itself for the rest of the file. Audio is now decoded in bounded spans, so a repetition can no longer propagate. Short dictations were never affected.</li>
+            <li><strong>"Auto" language detection now actually detects.</strong> The Language setting's default "Auto-detect" silently decoded everything as English, so non-English recordings were transcribed as though they were English — which also made the repetition problem more likely. Auto-detect now works, and the language list has grown from 9 to 27.</li>
+            <li><strong>A damaged settings file no longer wipes your settings.</strong> Any unreadable field in the settings file reset <em>everything</em> — hotkeys, custom vocabulary, rewrite styles — and immediately overwrote the file. Wspr now salvages every field it can read and keeps a backup of the original.</li>
+            <li><strong>Custom vocabulary now applies to a whole recording.</strong> It previously faded out after the first few minutes of a long file. It is now re-applied throughout.</li>
+            <li>Clearer errors for files that can't be read — an unreadable or corrupt media file now explains what went wrong instead of showing an exit code.</li>
+        </ul>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Progress and cancellation for file transcription.</strong> File jobs show a live percentage and can be cancelled mid-run instead of being uninterruptible. A cancelled job doesn't count against your usage.</li>
+            <li><strong>Automatic repetition guard.</strong> If a degenerate repetition ever slips through, Wspr collapses it, marks the spot inline, and keeps the original text in history rather than silently shipping the junk.</li>
+        </ul>
+
+        <h3 class="changelog-label changed">Changed</h3>
+        <ul>
+            <li>Decoding now uses Whisper's own default candidate count, which improves its ability to recover from a bad patch of audio. Slightly slower only when a recovery is actually needed.</li>
+            <li>Segment boundaries on long files may differ slightly from 5.4.0. Timestamps remain continuous; SRT output may split lines at different points.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.4.0 <span class="changelog-date">— July 12, 2026</span></h2>
         <p>A codebase-wide quality-and-hardening pass (internal audit). The focus is reliability, error visibility, and safer releases.</p>
 
