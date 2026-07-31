@@ -55,6 +55,29 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.6.0 <span class="changelog-date">— July 31, 2026</span></h2>
+        <p>Adds Large v3 Turbo — Large-class accuracy at roughly Small's speed — plus a set of licence reliability fixes.</p>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>New model: Large v3 Turbo.</strong> A 1.6 GB model that reaches Large v3 accuracy at roughly Small's speed. On a 45-second recording it transcribes in 1.16 s against Large v3's 3.40 s and Medium's 1.93 s (measured warm on an RTX 4060 Ti with Vulkan), and it loads in about half Large v3's time. It is now the best speed-to-accuracy trade in the list, and it beats Medium on both. Turbo is a separate download in Settings → Models; your current model stays selected until you choose it.</li>
+        </ul>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Pro is no longer lost when the system credential store can't be read.</strong> If your Keychain, wallet or Credential Manager was locked or unavailable when Wspr started — common on Linux desktops with a locked login keyring, and on headless or remote sessions — Wspr treated your licence as absent and quietly dropped you to the free tier. It now keeps Pro active and shows <strong>Wspr Pro (unverified)</strong> in the tray menu so you know to check on it.</li>
+            <li><strong>A refreshed licence check can no longer fail on a full disk.</strong> Wspr re-records the date each time it validates; if that write failed, the whole successful check was thrown away and Pro was lost for that session.</li>
+            <li><strong>A finished file transcription is never discarded.</strong> If Wspr could not write the entry to its history, it threw away the completed transcript along with it — losing hours of work to a bookkeeping error. The transcript is now always returned.</li>
+            <li>A clock skewed into the future no longer confuses offline licence checks.</li>
+        </ul>
+
+        <h3 class="changelog-label changed">Changed</h3>
+        <ul>
+            <li>Selecting Large v3 Turbo and then downgrading to 5.5.0 or earlier resets the active model to Base, because older versions do not recognise the new value. Custom vocabulary and every other setting are preserved — just re-select your model after a downgrade.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.5.0 <span class="changelog-date">— July 30, 2026</span></h2>
         <p>Fixes a defect that silently destroyed parts of long transcriptions, plus the language setting that never worked.</p>
 
