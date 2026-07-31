@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen3-ASR, Voxtral, Cohere Transcribe: The 2026 Speech-to-Text Model Boom (And Why the Model Isn&rsquo;t Your Bottleneck) &mdash; Wspr</title>
+    <meta name="description" content="Six new open speech-recognition models beat Whisper on the Open ASR Leaderboard in 2026 — Cohere Transcribe, Granite Speech 4.1, Qwen3-ASR, Parakeet TDT, Voxtral, ARK-ASR. Here are the real WER numbers, and the honest reason a better model won't make your dictation feel better.">
+    <meta name="keywords" content="best speech to text model 2026, Qwen3-ASR, Voxtral, Cohere Transcribe, Granite Speech 4.1, Parakeet TDT, open ASR leaderboard, Whisper alternative 2026, open source speech recognition, on-device speech to text, WER benchmark 2026">
+    <meta name="author" content="Mathieu-Philippe Bourgeois">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getwspr.com/blog/best-speech-to-text-models-2026.html">
+
+    <meta property="og:title" content="The 2026 Speech-to-Text Model Boom &mdash; And Why the Model Isn&rsquo;t Your Bottleneck">
+    <meta property="og:description" content="Cohere Transcribe, Granite Speech 4.1, Qwen3-ASR, Voxtral and Parakeet all beat Whisper on paper this year. Here's what those benchmarks actually measure — and what decides whether dictation feels good.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getwspr.com/blog/best-speech-to-text-models-2026.html">
+    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:site_name" content="Wspr">
+    <meta property="article:published_time" content="2026-07-30">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The 2026 Speech-to-Text Model Boom">
+    <meta name="twitter:description" content="Six open models beat Whisper on the leaderboard this year. Less than one WER point separates the top. Here's what actually matters instead.">
+    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Qwen3-ASR, Voxtral, Cohere Transcribe: The 2026 Speech-to-Text Model Boom (And Why the Model Isn't Your Bottleneck)",
+        "description": "Six new open speech-recognition models beat Whisper on the Open ASR Leaderboard in 2026. Here are the real WER numbers, and the honest reason a better model won't make your dictation feel better.",
+        "datePublished": "2026-07-30",
+        "author": {
+            "@type": "Person",
+            "name": "Mathieu-Philippe Bourgeois"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Wspr",
+            "url": "https://getwspr.com"
+        },
+        "mainEntityOfPage": "https://getwspr.com/blog/best-speech-to-text-models-2026.html"
+    }
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
+                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
+                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
+                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
+                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
+            </svg>
+            Wspr
+        </a>
+        <div class="nav-links">
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../support.html">Support</a>
+            <a href="../changelog.html">Changelog</a>
+            <a href="../blog/">Blog</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="page-container article-container">
+    <p class="article-date">July 30, 2026</p>
+    <h1>The 2026 Speech-to-Text Model Boom</h1>
+    <p class="article-subtitle">Cohere Transcribe. IBM Granite Speech 4.1. Qwen3-ASR. Voxtral. Parakeet TDT. ARK-ASR. In about six months, open speech recognition went from &ldquo;Whisper and some also-rans&rdquo; to a leaderboard where six models beat Whisper and the top four are separated by less than one percentage point. Here&rsquo;s what actually shipped &mdash; and the uncomfortable thing those benchmarks don&rsquo;t measure.</p>
+
+    <p>If you follow AI releases at all, 2026 has been a genuinely remarkable year for speech recognition. For three years, &ldquo;which speech-to-text model should I use?&rdquo; had one boring answer: OpenAI&rsquo;s Whisper. That question now has at least six defensible answers, most of them Apache&nbsp;2.0, most of them small enough to run on a laptop.</p>
+
+    <p>I build a dictation app, so I've been watching this closely and with some self-interest. Below is the honest state of play as of late July 2026, including the part that's bad news for my own marketing copy.</p>
+
+    <h2>What Actually Shipped in 2026</h2>
+
+    <p>Here is the current picture on the <strong>Hugging Face Open ASR Leaderboard</strong>, the most-cited public benchmark for English speech recognition. Lower WER (word error rate) is better.</p>
+
+    <div class="compare-table-wrap">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>WER</th>
+                    <th>Params</th>
+                    <th>License</th>
+                    <th>Languages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ARK-ASR-3B</td>
+                    <td><strong>5.04%</strong></td>
+                    <td>3B</td>
+                    <td>Apache 2.0</td>
+                    <td>&mdash;</td>
+                </tr>
+                <tr>
+                    <td>IBM Granite Speech 4.1</td>
+                    <td><strong>5.33%</strong></td>
+                    <td>2B</td>
+                    <td>Apache 2.0</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Cohere Transcribe</td>
+                    <td><strong>5.42%</strong></td>
+                    <td>2B</td>
+                    <td>Apache 2.0</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Qwen3-ASR-1.7B</td>
+                    <td><strong>5.76%</strong></td>
+                    <td>1.7B</td>
+                    <td>Apache 2.0</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>Parakeet TDT 0.6B v3</td>
+                    <td><strong>6.32%</strong></td>
+                    <td>0.6B</td>
+                    <td>CC-BY-4.0</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td class="highlight">Whisper large-v3 <em>(what Wspr runs)</em></td>
+                    <td class="highlight"><strong>7.44%</strong></td>
+                    <td class="highlight">1.55B</td>
+                    <td class="highlight">MIT</td>
+                    <td class="highlight">99</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>A few that don't fit neatly in a WER column but matter:</p>
+
+    <ul>
+        <li><strong>Voxtral</strong> (Mistral, February 2026) &mdash; a 3.4B Apache&nbsp;2.0 model built for <em>streaming</em>, with 80&ndash;1200&nbsp;ms latency and 13 languages. Its headline accuracy numbers usually come from a different benchmark than the one above, so I'm deliberately not dropping it into the same column. Its real story is real-time, not leaderboard rank.</li>
+        <li><strong>Meta Omnilingual ASR</strong> &mdash; 300M to 7B, Apache&nbsp;2.0, and the number that stops you: <strong>1,600+ languages</strong> supported, with zero-shot extension to 5,400+. Nothing else is close on coverage.</li>
+        <li><strong>Moonshine</strong> (Useful Sensors) &mdash; the smallest model is about 27&nbsp;MB, aimed at Raspberry Pi-class hardware where Whisper simply won't fit.</li>
+    </ul>
+
+    <p>So: Whisper large-v3 is now, on English benchmarks, in sixth place or worse. I'd rather say that plainly than have you find out from someone else's comparison table.</p>
+
+    <h2>The Catch Everyone Skips</h2>
+
+    <p>Read that leaderboard again. The gap between first place and fourth place is <strong>0.72 of a percentage point</strong>. On a 500-word dictation, that's the difference between about 25 wrong words and about 29 wrong words. You would not notice which model you were using. You would notice, immediately, if either one took four seconds to give you the first word.</p>
+
+    <p>This is the actual consensus among people benchmarking these models, not a convenient excuse: with the top of the leaderboard compressed into a single WER point, <em>rank has stopped being the deciding variable.</em> License, language coverage, streaming support, hardware requirements, and cost per audio-hour now matter more than which model is nominally #1 this month &mdash; and #1 has changed hands at least four times since March.</p>
+
+    <p>There's a second thing worth knowing about WER benchmarks. They're mostly scored on clean, read English: audiobooks, curated podcasts, prepared speech. Your dictation is not that. Your dictation is you, mid-thought, with a fan running, saying &ldquo;um&rdquo; and restarting the sentence twice, using your coworker's name and three acronyms from your industry. The leaderboard has very little to say about that, which is why the model that wins on LibriSpeech is often not the one that feels best in your editor.</p>
+
+    <h2>What Actually Decides Whether Dictation Feels Good</h2>
+
+    <p>After building and using a dictation app daily, my honest ranking of what determines whether you keep using one:</p>
+
+    <ol>
+        <li><strong>Time from releasing the hotkey to text appearing.</strong> This is the whole experience. Under a second feels like magic; over three seconds and you go back to typing. This is dominated by model size, your hardware, and GPU acceleration &mdash; not by the model's benchmark rank.</li>
+        <li><strong>Whether the text lands where you're actually typing.</strong> A transcript in a separate window that you copy-paste is a different, much worse product than text appearing at your cursor in whatever app has focus.</li>
+        <li><strong>Whether it works with no internet and no account.</strong> Cloud dictation dies on a plane, on hotel Wi-Fi, and during the vendor's outage.</li>
+        <li><strong>Whether your audio leaves your machine.</strong> Every word you dictate is, by definition, something you were about to write down. Sometimes that's a private email, a medical note, an unannounced product, a client's name.</li>
+        <li><strong>What it costs you per year, forever.</strong></li>
+        <li><em>Then</em> word error rate.</li>
+    </ol>
+
+    <p>Notice that a new state-of-the-art model improves exactly one item on that list, and it's the last one.</p>
+
+    <h2>Where Wspr Sits &mdash; Including What It Doesn&rsquo;t Do</h2>
+
+    <p><a href="../index.html">Wspr</a> runs OpenAI's Whisper models on your own machine via whisper.cpp with GPU acceleration. You press a global hotkey, speak, and the text appears at your cursor in whatever app you're using. It costs <strong>$14.99 once</strong> and runs on macOS, Windows, and Linux.</p>
+
+    <p>Let me be straight about the tradeoff this article has been building toward:</p>
+
+    <ul>
+        <li><strong>Wspr does not run the #1 model.</strong> It ships Whisper tiny, base, small, medium, and large-v3. On English WER benchmarks, Cohere Transcribe and Granite Speech 4.1 beat large-v3 by roughly two percentage points.</li>
+        <li><strong>Wspr doesn't do streaming.</strong> If you need words appearing as you speak them, Voxtral's architecture is built for that and Whisper's isn't.</li>
+        <li><strong>whisper.cpp is a Whisper runtime, not a universal one.</strong> Its supported-model list is Whisper variants &mdash; tiny through large-v3-turbo. You'll see claims that it has become a general ggml hub for Parakeet, Voxtral and friends; as of this writing its own documentation doesn't say that. Adopting a non-Whisper architecture is a real engineering project, not a config change.</li>
+    </ul>
+
+    <p>What Wspr does have is everything above WER on that list. Whisper large-v3 supports <strong>99 languages</strong> &mdash; more than every model that beats it on English except Meta's Omnilingual, and roughly seven times Cohere Transcribe's 14 or Granite's 6. It's MIT-licensed. It runs entirely offline. Your audio never touches a server, because there is no server. There's no account, no subscription, and no meter.</p>
+
+    <p>And if you want the speed end of the tradeoff, that's a dropdown: Whisper Small (~460&nbsp;MB) is dramatically faster than large-v3 (3.1&nbsp;GB) and, for clear speech into a decent microphone, close enough that most people leave it there.</p>
+
+    <div class="compare-table-wrap">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>What you might actually want</th>
+                    <th>The honest answer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lowest possible English WER, batch transcription, you're a developer</td>
+                    <td>Run Granite Speech 4.1 or Cohere Transcribe yourself. They're Apache 2.0 and free.</td>
+                </tr>
+                <tr>
+                    <td>Live captions / words appearing as you speak</td>
+                    <td>Voxtral. It's built for streaming; Whisper isn't.</td>
+                </tr>
+                <tr>
+                    <td>A language nobody else supports</td>
+                    <td>Meta Omnilingual ASR (1,600+ languages).</td>
+                </tr>
+                <tr>
+                    <td>Raspberry Pi or embedded hardware</td>
+                    <td>Moonshine (~27 MB) or Parakeet TDT 0.6B.</td>
+                </tr>
+                <tr>
+                    <td class="highlight">Press a key, speak, text appears in your app &mdash; privately, offline, on any desktop OS, no subscription</td>
+                    <td class="highlight"><strong>That's the one Wspr is built for.</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Those first four rows are genuinely better answers than mine for those jobs, and I'd rather send you to the right tool than pretend one app wins everything. But note what all four have in common: they hand you a model, not a product. Downloading a 2B-parameter checkpoint is not the same as having dictation in your email client on a Tuesday morning.</p>
+
+    <h2>Try It Without Paying</h2>
+
+    <p>The gap between benchmark and daily use is the reason Wspr's free tier exists: <strong>50 live transcriptions</strong>, no account, no card. That's enough to answer the only question that matters &mdash; how it feels on <em>your</em> hardware with <em>your</em> voice.</p>
+
+    <ol>
+        <li><a href="https://github.com/matpb/wspr-app/releases/latest"><strong>Download Wspr</strong></a> for macOS, Windows, or Linux.</li>
+        <li>Open Settings and grab a model. Start with <strong>Small</strong>; step up to <strong>Large-v3</strong> if you have the GPU for it.</li>
+        <li>Set your hotkey (Ctrl+Shift+Space by default).</li>
+        <li>Press it, talk, watch the words land at your cursor.</li>
+    </ol>
+
+    <p>If it earns a place in your workflow, Pro is a one-time <strong>$14.99</strong>. No renewal, ever.</p>
+
+    <h2>The Bottom Line</h2>
+
+    <p>2026 has been a genuinely great year for open speech recognition, and you should be excited about it &mdash; six credible models, most of them Apache&nbsp;2.0, several small enough for a laptop, one covering 1,600 languages. That's a real shift and it happened fast.</p>
+
+    <p>Just don't confuse it with a shift in what makes dictation useful. The models crossed the &ldquo;accurate enough&rdquo; threshold a while ago, and the last two percentage points of WER are being fought over in a range you cannot perceive while typing an email. What you <em>can</em> perceive is latency, whether the text shows up where you're working, whether it works on a plane, whether your words stay on your machine, and whether you're still paying for it in 2029.</p>
+
+    <p>That's the part I work on.</p>
+
+    <p class="article-subtitle" style="font-size: 0.9rem; opacity: 0.7;">Sources: Hugging Face Open ASR Leaderboard figures as reported by Cohere's Transcribe announcement (March 26, 2026) and MarkTechPost's open-ASR comparison (July 23, 2026); whisper.cpp project documentation for supported-model list. Figures checked July 30, 2026. Leaderboard positions in this field change monthly &mdash; verify before making decisions on them.</p>
+
+    <div class="cta-buttons" style="margin-top: 40px;">
+        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Wspr Free
+        </a>
+        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
+            Buy Pro &mdash; $14.99
+        </a>
+    </div>
+
+    <p style="margin-top: 32px;"><strong>Related:</strong> <a href="is-voice-typing-private.html">Does Voice Typing Send Your Voice to the Cloud?</a> | <a href="best-voice-to-text-mac-2026.html">Best Voice-to-Text Apps for Mac in 2026</a> | <a href="../linux-voice-to-text/">Voice-to-Text for Linux in 2026</a> | <a href="no-subscription-dictation.html">Why I Stopped Paying $15/Month for Dictation</a></p>
+
+    <a href="../blog/" class="back-link">&larr; More articles</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../support.html">Support</a>
+            <a href="../changelog.html">Changelog</a>
+            <a href="../blog/">Blog</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
