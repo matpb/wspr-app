@@ -55,6 +55,22 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.7.0 <span class="changelog-date">— August 12, 2026</span></h2>
+        <p>Wspr now tells you when it is recording, and stops pasting filler text when you did not say anything.</p>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Start and stop sounds.</strong> A short, bright click when recording starts and a softer, lower one when it stops, so you know the recording state without looking at the screen. The two are far apart in pitch, rising for start and falling for stop, so you can tell them apart without thinking about it. Cancelling plays the stop sound too, so a hotkey that did not register is never confused with one that did. The sounds are synthesized rather than sampled: there are no audio files to ship, and the volume slider is a true gain rather than a preset. On by default, with an on/off toggle, a volume slider and a Test button under Settings → General. The start sound plays before Wspr dims your system audio, so dimming or muting can no longer swallow it.</li>
+            <li><strong>Empty recordings are discarded instead of transcribed.</strong> Starting and stopping without speaking used to hand Whisper pure silence, which it answers with invented filler like “Thank you for watching.” Wspr now checks the audio itself for speech and throws the recording away if it finds none, telling you it did. The check adapts to your own room: it compares against the recording's own noise floor rather than a fixed level, so it works in a quiet office and a cafe alike, and it deliberately errs toward keeping a recording. When the start sound is on it ignores the head of the recording, so the sound picked up by your microphone cannot fool it; with the sound off it weighs the whole recording, so a single short word still gets through. On by default, and switchable off under Settings → General.</li>
+        </ul>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Linux: raising a system notification could kill the app.</strong> Any message Wspr showed you from a recording, such as telling you the selected model is not downloaded, went through a notification library in a way that is unsafe from inside the app's async runtime, and took the whole app down with it. Linux now raises notifications on its own thread.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.6.0 <span class="changelog-date">— July 31, 2026</span></h2>
         <p>Adds Large v3 Turbo — Large-class accuracy at roughly Small's speed — plus a set of licence reliability fixes.</p>
 
