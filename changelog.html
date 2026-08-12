@@ -55,6 +55,17 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.7.1 <span class="changelog-date">— August 12, 2026</span></h2>
+        <p>Recordings no longer stop on their own before you are finished talking.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Push-to-talk recordings stopped after exactly two minutes.</strong> Holding the hotkey starts a watchdog whose job is to catch a key release that never arrives, so a stuck key cannot leave your microphone running. It was set to two minutes, and when it fired it cancelled the recording outright, so any push-to-talk dictation longer than that was thrown away and you got nothing back for it. The watchdog now waits an hour, and when it fires it stops the recording and transcribes it instead of discarding it: at that length a held key is far more likely to be someone genuinely talking than a key that stuck, and a key that really did stick records silence, which Wspr already discards on its own. Toggle mode never had this watchdog and was never affected.</li>
+            <li><strong>Recordings longer than ten minutes were silently cut short.</strong> Wspr held a hard ceiling of ten minutes on a single recording and dropped everything past it without saying so. The ceiling is now sixty minutes. Reaching it behaves as before and on purpose: Wspr transcribes what it captured and tells you the tail was cut, rather than losing the recording.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.7.0 <span class="changelog-date">— August 12, 2026</span></h2>
         <p>Wspr now tells you when it is recording, and stops pasting filler text when you did not say anything.</p>
 
