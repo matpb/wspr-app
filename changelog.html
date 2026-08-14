@@ -55,6 +55,16 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.0 <span class="changelog-date">— August 14, 2026</span></h2>
+        <p>A shortcut that puts your last transcription back, for the times it lands somewhere it should not have.</p>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Paste last transcription.</strong> An optional shortcut that re-inserts your most recent transcription into whatever app is focused, through the same paste path a live dictation uses. It is for the moments the text does not arrive: the insert lands in the wrong window, the app you were aiming at swallowed it, or you clicked away a second too early and watched a long dictation disappear. Set it under Settings → General; it is empty until you choose a key, and Shift+Alt+V (Shift+Option+V on a Mac) is a good one. A dictation whose paste failed outright is now kept in your history as well, so the shortcut has something to bring back rather than nothing. It fires when you let the keys go, so the shortcut's own modifiers cannot interfere with the paste it is about to send. On Wayland your desktop owns global shortcut keys, so assign it in your desktop's settings alongside the dictation hotkey, or bind a key to <code>wspr --paste-last</code> if your compositor does not offer the app's shortcuts.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.7.1 <span class="changelog-date">— August 12, 2026</span></h2>
         <p>Recordings no longer stop on their own before you are finished talking.</p>
 
