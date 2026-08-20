@@ -55,6 +55,16 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.1 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
+        <p>Wspr now picks the right graphics card on machines that have more than one.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Transcription ran on the wrong GPU.</strong> Most desktops and many laptops have two graphics processors: a fast dedicated card, and a smaller one built into the CPU. Wspr took whichever of them its graphics driver happened to list first, and that order is not stable. It can differ between machines, and on the same machine it can change from something as ordinary as plugging a monitor into a different port. When the built-in one came first, transcription quietly moved onto it and got several times slower, with nothing to indicate anything had changed. Wspr now looks at every graphics processor available to it and chooses deliberately, preferring a dedicated card and, if there is more than one, the one with the most memory. It also writes its choice to the log, so if a machine ever does end up on the slower path there is now a record saying so.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.8.0 <span class="changelog-date">— August 14, 2026</span></h2>
         <p>A shortcut that puts your last transcription back, for the times it lands somewhere it should not have.</p>
 
