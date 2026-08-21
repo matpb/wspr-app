@@ -55,6 +55,16 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.4 <span class="changelog-date">&mdash; August 21, 2026</span></h2>
+        <p>The Linux fix from yesterday only fixed half the problem. This is the other half.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Links still did nothing on the Linux AppImage.</strong> Version 5.8.3 stopped your browser crashing on Wspr's bundled libraries, and that was a real cause, but it was not the only one. An AppImage also rewrites the list of places to look for programs so that its own copies come first, and it happens to carry its own copy of the small helper that hands a web address to your desktop. That copy reports success and opens nothing. So the click still went nowhere, quietly instead of noisily, and from the outside nothing had changed. Wspr now removes everything the bundle rewrote before it hands over the address, keeping the parts of each setting that belong to your system, so your desktop's own helper and your own browser are what receive it. This one was checked by watching a page actually load rather than by watching the handover appear to succeed.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.8.3 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
         <p>On Linux, the buttons that open a web page now open a web page.</p>
 
