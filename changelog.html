@@ -55,6 +55,19 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.2 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
+        <p>Your licence stops quietly spending the devices you are allowed to use it on.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Re-entering your licence key used up another of your three devices, even on a computer that already had it.</strong> Wspr kept your licence in one place only: the password store your operating system provides. That store is not always available the instant Wspr asks for it. A locked keychain, a login session that has not unlocked it yet, or a security prompt answered the wrong way all produce the same answer as never having bought Wspr at all, and Wspr believed it. It dropped to the free tier and asked for your key. You pasted it back in, everything looked fine, and behind the scenes that counted as activating a brand-new device. Nothing noticed that it was the same computer as last time, because the activation is registered the moment it is asked for and carries no memory of the machine that asked. Do that three times over a few months and you are out of devices, on one laptop, with no way to tell why. Wspr now keeps a second copy of your licence in a private file alongside its settings, readable only by you, and takes whichever copy answers. Existing licences are copied across the first time you open this version, with no internet connection needed. And if you do type your key in again on a computer that already has it, Wspr checks before it asks for anything, and reuses the activation you already hold.</li>
+            <li><strong>Freeing up a device in your account made Wspr act as though it had lost its internet connection.</strong> When you remove an old activation from your Polar account, the one your computer is holding may be the one that goes. Wspr could not tell that apart from being offline, so it carried on quietly for a week and then dropped to the free tier with no explanation at all. It now recognises what happened, keeps your key, and offers to reactivate in a single click, from the menu bar, from Settings, and from the upgrade window with your key already filled in. Wspr keeps working while you get to it, and if the activation turns out to have been fine all along, the notice clears itself.</li>
+            <li><strong>Activation errors said nothing you could act on.</strong> Running out of devices produced <em>Activation failed (403)</em>, which is a number, not an explanation, and it pointed nowhere. It now tells you that the key is already in use on all three of its devices and links you to the page in your account where you can free one. A mistyped key and a licence server you cannot reach now say so in as many words, too.</li>
+            <li><strong>Wspr could freeze on startup when it could not read your stored licence.</strong> The code that keeps you on Pro when your licence cannot be read got stuck against itself and never finished, on exactly the computers it was written to protect.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.8.1 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
         <p>Wspr now picks the right graphics card on machines that have more than one.</p>
 
