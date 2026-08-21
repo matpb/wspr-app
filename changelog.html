@@ -55,6 +55,16 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.5 <span class="changelog-date">&mdash; August 21, 2026</span></h2>
+        <p>The Linux fix from this morning was still not the whole story. This one is.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Links still did nothing on the Linux AppImage, even after 5.8.4.</strong> When Wspr updates itself it starts the new version from inside the old one, and each version adds its own folders to the front of the list of places to look for programs. So a computer that has updated in place is carrying two copies of Wspr's packaging at once, not one, and Wspr only knew the name of the current copy. It cleaned that one up and left the previous one sitting at the front of the queue, and that copy contains the same small helper that reports success and opens nothing. The button went quiet again for exactly the same reason as before, one layer further back. Wspr now clears out every copy it can find rather than only its own, and asks your system for its own web-address helper by name and full location instead of searching a list that has been tampered with. It also stops leaving a finished helper process behind after every click. This was checked by planting a decoy copy of the broken helper in Wspr's path and confirming both that the page opens and that the decoy was never touched.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.8.4 <span class="changelog-date">&mdash; August 21, 2026</span></h2>
         <p>The Linux fix from yesterday only fixed half the problem. This is the other half.</p>
 
