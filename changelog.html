@@ -55,6 +55,16 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.3 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
+        <p>On Linux, the buttons that open a web page now open a web page.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Buttons that open a web page did nothing, on the Linux AppImage only.</strong> Upgrade to Pro, Manage activations, and the link to the website all did the same thing when you clicked them: nothing at all, with no error and nothing written to the log. An AppImage carries its own copies of the system libraries it needs and points anything it starts at them. That is fine for Wspr itself and wrong for your browser, which then tried to load Wspr's libraries instead of the ones it was built against and stopped before it ever got as far as opening a page. Because the browser was started successfully and only failed afterwards, Wspr had nothing to report and the click simply went nowhere. Wspr now hands the page to your desktop cleanly, with its own libraries left out of the handover. If you installed Wspr from the .deb package, or you are on macOS or Windows, this never affected you.</li>
+        </ul>
+    </section>
+
+    <section class="changelog-entry">
         <h2>5.8.2 <span class="changelog-date">&mdash; August 20, 2026</span></h2>
         <p>Your licence stops quietly spending the devices you are allowed to use it on.</p>
 
