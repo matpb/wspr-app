@@ -55,6 +55,15 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.7 <span class="changelog-date">&mdash; September 5, 2026</span></h2>
+        <p>Everything you said after a stumble now makes it into the text.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>A repeated phrase no longer swallows the end of a dictation.</strong> Every speech model has a weak spot: when you hesitate, or start a sentence over, it can lock onto the phrase it just wrote and write it again, and again, and everything you say afterwards gets pulled into the same rut. Wspr already tidied that up by collapsing the repeats and leaving a short note where the loop had been, but the words spoken after the loop were gone. Wspr now notices the loop as it happens and transcribes that stretch of audio a second time with a fresh start, so the rest of what you said comes through as text instead of a note. The note only appears now if the second pass gets stuck too. This applies to hotkey dictation and to file transcription alike; on a two-hour test recording it recovered 42 seconds of speech that previous versions dropped.</li>
+        </ul>
+    </section>
+    <section class="changelog-entry">
         <h2>5.8.6 <span class="changelog-date">&mdash; August 30, 2026</span></h2>
         <p>A recording you cut short no longer pastes a word nobody said.</p>
 
