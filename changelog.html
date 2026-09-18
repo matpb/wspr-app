@@ -55,6 +55,15 @@
 
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.8.8 <span class="changelog-date">&mdash; September 18, 2026</span></h2>
+        <p>The recording pill on your Mac is back to its proper size.</p>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>The recording pill was half size on macOS.</strong> On a Retina display Wspr asked for the pill's window in screen pixels rather than in points, and a Retina screen packs two pixels into every point, so the window came out at half the intended size and cut off the pill's padding and rounded corners. It is now sized in points, which is what the display expects, and looks the same as it does on Linux and Windows.</li>
+        </ul>
+    </section>
+    <section class="changelog-entry">
         <h2>5.8.7 <span class="changelog-date">&mdash; September 5, 2026</span></h2>
         <p>Everything you said after a stumble now makes it into the text.</p>
 
