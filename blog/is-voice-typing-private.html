@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Does Voice Typing Send Your Voice to the Cloud? (2026) — Wspr</title>
-    <meta name="description" content="What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026 — and why a wave of transcription lawsuits is making on-device the only safe option. Plus how Wspr keeps your voice on your machine.">
+    <title>Does Voice Typing Send Your Voice to the Cloud? (2026) | Wspr</title>
+    <meta name="description" content="What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026, and why a wave of transcription lawsuits is making on-device the only safe option. Plus how Wspr keeps your voice on your machine.">
     <meta name="keywords" content="is voice typing private, does voice typing send my voice to the cloud, private voice to text, offline dictation no cloud, on-device dictation, HIPAA voice to text, is windows voice typing private">
     <meta name="author" content="Mathieu-Philippe Bourgeois">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getwspr.com/blog/is-voice-typing-private.html">
 
     <meta property="og:title" content="Does Voice Typing Send Your Voice to the Cloud?">
-    <meta property="og:description" content="What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026 — and why on-device is the only privacy you can verify.">
+    <meta property="og:description" content="What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026, and why on-device is the only privacy you can verify.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://getwspr.com/blog/is-voice-typing-private.html">
-    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:image" content="https://getwspr.com/images/og/is-voice-typing-private.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:site_name" content="Wspr">
     <meta property="article:published_time" content="2026-06-17">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Does Voice Typing Send Your Voice to the Cloud?">
     <meta name="twitter:description" content="What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026.">
-    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+    <meta name="twitter:image" content="https://getwspr.com/images/og/is-voice-typing-private.png">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -31,14 +34,17 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/blog.css">
+    <script>document.documentElement.classList.add('js')</script>
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Does Voice Typing Send Your Voice to the Cloud?",
-        "description": "What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026 — and why on-device transcription is the only privacy you can verify.",
+        "description": "What Windows, Google, Apple, and cloud dictation apps actually do with your audio in 2026, and why on-device transcription is the only privacy you can verify.",
         "datePublished": "2026-06-17",
         "author": {
             "@type": "Person",
@@ -55,162 +61,283 @@
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav scrolled">
-    <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="../index.html#features">Features</a>
-            <a href="../index.html#pricing">Pricing</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-            <a href="../privacy.html">Privacy</a>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
 
-<main class="page-container article-container">
-    <p class="article-date">June 17, 2026</p>
-    <h1>Does Voice Typing Send Your Voice to the Cloud?</h1>
-    <p class="article-subtitle">In 2026, a wave of lawsuits and regulatory rulings made one question worth answering carefully: when you dictate, where does your audio actually go? Here's what Windows, Google, Apple, and the popular cloud dictation apps do with your voice &mdash; and why &ldquo;on-device&rdquo; is the only privacy you can verify.</p>
-
-    <p>Voice typing has quietly become a daily habit. People dictate emails, draft documents, take meeting notes, and talk to AI coding agents instead of typing. But most users never ask the obvious question: the moment you speak, where does that audio travel before it comes back as text?</p>
-
-    <p>For a lot of popular tools, the answer is &ldquo;to a server you don't control.&rdquo; And in 2026, that stopped being a theoretical concern.</p>
-
-    <h2>2026 made cloud transcription a legal question, not just a privacy one</h2>
-
-    <p>A run of cases and rulings this year turned &ldquo;where does my voice go&rdquo; into something lawyers, clinicians, and compliance teams now ask out loud:</p>
-
-    <ul>
-        <li><strong>The Otter.ai class action.</strong> <em>In re Otter.AI Privacy Litigation</em> (Northern District of California, before Judge Eumi Lee) is widely described as the first federal test of whether wiretap statutes reach an AI bot sitting in a meeting and recording it. The motion-to-dismiss hearing was held May 20, 2026.</li>
-        <li><strong>Biometric suits over &ldquo;voiceprints.&rdquo;</strong> <em>Cruz v. Fireflies.AI</em>, filed in Illinois in December 2025, alleges the company collected voiceprints without consent under Illinois' Biometric Information Privacy Act (BIPA).</li>
-        <li><strong>Law firms are warning clients directly.</strong> An April 27, 2026 client alert from Goodwin put it plainly: once audio and transcripts are generated, they &ldquo;often reside on systems controlled by the service provider, not the organization.&rdquo; For anyone under attorney-client privilege or all-party-consent recording rules, that's a problem.</li>
-        <li><strong>Regulators are drawing lines on training data.</strong> In May 2026, Canada's federal and provincial privacy commissioners concluded that OpenAI's training of early ChatGPT models violated Canadian privacy law. Around the same time, Atlassian moved to collect customer product data by default to train its AI offerings &mdash; a change affecting roughly 300,000 customers.</li>
-    </ul>
-
-    <p>None of this means cloud transcription is evil. It means that when your audio leaves your device, it becomes someone else's data, on someone else's servers, subject to someone else's retention policy &mdash; and potentially to subpoena, breach, or a quietly updated training clause. That's the exposure. The only way to eliminate it is to never send the audio in the first place.</p>
-
-    <h2>Where your audio actually goes, app by app</h2>
-
-    <p>Here's an honest breakdown of how the most common ways to dictate in 2026 handle your voice.</p>
-
-    <div class="compare-table-wrap">
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th>Tool</th>
-                    <th>Where audio is processed</th>
-                    <th>Leaves your device?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="highlight"><strong>Wspr</strong></td>
-                    <td class="highlight">On-device (whisper.cpp, GPU-accelerated)</td>
-                    <td class="highlight"><strong>Never</strong></td>
-                </tr>
-                <tr>
-                    <td>Cloud dictation apps (e.g. Wispr Flow)</td>
-                    <td>Vendor servers &amp; third-party subprocessors</td>
-                    <td>Always</td>
-                </tr>
-                <tr>
-                    <td>AI meeting note-takers (Otter, Fireflies, etc.)</td>
-                    <td>Vendor cloud</td>
-                    <td>Always</td>
-                </tr>
-                <tr>
-                    <td>Apple Dictation</td>
-                    <td>On-device on Apple Silicon; may use Apple servers depending on settings</td>
-                    <td>Sometimes</td>
-                </tr>
-                <tr>
-                    <td>Windows &ldquo;Fluid Dictation&rdquo;</td>
-                    <td>On-device &mdash; but only on Copilot+ PCs</td>
-                    <td>No (Copilot+ only)</td>
-                </tr>
-                <tr>
-                    <td>Windows voice typing (standard PCs)</td>
-                    <td>Cloud-assisted</td>
-                    <td>Typically yes</td>
-                </tr>
-                <tr>
-                    <td>Google voice typing (Docs / Gboard)</td>
-                    <td>Cloud by default</td>
-                    <td>Typically yes</td>
-                </tr>
-            </tbody>
-        </table>
+<header class="art-top">
+  <div class="wrap">
+    <div class="art-head cat-privacy">
+      <div class="crumb"><a href="/blog/">Blog</a><span>/</span><span>Privacy</span></div>
+      <span class="tag-cat">Privacy</span>
+      <h1>Does Voice Typing Send Your Voice to the Cloud?</h1>
+      <p class="lede">In 2026, a wave of lawsuits and regulatory rulings made one question worth answering carefully: when you dictate, where does your audio actually go? Here’s what Windows, Google, Apple, and the popular cloud dictation apps do with your voice, and why &ldquo;on-device&rdquo; is the only privacy you can verify.</p>
+      <div class="byline">
+        <span class="avatar" aria-hidden="true">MB</span>
+        <div><b>Mathieu-Philippe Bourgeois</b><span class="meta">JUN 17, 2026 · 5 MIN READ</span></div>
+      </div>
     </div>
+    <div class="art-cover cat-privacy rv"><div class="cover lg" aria-hidden="true"><span class="cv-kick">Privacy · Cloud</span><div class="cv-motif"><div class="cv-cloud"><svg viewBox="0 0 36 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 21.5h-1A5.5 5.5 0 0 1 8 10.6a8 8 0 0 1 15.2-1.9A6.4 6.4 0 0 1 27 21.5H14"/><path d="M4 2.5l28 21" stroke-width="1.6"/></svg></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div></div>
+  </div>
+</header>
 
-    <p>A few things worth calling out, because the marketing language around &ldquo;private&rdquo; and &ldquo;secure&rdquo; can be slippery:</p>
+<div class="art-body">
+  <details class="toc-m">
+    <summary>On this page</summary>
+    <ol data-toc><li><a href="#2026-made-cloud-transcription-a-legal-question-not-just-a-privacy-one">2026 made cloud transcription a legal question, not just a privacy one</a></li><li><a href="#where-your-audio-actually-goes-app-by-app">Where your audio actually goes, app by app</a></li><li><a href="#the-only-privacy-you-can-actually-verify">The only privacy you can actually verify</a></li><li><a href="#who-should-care-about-this">Who should care about this</a></li><li><a href="#the-bottom-line">The bottom line</a></li></ol>
+  </details>
+  <nav class="toc" aria-label="On this page">
+    <h4>On this page</h4>
+    <ul data-toc><li><a href="#2026-made-cloud-transcription-a-legal-question-not-just-a-privacy-one">2026 made cloud transcription a legal question, not just a privacy one</a></li><li><a href="#where-your-audio-actually-goes-app-by-app">Where your audio actually goes, app by app</a></li><li><a href="#the-only-privacy-you-can-actually-verify">The only privacy you can actually verify</a></li><li><a href="#who-should-care-about-this">Who should care about this</a></li><li><a href="#the-bottom-line">The bottom line</a></li></ul>
+  </nav>
 
-    <p><strong>Cloud apps can be secure and still send your audio.</strong> A vendor can hold every certification going and still process your voice on its own infrastructure. Wispr Flow, for example, is a polished cloud service &mdash; its own documentation lists third-party cloud subprocessors that handle your audio. That can be perfectly acceptable for plenty of people. But &ldquo;we encrypt it and we're compliant&rdquo; is a promise about how your data is handled <em>after</em> it leaves your machine. It is not the same as the data never leaving.</p>
+  <article class="art-main prose">
+<p>Voice typing has quietly become a daily habit. People dictate emails, draft documents, take meeting notes, and talk to AI coding agents instead of typing. But most users never ask the obvious question: the moment you speak, where does that audio travel before it comes back as text?</p>
 
-    <p><strong>&ldquo;On-device&rdquo; with an asterisk is common.</strong> Apple Dictation can run locally on Apple Silicon, but whether audio stays on-device depends on the feature and your settings. Microsoft's new on-device &ldquo;Fluid Dictation&rdquo; is genuinely local &mdash; but it's gated to Copilot+ PCs, which most Windows machines aren't. If you're on a standard Windows laptop or on Linux, the free built-in &ldquo;private&rdquo; option often isn't available to you at all.</p>
+<p>For a lot of popular tools, the answer is &ldquo;to a server you don’t control.&rdquo; And in 2026, that stopped being a theoretical concern.</p>
 
-    <h2>The only privacy you can actually verify</h2>
+<h2 id="2026-made-cloud-transcription-a-legal-question-not-just-a-privacy-one">2026 made cloud transcription a legal question, not just a privacy one</h2>
 
-    <p>There's a meaningful difference between privacy that's <em>promised</em> and privacy that's <em>structural</em>. A cloud service asks you to trust its policies, its certifications, and its future decisions about your data. On-device processing removes the question entirely: if the audio is transcribed locally and never uploaded, there's nothing on a server to leak, subpoena, retain, or train on. The privacy isn't a policy &mdash; it's the architecture.</p>
+<p>A run of cases and rulings this year turned &ldquo;where does my voice go&rdquo; into something lawyers, clinicians, and compliance teams now ask out loud:</p>
 
-    <p>That's the whole idea behind Wspr. It runs OpenAI's Whisper models directly on your machine using whisper.cpp with GPU acceleration. You press a hotkey, speak, and your words are inserted wherever your cursor is. Your audio never touches a network. There are no servers, no accounts, no analytics, and no crash reporting &mdash; the temporary audio file is deleted the moment transcription finishes. If you add AI rewriting, it's optional and uses <em>your own</em> API key, so you stay in control of that too.</p>
+<ul>
+<li><strong>The Otter.ai class action.</strong> <em>In re Otter.AI Privacy Litigation</em> (Northern District of California, before Judge Eumi Lee) is widely described as the first federal test of whether wiretap statutes reach an AI bot sitting in a meeting and recording it. The motion-to-dismiss hearing was held May 20, 2026.</li>
+<li><strong>Biometric suits over &ldquo;voiceprints.&rdquo;</strong> <em>Cruz v. Fireflies.AI</em>, filed in Illinois in December 2025, alleges the company collected voiceprints without consent under Illinois’ Biometric Information Privacy Act (BIPA).</li>
+<li><strong>Law firms are warning clients directly.</strong> An April 27, 2026 client alert from Goodwin put it plainly: once audio and transcripts are generated, they &ldquo;often reside on systems controlled by the service provider, not the organization.&rdquo; For anyone under attorney-client privilege or all-party-consent recording rules, that’s a problem.</li>
+<li><strong>Regulators are drawing lines on training data.</strong> In May 2026, Canada’s federal and provincial privacy commissioners concluded that OpenAI’s training of early ChatGPT models violated Canadian privacy law. Around the same time, Atlassian moved to collect customer product data by default to train its AI offerings: a change affecting roughly 300,000 customers.</li>
+</ul>
 
-    <p>It's also one of the few serious dictation apps that runs on <strong>Windows and Linux</strong>, not just Mac &mdash; which matters here, because the &ldquo;just use the free built-in private option&rdquo; advice mostly assumes you're on a recent Apple Silicon Mac or a Copilot+ PC. If you're not, on-device dictation has been hard to come by. (We wrote separately about <a href="../linux-voice-to-text/">on-device voice-to-text on Linux</a> and <a href="private-dictation-mac.html">how local dictation actually works</a> if you want the technical details.)</p>
+<p>None of this means cloud transcription is evil. It means that when your audio leaves your device, it becomes someone else’s data, on someone else’s servers, subject to someone else’s retention policy, and potentially to subpoena, breach, or a quietly updated training clause. That’s the exposure. The only way to eliminate it is to never send the audio in the first place.</p>
 
-    <h2>Who should care about this</h2>
+<h2 id="where-your-audio-actually-goes-app-by-app">Where your audio actually goes, app by app</h2>
 
-    <p>If you dictate your grocery list, the stakes are low and any tool is fine. The calculus changes when your words carry obligations:</p>
+<p>Here’s an honest breakdown of how the most common ways to dictate in 2026 handle your voice.</p>
 
-    <ul>
-        <li><strong>Lawyers</strong> dictating notes or correspondence covered by privilege.</li>
-        <li><strong>Clinicians</strong> handling patient information under HIPAA or provincial health-privacy rules.</li>
-        <li><strong>Anyone in an all-party-consent jurisdiction</strong> who records or transcribes conversations.</li>
-        <li><strong>People who simply don't want their voice becoming training data</strong> the next time a terms-of-service update rolls out.</li>
-    </ul>
+<div class="tbl-wrap">
+<table class="cmp">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Where audio is processed</th>
+<th>Leaves your device?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="us"><strong>Wspr</strong></td>
+<td class="us">On-device (whisper.cpp, GPU-accelerated)</td>
+<td class="us"><strong>Never</strong></td>
+</tr>
+<tr>
+<td>Cloud dictation apps (e.g. Wispr Flow)</td>
+<td>Vendor servers &amp; third-party subprocessors</td>
+<td>Always</td>
+</tr>
+<tr>
+<td>AI meeting note-takers (Otter, Fireflies, etc.)</td>
+<td>Vendor cloud</td>
+<td>Always</td>
+</tr>
+<tr>
+<td>Apple Dictation</td>
+<td>On-device on Apple Silicon; may use Apple servers depending on settings</td>
+<td>Sometimes</td>
+</tr>
+<tr>
+<td>Windows &ldquo;Fluid Dictation&rdquo;</td>
+<td>On-device, but only on Copilot+ PCs</td>
+<td>No (Copilot+ only)</td>
+</tr>
+<tr>
+<td>Windows voice typing (standard PCs)</td>
+<td>Cloud-assisted</td>
+<td>Typically yes</td>
+</tr>
+<tr>
+<td>Google voice typing (Docs / Gboard)</td>
+<td>Cloud by default</td>
+<td>Typically yes</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-    <p>For all of them, &ldquo;the audio never leaves my machine&rdquo; isn't a marketing line. It's a compliance posture that needs no data-processing agreement to negotiate and no vendor retention policy to audit.</p>
+<p>A few things worth calling out, because the marketing language around &ldquo;private&rdquo; and &ldquo;secure&rdquo; can be slippery:</p>
 
-    <h2>The bottom line</h2>
+<p><strong>Cloud apps can be secure and still send your audio.</strong> A vendor can hold every certification going and still process your voice on its own infrastructure. Wispr Flow, for example, is a polished cloud service: its own documentation lists third-party cloud subprocessors that handle your audio. That can be perfectly acceptable for plenty of people. But &ldquo;we encrypt it and we’re compliant&rdquo; is a promise about how your data is handled <em>after</em> it leaves your machine. It is not the same as the data never leaving.</p>
 
-    <p>In 2026, the question stopped being &ldquo;is my dictation app trustworthy?&rdquo; and became &ldquo;does my dictation app even need to be trusted?&rdquo; The least exposure is the audio you never send. If you want voice typing that's genuinely private &mdash; on Mac, Windows, or Linux, with nothing uploaded and no subscription &mdash; that's exactly what Wspr is built to be.</p>
+<p><strong>&ldquo;On-device&rdquo; with an asterisk is common.</strong> Apple Dictation can run locally on Apple Silicon, but whether audio stays on-device depends on the feature and your settings. Microsoft’s new on-device &ldquo;Fluid Dictation&rdquo; is genuinely local, but it’s gated to Copilot+ PCs, which most Windows machines aren’t. If you’re on a standard Windows laptop or on Linux, the free built-in &ldquo;private&rdquo; option often isn’t available to you at all.</p>
 
-    <p>You can try it free, and Pro is a one-time <strong>$14.99</strong> &mdash; no monthly fee, no account, no cloud. (If recurring charges are part of why you're rethinking your setup, here's <a href="no-subscription-dictation.html">why one-time pricing matters</a>.) Read exactly what we do and don't store in our <a href="../privacy.html">privacy policy</a>.</p>
+<h2 id="the-only-privacy-you-can-actually-verify">The only privacy you can actually verify</h2>
 
-    <div class="cta-buttons" style="margin-top: 40px;">
-        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Wspr Free
-        </a>
-        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
-            Buy Pro &mdash; $14.99
-        </a>
+<p>There’s a meaningful difference between privacy that’s <em>promised</em> and privacy that’s <em>structural</em>. A cloud service asks you to trust its policies, its certifications, and its future decisions about your data. On-device processing removes the question entirely: if the audio is transcribed locally and never uploaded, there’s nothing on a server to leak, subpoena, retain, or train on. The privacy isn’t a policy: it’s the architecture.</p>
+<blockquote class="pull">The privacy isn’t a policy: it’s the architecture.</blockquote>
+
+<p>That’s the whole idea behind Wspr. It runs OpenAI’s Whisper models directly on your machine using whisper.cpp with GPU acceleration. You press a hotkey, speak, and your words are inserted wherever your cursor is. Your audio never touches a network. There are no servers, no accounts, no analytics, and no crash reporting, the temporary audio file is deleted the moment transcription finishes. If you add AI rewriting, it’s optional and uses <em>your own</em> API key, so you stay in control of that too.</p>
+
+<p>It’s also one of the few serious dictation apps that runs on <strong>Windows and Linux</strong>, not just Mac, which matters here, because the &ldquo;just use the free built-in private option&rdquo; advice mostly assumes you’re on a recent Apple Silicon Mac or a Copilot+ PC. If you’re not, on-device dictation has been hard to come by. (We wrote separately about <a href="/linux-voice-to-text/">on-device voice-to-text on Linux</a> and <a href="/blog/private-dictation-mac.html">how local dictation actually works</a> if you want the technical details.)</p>
+
+<h2 id="who-should-care-about-this">Who should care about this</h2>
+
+<p>If you dictate your grocery list, the stakes are low and any tool is fine. The calculus changes when your words carry obligations:</p>
+
+<ul>
+<li><strong>Lawyers</strong> dictating notes or correspondence covered by privilege.</li>
+<li><strong>Clinicians</strong> handling patient information under HIPAA or provincial health-privacy rules.</li>
+<li><strong>Anyone in an all-party-consent jurisdiction</strong> who records or transcribes conversations.</li>
+<li><strong>People who simply don’t want their voice becoming training data</strong> the next time a terms-of-service update rolls out.</li>
+</ul>
+
+<aside class="callout"><span class="co-lab"><svg aria-hidden="true"><use href="#i-lock"/></svg>Compliance</span>
+<p>For all of them, &ldquo;the audio never leaves my machine&rdquo; isn’t a marketing line. It’s a compliance posture that needs no data-processing agreement to negotiate and no vendor retention policy to audit.</p></aside>
+
+<h2 id="the-bottom-line">The bottom line</h2>
+
+<p>In 2026, the question stopped being &ldquo;is my dictation app trustworthy?&rdquo; and became &ldquo;does my dictation app even need to be trusted?&rdquo; The least exposure is the audio you never send. If you want voice typing that’s genuinely private, on Mac, Windows, or Linux, with nothing uploaded and no subscription, that’s exactly what Wspr is built to be.</p>
+
+<p>You can try it free, and Pro is a one-time <strong>$14.99</strong>: no monthly fee, no account, no cloud. (If recurring charges are part of why you’re rethinking your setup, here’s <a href="/blog/no-subscription-dictation.html">why one-time pricing matters</a>.) Read exactly what we do and don’t store in our <a href="/privacy.html">privacy policy</a>.</p>
+  </article>
+
+  <aside class="side">
+    <div class="side-card">
+      <svg class="lx" aria-hidden="true"><use href="#i-lock"/></svg>
+      <h4>Your voice stays on your computer</h4>
+      <p>On-device transcription. No account, no analytics.</p>
+      <a class="btn btn-primary btn-sm" href="/#download">Download</a>
     </div>
+  </aside>
+</div>
 
-    <a href="../blog/" class="back-link">&larr; More articles</a>
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="../privacy.html">Privacy Policy</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+<div class="art-after">
+  <section class="art-cta rv">
+    <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="h-3">Your voice stays on your computer.</h2>
+    <p>Transcription runs on-device. No account, no analytics, and nothing uploaded.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/#download">Download Wspr free</a>
+      <a class="btn btn-ghost" href="/#privacy">See how it stays private</a>
     </div>
+  </section>
+  <div class="author rv">
+    <span class="avatar" aria-hidden="true">MB</span>
+    <div><b>Mathieu-Philippe Bourgeois</b><p>Builds Wspr. Writes about on-device AI and the tools around it.</p></div>
+  </div>
+</div>
+
+<section class="more">
+  <div class="wrap">
+    <div class="more-head">
+      <h2 class="h-3" style="font-size:26px;letter-spacing:-.025em">Keep reading</h2>
+      <a class="go" href="/blog/">All posts <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="grid">
+<a class="card cat-privacy rv" href="/blog/private-dictation-mac.html" data-cat="Privacy">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Privacy · Mac</span><div class="cv-motif"><div class="cv-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2.2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/><circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/></svg></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Privacy</span>
+    <h3>How to Dictate on Mac Without Sending Your Voice to the Cloud</h3>
+    <p>Most dictation apps send your audio to remote servers. Here’s how on-device transcription works with whisper.cpp and local GPU acceleration, and why it matters.</p>
+    <span class="meta">MAR 22, 2026 · 5 MIN READ</span>
+  </div>
+</a>
+<a class="card cat-linux rv" href="/blog/dictate-coding-agents-linux.html" data-cat="Linux">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Linux · Wayland</span><div class="cv-motif"><div class="cv-term"><u></u><u></u><b>&gt;_</b></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Linux</span>
+    <h3>How to Dictate Prompts to Coding Agents on Linux</h3>
+    <p>A coding agent does about as well as the brief you hand it, and typing a proper brief is the slow part. The TUI paste problem, the honest state of Wayland support, and which Whisper model to run for long prompts.</p>
+    <span class="meta">SEP 15, 2026 · 8 MIN READ</span>
+  </div>
+</a>
+<a class="card cat-models rv" href="/blog/best-speech-to-text-models-2026.html" data-cat="Models">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Models · 2026</span><div class="cv-motif"><div class="cv-chart"><i style="--h:26%"></i><i style="--h:40%"></i><i style="--h:58%"></i><i style="--h:80%"></i><i class=hi style="--h:100%"></i></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Models</span>
+    <h3>The 2026 Speech-to-Text Model Boom: Qwen3-ASR, Voxtral, Cohere Transcribe &amp; Why the Model Isn’t Your Bottleneck</h3>
+    <p>Six new open models beat Whisper on the Open ASR Leaderboard this year, and less than one WER point separates the top four. Here are the real numbers, and the honest reason a better model won’t make your dictation feel better.</p>
+    <span class="meta">JUL 30, 2026 · 7 MIN READ</span>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const links = [...document.querySelectorAll('[data-toc] a')];
+const heads = [...document.querySelectorAll('.prose h2')];
+const spy = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); });
+}, { rootMargin: '-90px 0px -65% 0px' });
+heads.forEach(h => spy.observe(h));
+</script>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
-
+<script src="/site.js" defer></script>
 </body>
 </html>

@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice-to-Text for Linux in 2026: The Missing Dictation App for GNOME, KDE, Hyprland &amp; More</title>
-    <meta name="description" content="Linux has almost no good native dictation apps — until now. Wspr runs Whisper on-device with GPU acceleration on Ubuntu, Fedora, Arch, Pop!_OS, and any x86_64 Linux desktop. $14.99 once, private, offline, 99 languages.">
+    <meta name="description" content="Linux has almost no good native dictation apps. Until now. Wspr runs Whisper on-device with GPU acceleration on Ubuntu, Fedora, Arch, Pop!_OS, and any x86_64 Linux desktop. $14.99 once, private, offline, 99 languages.">
     <meta name="keywords" content="linux voice to text, linux dictation app, speech to text linux, voice typing linux, ubuntu voice to text, fedora dictation, arch linux dictation, gnome voice to text, kde dictation, pop os voice to text, whisper linux, offline dictation linux">
     <meta name="author" content="Mathieu-Philippe Bourgeois">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getwspr.com/linux-voice-to-text/">
 
     <meta property="og:title" content="Voice-to-Text for Linux in 2026: Finally, a Real Dictation App">
-    <meta property="og:description" content="Wspr brings on-device Whisper-powered dictation to Linux — works on Ubuntu, Fedora, Arch, Pop!_OS, and more. $14.99 once, no cloud, no subscription.">
+    <meta property="og:description" content="Wspr brings on-device Whisper-powered dictation to Linux : works on Ubuntu, Fedora, Arch, Pop!_OS, and more. $14.99 once, no cloud, no subscription.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://getwspr.com/linux-voice-to-text/">
-    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:image" content="https://getwspr.com/images/og/linux-voice-to-text.png">
     <meta property="og:site_name" content="Wspr">
     <meta property="article:published_time" content="2026-04-16">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Voice-to-Text for Linux in 2026">
     <meta name="twitter:description" content="On-device Whisper dictation for any x86_64 Linux desktop. One-time purchase.">
-    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+    <meta name="twitter:image" content="https://getwspr.com/images/og/linux-voice-to-text.png">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -30,8 +30,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
-
-    <link rel="stylesheet" href="../style.css">
 
     <script type="application/ld+json">
     {
@@ -52,133 +50,436 @@
         "mainEntityOfPage": "https://getwspr.com/linux-voice-to-text/"
     }
     </script>
+
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pages.css">
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Wspr work on Wayland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "X11 sessions are fully supported and tested daily. Wayland sessions that expose the RemoteDesktop portal (KDE Plasma 6, GNOME 45+) are supported natively, through libei via xdg-desktop-portal. Compositors without that portal, meaning wlroots ones such as Sway and Hyprland, fall back to xdotool, which needs XWayland present. A bare Wayland session with neither the portal nor XWayland is not supported yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Linux distros does Wspr support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wspr ships as a Linux build for x86_64 systems. It has been validated on mainstream distros including Ubuntu and its derivatives. Other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Wspr send my audio to the cloud on Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wspr never sends audio anywhere. The Whisper model lives on your disk, runs on your GPU, and produces text that is pasted directly into your focused application. There is no telemetry, no account and no cloud dependency for core transcription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Wspr use my GPU on Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, where GPU acceleration is available, with a CPU fallback when it isn't. Wspr runs the same whisper.cpp engine as on macOS and Windows. Models are downloaded on first run and you pick the one that fits your hardware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which audio system does Wspr use on Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Audio capture goes through cpal, which speaks whatever audio system your distro exposes: PipeWire on modern setups, PulseAudio on older ones. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Wspr cost on Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "$14.99, once. There is no subscription and no account. The free download includes 50 live transcriptions so you can test it on your exact setup before paying. Pro is a one-time unlock that removes the cap forever."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav scrolled">
-    <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="../index.html#features">Features</a>
-            <a href="../index.html#pricing">Pricing</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-            <a href="../privacy.html">Privacy</a>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
 
-<main class="page-container article-container">
-    <p class="article-date">Updated April 16, 2026</p>
-    <h1>Voice-to-Text for Linux in 2026</h1>
-    <p class="article-subtitle">Linux has been the forgotten platform for dictation for two decades. Here's where things actually stand in 2026 — and how to get modern, on-device, Whisper-powered voice typing working on any Linux desktop.</p>
-
-    <p>If you've tried to set up dictation on Linux in the past, you know the story. The desktop ecosystem has always trailed macOS and Windows on accessibility tooling, and voice input has been the most glaring gap. The options have historically been: wrestle with half-abandoned open-source projects, run a cloud service that sends every word to someone else's server, or just give up and type.</p>
-
-    <p>In 2026, that's finally changing. Whisper-class models are small enough to run on consumer laptops, whisper.cpp has matured into a production-ready inference engine, and GPU acceleration is available on basically every modern Linux machine via Vulkan and CUDA. The pieces all exist &mdash; they just hadn't been packaged into a real desktop app. Now they have.</p>
-
-    <h2>The State of Dictation on Linux</h2>
-
-    <p>Historically, Linux users looking for voice input have had three rough options, none of them great:</p>
-
-    <ul>
-        <li><strong>DIY open-source stacks</strong> like nerd-dictation, wtype scripts around whisper.cpp, or Vosk-based tools. These can work well for a tinkerer, but they're CLI-first, require manual setup per desktop environment, and don't give you a packaged app with a UI.</li>
-        <li><strong>Cloud APIs</strong> like the OpenAI Whisper API or Google Speech-to-Text, wrapped in custom scripts. Accurate, but your audio leaves your machine and you pay per minute.</li>
-        <li><strong>Desktop-built-in accessibility tools</strong>. Useful for some workflows but typically limited in accuracy, languages, and customization.</li>
-    </ul>
-
-    <p>What's been missing is a packaged, installable desktop app that runs Whisper locally with GPU acceleration, has a proper UI, and Just Works on a modern Linux install. That's the gap Wspr is built to fill.</p>
-
-    <h2>Why Linux Has Been Underserved</h2>
-
-    <p>Three structural reasons:</p>
-
-    <p><strong>Market size.</strong> Commercial dictation vendors (Dragon, Wispr Flow, Superwhisper, MacWhisper) build for Mac, Windows, and in some cases mobile &mdash; because that's where the paying users are. Linux is a rounding error on their revenue spreadsheet, so it stays unsupported.</p>
-
-    <p><strong>Desktop fragmentation.</strong> GNOME, KDE Plasma, Hyprland, Sway, XFCE, Cinnamon &mdash; same kernel, six different ways to paste text into the focused window. Any serious Linux dictation tool has to handle X11 and Wayland, ibus and fcitx, xdotool and wtype. It's non-trivial and most vendors don't bother.</p>
-
-    <p><strong>Audio stack churn.</strong> ALSA, PulseAudio, PipeWire &mdash; capturing microphone input on Linux has been a moving target for years. PipeWire finally stabilized that in 2023-2024, which is part of why this kind of app is feasible now.</p>
-
-    <h2>What Wspr Does on Linux</h2>
-
-    <p>Wspr is a native Linux app. It runs the same whisper.cpp engine as on macOS and Windows, with GPU acceleration where available and CPU fallback when it isn't.</p>
-
-    <p>The user flow on Linux is the same as everywhere else:</p>
-
-    <ol>
-        <li>Press your configured global hotkey.</li>
-        <li>Speak.</li>
-        <li>Release the hotkey. Wspr transcribes locally and pastes into the focused window.</li>
-        <li>Optionally trigger an AI rewrite &mdash; "make this a bullet list", "translate to French", "fix grammar" &mdash; routed to OpenAI, Anthropic, or Gemini using your own API key.</li>
-    </ol>
-
-    <p>It also does file transcription: drop an audio or video file in, get a transcript out. Good for meeting recordings, voice memos, and podcast clips.</p>
-
-    <h2>Distro and Desktop Support</h2>
-
-    <p>Wspr ships as a Linux build for x86_64 systems. It's been validated on mainstream distros including Ubuntu and its derivatives &mdash; other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior.</p>
-
-    <p><strong>Session support, plainly:</strong> X11 sessions are fully supported and tested daily. Wayland sessions that expose the RemoteDesktop portal (KDE Plasma 6, GNOME 45+) are supported natively: since version 5.1.2 Wspr injects text through libei via <code>xdg-desktop-portal</code> and holds one portal session for the life of the process, so the compositor remembers the grant and the old &ldquo;Control input devices&rdquo; prompt on every launch is gone. The global dictation hotkey goes through the <code>GlobalShortcuts</code> portal on Wayland, which is why it still fires when no Wspr window is focused; your desktop owns that binding, so you rebind it in your desktop's own settings (on GNOME, under Settings then Apps). <strong>Compositors without that portal, meaning wlroots ones such as Sway and Hyprland, fall back to <code>xdotool</code>, which needs XWayland present.</strong> A bare Wayland session with neither the portal nor XWayland is not supported yet.</p>
-
-    <p>If you dictate into a terminal, the paste path is worth understanding in a bit more depth: we wrote it up in <a href="../blog/dictate-coding-agents-linux.html">How to Dictate Prompts to Coding Agents on Linux</a>.</p>
-
-    <p>Audio capture goes through <code>cpal</code>, which speaks whatever audio system your distro exposes &mdash; PipeWire on modern setups, PulseAudio on older ones. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue and we'll look at it.</p>
-
-    <h2>Privacy: This Is the Part Linux Users Care About</h2>
-
-    <p>A big reason people use Linux in the first place is because they don't want a vendor-controlled pipe between them and their computer. A dictation app that streams every word to a cloud service undoes that in one install.</p>
-
-    <p>Wspr never sends audio anywhere. The Whisper model lives on your disk, runs on your GPU, and produces text that's pasted directly into your focused application. No telemetry, no account, no cloud dependency for core transcription. AI rewriting is the only step that optionally calls out to a provider &mdash; and only the text you explicitly rewrite, using your own API key, routed directly from your machine to the provider you chose.</p>
-
-    <h2>Performance</h2>
-
-    <p>Whisper "small" and "medium" models run comfortably in real-time on a mid-range Linux laptop with integrated graphics. On a discrete GPU, you can run "large-v3" and get near-instant transcription of multi-minute recordings. Wspr downloads models on first run; you pick the one that fits your hardware.</p>
-
-    <h2>Pricing</h2>
-
-    <p>$14.99. Once. That's the whole pricing page.</p>
-
-    <p>No subscription, no account, no tiered "Pro" that gates normal functionality. The free download includes 50 live transcriptions so you can actually test that it works on your exact setup before paying. Pro is a one-time unlock that removes the cap &mdash; and removes it forever.</p>
-
-    <h2>Try It</h2>
-
-    <p>Linux has needed a real dictation app for a long time. Wspr is that app. It's private, it runs Whisper locally with GPU acceleration where available, and it costs $14.99 once. Grab the free build and see if it fits your workflow.</p>
-
-    <div class="cta-buttons" style="margin-top: 40px;">
-        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Wspr for Linux
-        </a>
-        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
-            Buy Pro &mdash; $14.99
-        </a>
+<main>
+<header class="hero lander is-green">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill-meta"><span class="dot"></span>Updated <b>April 16, 2026</b> · Linux x64</span>
+      <h1 class="h-1"><span class="grad">Voice to text for Linux,</span> <em class="acc green">finally.</em></h1>
+      <p class="lede">Linux has been the forgotten platform for dictation for two decades. Here is where things actually stand in 2026, and how to get modern, on-device, Whisper-powered voice typing working on any Linux desktop.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-os-cta href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage" data-mac="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" data-win="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe" data-linux="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg><use href="#i-linux"/></svg><span data-os-label>Download for Linux</span></a>
+        <a class="btn btn-ghost" href="#film"><svg><use href="#i-play"/></svg>Watch the film <span class="mono dim" style="font-size:13px">1:46</span></a>
+      </div>
+      <div class="hero-note">
+        <span><svg><use href="#i-check"/></svg>AppImage or .deb</span>
+        <span><svg><use href="#i-check"/></svg>No card, no account</span>
+        <span><svg><use href="#i-check"/></svg>Pro is $14.99, once</span>
+      </div>
     </div>
+    <div class="scene" aria-hidden="true">
+      <div class="term">
+        <div class="win-bar"><i></i><i></i><i></i><span>Terminal</span></div>
+        <div class="term-body">
+          <span class="c"># dictated with Wspr, typed into the focused window</span>
+          <span class="line"><span class="p">~/src/uploader $</span> git commit -m "fix the retry</span>
+          <span class="line l2">loop in the upload worker"</span>
+          <span class="line l3"><span class="p">~/src/uploader $</span> <span class="caret"></span></span>
+        </div>
+      </div>
+      <div class="keys"><div class="key">Ctrl</div><div class="key">Shift</div><div class="key space">Space</div></div>
+      <div class="rec"><div class="wave"><i></i><i></i><i></i><i></i><i></i></div><span class="lbl">Listening</span><span>00:04</span></div>
+    </div>
+  </div>
+</header>
 
-    <a href="../index.html" class="back-link">&larr; Back to Wspr</a>
+<section id="state" class="sect">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-text rv prose">
+        <span class="eyebrow green">The state of dictation on Linux</span>
+        <h2 class="h-2">Three rough options, <em class="acc green">none great.</em></h2>
+        <p>If you've tried to set up dictation on Linux in the past, you know the story. The desktop ecosystem has always trailed macOS and Windows on accessibility tooling, and voice input has been the most glaring gap. The options have historically been: wrestle with half-abandoned open-source projects, run a cloud service that sends every word to someone else's server, or just give up and type.</p>
+        <p>In 2026, that's finally changing. Whisper-class models are small enough to run on consumer laptops, whisper.cpp has matured into a production-ready inference engine, and GPU acceleration is available on basically every modern Linux machine via Vulkan and CUDA. The pieces all exist, they just hadn't been packaged into a real desktop app. Now they have.</p>
+        <p>What's been missing is a packaged, installable desktop app that runs Whisper locally with GPU acceleration, has a proper UI, and Just Works on a modern Linux install. That's the gap Wspr is built to fill.</p>
+      </div>
+      <div class="duo rv" style="grid-template-columns:1fr">
+        <div class="cell">
+          <div class="ico g"><svg><use href="#i-term"/></svg></div>
+          <h3 class="h-3">DIY open-source stacks</h3>
+          <p>Tools like nerd-dictation, wtype scripts around whisper.cpp, or Vosk-based tools. These can work well for a tinkerer, but they're CLI-first, require manual setup per desktop environment, and don't give you a packaged app with a UI.</p>
+        </div>
+        <div class="cell">
+          <div class="ico g"><svg><use href="#i-cloudoff"/></svg></div>
+          <h3 class="h-3">Cloud APIs</h3>
+          <p>Like the OpenAI Whisper API or Google Speech-to-Text, wrapped in custom scripts. Accurate, but your audio leaves your machine and you pay per minute.</p>
+        </div>
+        <div class="cell">
+          <div class="ico g"><svg><use href="#i-key"/></svg></div>
+          <h3 class="h-3">Desktop built-in accessibility tools</h3>
+          <p>Useful for some workflows but typically limited in accuracy, languages, and customization.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">Why Linux has been underserved</span>
+      <h2 class="h-2">Three structural <em class="acc green">reasons.</em></h2>
+    </div>
+    <div class="bento">
+      <div class="cell c2 rv">
+        <div class="ico"><svg><use href="#i-globe"/></svg></div>
+        <h3 class="h-3">Market size</h3>
+        <p>Commercial dictation vendors (Dragon, Wispr Flow, Superwhisper, MacWhisper) build for Mac, Windows, and in some cases mobile, because that's where the paying users are. Linux is a rounding error on their revenue spreadsheet, so it stays unsupported.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico"><svg><use href="#i-chip"/></svg></div>
+        <h3 class="h-3">Desktop fragmentation</h3>
+        <p>GNOME, KDE Plasma, Hyprland, Sway, XFCE, Cinnamon: same kernel, six different ways to paste text into the focused window. Any serious Linux dictation tool has to handle X11 and Wayland, ibus and fcitx, xdotool and wtype. It's non-trivial and most vendors don't bother.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico"><svg><use href="#i-mic"/></svg></div>
+        <h3 class="h-3">Audio stack churn</h3>
+        <p>ALSA, PulseAudio, PipeWire: capturing microphone input on Linux has been a moving target for years. PipeWire finally stabilized that in 2023 to 2024, which is part of why this kind of app is feasible now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow green">What Wspr does on Linux</span>
+      <h2 class="h-2">A native app. <em class="acc green">The same flow as everywhere.</em></h2>
+      <p class="lede">Wspr is a native Linux app. It runs the same whisper.cpp engine as on macOS and Windows, with GPU acceleration where available and CPU fallback when it isn't.</p>
+    </div>
+    <div class="steps s4">
+      <div class="step rv"><span class="n">01</span><h3 class="h-3">Press your hotkey</h3><p>Press your configured global hotkey.</p></div>
+      <div class="step rv"><span class="n">02</span><h3 class="h-3">Speak</h3><p>Say it the way you would say it out loud.</p></div>
+      <div class="step rv"><span class="n">03</span><h3 class="h-3">Release</h3><p>Release the hotkey. Wspr transcribes locally and pastes into the focused window.</p></div>
+      <div class="step rv"><span class="n">04</span><h3 class="h-3">Rewrite, if you want</h3><p>Optionally trigger an AI rewrite: "make this a bullet list", "translate to French", "fix grammar". It is routed to OpenAI, Anthropic, or Gemini using your own API key.</p></div>
+    </div>
+    <p class="prose rv" style="max-width:46em;margin-top:28px"><span style="display:block;color:var(--ink-2)">It also does file transcription: drop an audio or video file in, get a transcript out. Good for meeting recordings, voice memos, and podcast clips.</span></p>
+  </div>
+</section>
+
+<section id="film" class="sect tight">
+  <div class="aura blue"></div>
+  <div class="wrap">
+    <div class="sect-head center rv">
+      <span class="eyebrow blue">The film</span>
+      <h2 class="h-2">Five places, <em class="acc blue">one hotkey.</em></h2>
+      <p class="lede">Watch Wspr type in five different places.</p>
+    </div>
+    <div class="rv">
+      <div class="cinema" id="cinema">
+        <video preload="none" playsinline poster="/images/film-01-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-01-five-places-1080.mp4"></video>
+        <button class="play" aria-label="Play film"><span class="b"><svg><use href="#i-play"/></svg></span><span class="cap" data-cap>Five places, one hotkey · 1:46 · sound on</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="support" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow green">Distro and desktop support</span>
+      <h2 class="h-2">Session support, <em class="acc green">stated plainly.</em></h2>
+      <p class="lede">Wspr ships as a Linux build for x86_64 systems. It's been validated on mainstream distros including Ubuntu and its derivatives. Other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior.</p>
+    </div>
+    <div class="sup">
+      <div class="cell rv">
+        <div class="tagrow"><span class="chip g"><svg><use href="#i-check"/></svg>Supported</span></div>
+        <h3 class="h-3">X11 sessions</h3>
+        <p>Fully supported and tested daily.</p>
+      </div>
+      <div class="cell wide on-g rv">
+        <div class="tagrow"><span class="chip g"><svg><use href="#i-check"/></svg>Supported natively</span><span class="chip">KDE Plasma 6</span><span class="chip">GNOME 45+</span></div>
+        <h3 class="h-3">Wayland with the RemoteDesktop portal</h3>
+        <p>Since version 5.1.2 Wspr injects text through libei via <code>xdg-desktop-portal</code> and holds one portal session for the life of the process, so the compositor remembers the grant and the old &ldquo;Control input devices&rdquo; prompt on every launch is gone.</p>
+        <p>The global dictation hotkey goes through the <code>GlobalShortcuts</code> portal on Wayland, which is why it still fires when no Wspr window is focused. Your desktop owns that binding, so you rebind it in your desktop's own settings (on GNOME, under Settings then Apps).</p>
+      </div>
+      <div class="cell wide rv">
+        <div class="tagrow"><span class="chip">Falls back to xdotool</span><span class="chip">Sway</span><span class="chip">Hyprland</span></div>
+        <h3 class="h-3">Compositors without that portal</h3>
+        <p>Compositors without that portal, meaning wlroots ones such as Sway and Hyprland, fall back to <code>xdotool</code>, which needs XWayland present.</p>
+      </div>
+      <div class="cell no rv">
+        <div class="tagrow"><span class="chip dim">Not supported yet</span></div>
+        <h3 class="h-3">Bare Wayland</h3>
+        <p>A bare Wayland session with neither the portal nor XWayland is not supported yet.</p>
+      </div>
+      <div class="cell wide rv">
+        <div class="tagrow"><span class="chip">cpal</span><span class="chip">PipeWire</span><span class="chip">PulseAudio</span></div>
+        <h3 class="h-3">Audio capture</h3>
+        <p>Audio capture goes through <code>cpal</code>, which speaks whatever audio system your distro exposes: PipeWire on modern setups, PulseAudio on older ones. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue and we'll look at it.</p>
+      </div>
+      <div class="cell rv">
+        <div class="tagrow"><span class="chip">Terminals</span></div>
+        <h3 class="h-3">Dictating into a terminal</h3>
+        <p>If you dictate into a terminal, the paste path is worth understanding in a bit more depth: we wrote it up in <a class="note-link" href="/blog/dictate-coding-agents-linux.html" style="color:var(--blue-hi)">How to Dictate Prompts to Coding Agents on Linux</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="sect tight">
+  <div class="aura green"></div>
+  <div class="wrap">
+    <div class="split rev">
+      <div class="rv">
+        <div class="device">
+          <span class="device-tag">YOUR LINUX MACHINE</span>
+          <div class="flow">
+            <div class="node"><div class="ic"><svg><use href="#i-mic"/></svg></div><b>Your voice</b><small>Microphone</small></div>
+            <span class="arrow"><svg><use href="#i-arrow"/></svg></span>
+            <div class="node"><div class="ic"><svg><use href="#i-chip"/></svg></div><b>whisper.cpp</b><small>On your GPU</small></div>
+            <span class="arrow"><svg><use href="#i-arrow"/></svg></span>
+            <div class="node"><div class="ic"><svg><use href="#i-text"/></svg></div><b>Focused app</b><small>Text pasted in</small></div>
+          </div>
+          <div class="device-foot">
+            <span class="chip g"><svg><use href="#i-check"/></svg>No telemetry</span>
+            <span class="chip g"><svg><use href="#i-check"/></svg>No account</span>
+            <span class="chip g"><svg><use href="#i-check"/></svg>Audio never leaves</span>
+          </div>
+        </div>
+      </div>
+      <div class="split-text rv prose">
+        <span class="eyebrow green">Privacy</span>
+        <h2 class="h-2">The part Linux users <em class="acc green">care about.</em></h2>
+        <p>A big reason people use Linux in the first place is because they don't want a vendor-controlled pipe between them and their computer. A dictation app that streams every word to a cloud service undoes that in one install.</p>
+        <p>Wspr never sends audio anywhere. The Whisper model lives on your disk, runs on your GPU, and produces text that's pasted directly into your focused application. No telemetry, no account, no cloud dependency for core transcription. AI rewriting is the only step that optionally calls out to a provider, and only the text you explicitly rewrite, using your own API key, routed directly from your machine to the provider you chose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="performance" class="sect tight">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-text rv prose">
+        <span class="eyebrow">Performance</span>
+        <h2 class="h-2">Pick the model <em class="acc green">your hardware likes.</em></h2>
+        <p>Whisper "small" and "medium" models run comfortably in real-time on a mid-range Linux laptop with integrated graphics. On a discrete GPU, you can run "large-v3" and get near-instant transcription of multi-minute recordings. Wspr downloads models on first run; you pick the one that fits your hardware.</p>
+      </div>
+      <div class="models-mini rv">
+        <div><b>Tiny</b><span>~75 MB</span></div>
+        <div><b>Base</b><span>~140 MB</span></div>
+        <div class="rec-m"><b>Small <span class="tag" style="margin-left:6px;color:var(--green);background:rgba(48,209,88,.14)">recommended</span></b><span>~460 MB</span></div>
+        <div><b>Medium</b><span>~1.5 GB</span></div>
+        <div><b>Large v3 Turbo</b><span>~1.6 GB</span></div>
+        <div><b>Large v3</b><span>~3 GB</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow green">Install</span>
+      <h2 class="h-2">Grab the free build <em class="acc green">and try it.</em></h2>
+      <p class="lede">Linux has needed a real dictation app for a long time. Wspr is that app. It's private, it runs Whisper locally with GPU acceleration where available, and it costs $14.99 once.</p>
+    </div>
+    <div class="install">
+      <div class="cell on-g rv">
+        <div class="ico g"><svg><use href="#i-linux"/></svg></div>
+        <h3 class="h-3">AppImage</h3>
+        <p>The Linux x64 build as an AppImage.</p>
+        <a class="btn btn-primary" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg><use href="#i-linux"/></svg>Download AppImage</a>
+      </div>
+      <div class="cell rv">
+        <div class="ico g"><svg><use href="#i-linux"/></svg></div>
+        <h3 class="h-3">.deb package</h3>
+        <p>The Linux x64 build as a .deb, from the latest release.</p>
+        <a class="btn btn-ghost" href="https://github.com/matpb/wspr-app/releases/latest"><svg><use href="#i-linux"/></svg>Get the .deb</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="sect tight">
+  <div class="wrap">
+    <div class="callout rv">
+      <div>
+        <span class="eyebrow orange">Pricing</span>
+        <h2 class="h-2">One price. <em class="acc orange">Once.</em></h2>
+        <p>No subscription, no account, no tiered Pro that gates normal functionality. The free download includes 50 live transcriptions so you can actually test that it works on your exact setup before paying. Pro is a one-time unlock that removes the cap, and removes it forever.</p>
+      </div>
+      <div class="buy">
+        <div class="amt">$14.99<small>USD, one time</small></div>
+        <a class="btn btn-orange" href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Buy Pro, $14.99</a>
+        <a class="btn btn-ghost" href="https://github.com/matpb/wspr-app/releases/latest">Download free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-2">Questions, <em class="acc green">answered.</em></h2>
+    </div>
+    <div class="faq rv">
+      <div>
+        <details open><summary>Does Wspr work on Wayland?</summary><p>X11 sessions are fully supported and tested daily. Wayland sessions that expose the RemoteDesktop portal (KDE Plasma 6, GNOME 45+) are supported natively, through libei via xdg-desktop-portal. Compositors without that portal, meaning wlroots ones such as Sway and Hyprland, fall back to xdotool, which needs XWayland present. A bare Wayland session with neither the portal nor XWayland is not supported yet.</p></details>
+        <details><summary>Which Linux distros does Wspr support?</summary><p>Wspr ships as a Linux build for x86_64 systems. It has been validated on mainstream distros including Ubuntu and its derivatives. Other recent glibc-based distros should work too, though your mileage may vary depending on your desktop environment's input-injection behavior.</p></details>
+        <details><summary>Does Wspr send my audio to the cloud on Linux?</summary><p>No. Wspr never sends audio anywhere. The Whisper model lives on your disk, runs on your GPU, and produces text that is pasted directly into your focused application. There is no telemetry, no account and no cloud dependency for core transcription.</p></details>
+      </div>
+      <div>
+        <details><summary>Does Wspr use my GPU on Linux?</summary><p>Yes, where GPU acceleration is available, with a CPU fallback when it isn't. Wspr runs the same whisper.cpp engine as on macOS and Windows. Models are downloaded on first run and you pick the one that fits your hardware.</p></details>
+        <details><summary>Which audio system does Wspr use on Linux?</summary><p>Audio capture goes through cpal, which speaks whatever audio system your distro exposes: PipeWire on modern setups, PulseAudio on older ones. If you run into a compatibility issue on a specific distro or compositor, open a GitHub issue.</p></details>
+        <details><summary>How much does Wspr cost on Linux?</summary><p>$14.99, once. There is no subscription and no account. The free download includes 50 live transcriptions so you can test it on your exact setup before paying. Pro is a one-time unlock that removes the cap forever.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="download">
+  <div class="wrap">
+    <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="h-1"><span class="grad">Say it.</span> <em class="acc green">Linux types it.</em></h2>
+    <p class="lede" style="margin:18px auto 0">Free to start. No card, no account.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg><use href="#i-linux"/></svg>Linux <span class="sub">AppImage</span></a>
+      <a class="btn btn-ghost" href="https://github.com/matpb/wspr-app/releases/latest"><svg><use href="#i-linux"/></svg>Linux <span class="sub">.deb</span></a>
+    </div>
+    <p class="fine">Also on <a href="/#download">macOS and Windows</a>.</p>
+  </div>
+</section>
 </main>
 
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="../privacy.html">Privacy Policy</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
     </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
+<script src="/site.js" defer></script>
 
 </body>
 </html>

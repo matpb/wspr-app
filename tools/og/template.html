@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>og</title>
+<style>
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 300 800; src: url('../../fonts/geist.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: italic; font-weight: 300 800; src: url('../../fonts/geist-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Geist Mono'; font-style: normal; font-weight: 400 500; src: url('../../fonts/geist-mono.woff2') format('woff2'); }
+</style>
+<link rel="stylesheet" href="../../blog.css">
+<style>
+:root { --ink:#f5f5f7; --ink-2:#a1a1a8; --ink-3:#6b6b72; --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.13);
+  --sans:'Geist',sans-serif; --mono:'Geist Mono',ui-monospace,monospace; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { width:1200px; height:630px; overflow:hidden; background:#000; color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+.card { position:relative; width:1200px; height:630px; overflow:hidden; background:#000; isolation:isolate; }
+.glow { position:absolute; inset:0; z-index:-3; background:
+  radial-gradient(34% 62% at 77% 52%, rgba(var(--c),.30), transparent 72%),
+  radial-gradient(40% 50% at 100% 100%, rgba(var(--c2,var(--c)),.12), transparent 70%); }
+.grid { position:absolute; inset:0; z-index:-2; opacity:.6;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:40px 40px; background-position:center;
+  -webkit-mask-image:radial-gradient(30% 58% at 77% 52%,#000,transparent 78%); mask-image:radial-gradient(30% 58% at 77% 52%,#000,transparent 78%); }
+.brand { position:absolute; left:72px; top:64px; display:flex; align-items:center; gap:14px; font:650 34px/1 var(--sans); letter-spacing:-.03em; }
+.brand svg { width:44px; height:44px; }
+.left { position:absolute; left:72px; top:150px; bottom:130px; width:680px; display:flex; flex-direction:column; justify-content:center; }
+.kick { font:500 20px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:rgb(var(--c)); margin-bottom:28px; }
+h1 { font-weight:650; letter-spacing:-.045em; line-height:1.04; font-size:84px; text-wrap:balance; }
+h1 em { font-style:italic; font-weight:500; color:rgb(var(--c)); letter-spacing:-.04em; }
+.foot { position:absolute; left:72px; right:72px; bottom:56px; display:flex; justify-content:space-between; align-items:baseline; font:500 22px/1 var(--mono); color:var(--ink-3); }
+.foot b { color:var(--ink-2); font-weight:500; }
+.foot span { font-family:var(--sans); font-size:21px; }
+.motif { position:absolute; left:740px; right:0; top:0; bottom:0; display:grid; place-items:center; --m:270px; font-size:var(--m); line-height:1; }
+.cv-motif { font-size:inherit; }
+.motif.m-was,.motif.m-price { --m:150px; }
+.motif.m-term { --m:215px; }
+.cat-home { --c:48,209,88; }
+/* pill motif */
+.pill { font-size:1px; display:flex; flex-direction:column; align-items:center; gap:34px; }
+.rec { display:flex; align-items:center; gap:18px; padding:20px 30px 20px 24px; border-radius:99px; background:#0c0c0f; border:1.5px solid rgba(255,255,255,.16);
+  box-shadow:0 0 70px -10px rgba(61,155,255,.45), 0 30px 60px -20px #000; }
+.rec .dot { width:18px; height:18px; border-radius:50%; background:#ff453a; box-shadow:0 0 18px rgba(255,69,58,.8); }
+.rec .w { display:flex; align-items:center; gap:6px; height:44px; }
+.rec .w i { width:6px; border-radius:9px; background:linear-gradient(180deg,#3d9bff,rgba(0,113,227,.7)); }
+.rec .t { font:500 21px/1 var(--mono); color:var(--ink-2); letter-spacing:.04em; }
+.keys { display:flex; gap:14px; }
+.key { min-width:92px; height:84px; padding:0 22px; display:grid; place-items:center; border-radius:18px; background:linear-gradient(180deg,#1e1e23,#121215);
+  border:1.5px solid rgba(255,255,255,.14); border-bottom-width:5px; font:500 24px/1 var(--mono); color:var(--ink); }
+.key.sp { min-width:170px; }
+.cat-comparisons .cv-vs i, .cv-vs i { }
+</style></head>
+<body>
+<div class="card" id="card">
+  <div class="glow"></div><div class="grid"></div>
+  <div class="brand"><svg viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></svg>Wspr</div>
+  <div class="left"><div class="kick" id="kick"></div><h1 id="h"></h1></div>
+  <div class="motif" id="motif"></div>
+  <div class="foot"><b>getwspr.com</b><span>On-device voice to text · macOS, Windows, Linux</span></div>
+</div>
+<script>
+const M = {
+  wave:'<div class="cv-motif"><div class="cv-wave"><i></i><i></i><i></i><i></i><i></i></div></div>',
+  term:'<div class="cv-motif"><div class="cv-term"><u></u><u></u><b>&gt;_</b></div></div>',
+  chart:'<div class="cv-motif"><div class="cv-chart"><i style="--h:26%"></i><i style="--h:40%"></i><i style="--h:58%"></i><i style="--h:80%"></i><i class=hi style="--h:100%"></i></div></div>',
+  chart2:'<div class="cv-motif"><div class="cv-chart"><i style="--h:58%"></i><i class=hi style="--h:100%"></i><i style="--h:76%"></i><i style="--h:44%"></i></div></div>',
+  lock:'<div class="cv-motif"><div class="cv-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2.2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/><circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/></svg></div></div>',
+  cloud:'<div class="cv-motif"><div class="cv-cloud"><svg viewBox="0 0 36 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 21.5h-1A5.5 5.5 0 0 1 8 10.6a8 8 0 0 1 15.2-1.9A6.4 6.4 0 0 1 27 21.5H14"/><path d="M4 2.5l28 21" stroke-width="1.6"/></svg></div></div>',
+  vs:'<div class="cv-motif"><div class="cv-vs"><i></i><i></i><b>vs</b></div></div>',
+  was:'<div class="cv-motif"><div class="cv-price was"><b>$699.99</b><small>one license</small></div></div>',
+  price:'<div class="cv-motif"><div class="cv-price"><b>$14.99</b><small>once</small></div></div>',
+  pill:'<div class="pill"><div class="rec"><span class="dot"></span><span class="w">'+[14,26,40,22,34,18,10].map(h=>'<i style="height:'+h+'px"></i>').join('')+'</span><span class="t">Listening</span></div><div class="keys"><div class="key">Ctrl</div><div class="key">Shift</div><div class="key sp">Space</div></div></div>'
+};
+(async()=>{
+  const slug = new URLSearchParams(location.search).get('slug');
+  const pages = await (await fetch('pages.json')).json();
+  const p = pages.find(x=>x.slug===slug);
+  const card = document.getElementById('card');
+  card.classList.add('cat-'+p.cat);
+  document.getElementById('kick').textContent = p.kicker;
+  const esc = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const h = document.getElementById('h');
+  h.innerHTML = esc(p.headline).replace(/\*(.+?)\*/g,'<em>$1</em>');
+  const mo = document.getElementById('motif'); mo.innerHTML = M[p.motif]; mo.classList.add('m-'+p.motif);
+  await document.fonts.ready;
+  const box = h.parentElement, lh = () => parseFloat(getComputedStyle(h).lineHeight);
+  let fs = 84;
+  while (fs > 38) {
+    h.style.fontSize = fs+'px';
+    const lines = Math.round(h.getBoundingClientRect().height / lh());
+    if (lines <= 3 && h.scrollWidth <= h.clientWidth && box.scrollHeight <= box.clientHeight) break;
+    fs -= 2;
+  }
+  window.__ready = true;
+})();
+</script>
+</body></html>

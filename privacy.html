@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Wspr</title>
+    <title>Privacy Policy | Wspr</title>
     <meta name="description" content="Wspr's privacy policy. All speech transcription happens on your device. No data collection, no tracking, no cloud audio processing. Your audio never leaves your computer.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getwspr.com/privacy.html">
 
-    <meta property="og:title" content="Privacy Policy — Wspr">
+    <meta property="og:title" content="Privacy Policy | Wspr">
     <meta property="og:description" content="Wspr processes everything on your device. No servers, no analytics, no tracking.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://getwspr.com/privacy.html">
@@ -21,38 +21,81 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/docs.css">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="nav scrolled">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="support.html">Support</a>
-            <a href="changelog.html">Changelog</a>
-            <a href="privacy.html">Privacy</a>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
-
-<main class="page-container">
-    <h1>Privacy Policy</h1>
-    <p class="page-updated">Last updated: March 27, 2026</p>
-
-    <p>Wspr is designed with privacy as a core principle. This policy explains how the app handles your data.</p>
+<header class="doc-top green"><div class="wrap doc">
+  <span class="eyebrow green">Legal</span>
+  <h1 class="h-1">Privacy <em class="acc green">Policy</em></h1>
+  <p class="lede">Wspr is designed with privacy as a core principle. This policy explains how the app handles your data.</p>
+  <p class="updated">Last updated: March 27, 2026</p>
+</div></header>
+<main class="doc-main"><div class="wrap doc">
+<div class="summary"><span class="co-lab"><svg aria-hidden="true"><use href="#i-check"/></svg>In short</span>
+<ul>
+<li><svg aria-hidden="true"><use href="#i-check"/></svg>Wspr does not collect, store, or transmit any personal data to us. We have no servers, no analytics, no crash reporting, and no user accounts.</li>
+<li><svg aria-hidden="true"><use href="#i-check"/></svg>Your audio recordings are processed locally and are never sent to any external server.</li>
+<li><svg aria-hidden="true"><use href="#i-check"/></svg>Optional AI text rewriting sends your transcribed text, never audio, directly from your device to the provider you chose, using your own API key.</li>
+</ul></div>
+<div class="prose" style="margin-top:1.6em">
 
     <h2>Data Collection</h2>
     <p>Wspr does not collect, store, or transmit any personal data to us. We have no servers, no analytics, no crash reporting, and no user accounts.</p>
@@ -63,7 +106,7 @@
     <h2>AI Text Rewriting</h2>
     <p>Wspr offers optional AI text rewriting through:</p>
     <ul>
-        <li><strong>Cloud AI providers (OpenAI, Anthropic, Google Gemini)</strong> — If you choose to use a cloud provider, your transcribed text is sent directly from your device to the provider's API using your own API key. Wspr does not route this data through any intermediary server. Your use of these services is subject to the respective provider's privacy policy.</li>
+    <li><strong>Cloud AI providers (OpenAI, Anthropic, Google Gemini)</strong>: If you choose to use a cloud provider, your transcribed text is sent directly from your device to the provider's API using your own API key. Wspr does not route this data through any intermediary server. Your use of these services is subject to the respective provider's privacy policy.</li>
     </ul>
 
     <h2>API Keys</h2>
@@ -72,10 +115,10 @@
     <h2>Local Storage</h2>
     <p>Wspr stores the following data locally on your device:</p>
     <ul>
-        <li>App preferences and settings (config.json)</li>
-        <li>Transcription history (stored locally)</li>
-        <li>Usage counts for the free tier</li>
-        <li>Whisper models you download</li>
+    <li>App preferences and settings (config.json)</li>
+    <li>Transcription history (stored locally)</li>
+    <li>Usage counts for the free tier</li>
+    <li>Whisper models you download</li>
     </ul>
     <p>None of this data is transmitted off your device.</p>
 
@@ -92,21 +135,24 @@
     <p>If this privacy policy changes, the updated version will be posted on this page with a revised date.</p>
 
     <h2>Contact</h2>
-    <p>If you have questions about this privacy policy, please visit our <a href="support.html">support page</a>.</p>
-
-    <a href="index.html" class="back-link">&larr; Back to Wspr</a>
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="support.html">Support</a>
-            <a href="changelog.html">Changelog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+    <p>If you have questions about this privacy policy, please visit our <a href="/support.html">support page</a>.</p>
+</div>
+<a class="doc-back" href="/"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Back to Wspr</a>
+</div></main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
     </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
-
+<script src="/site.js" defer></script>
 </body>
 </html>

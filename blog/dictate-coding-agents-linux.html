@@ -14,14 +14,17 @@
     <meta property="og:description" content="Your agent is only as good as the brief you give it, and typing the brief is the slow part. On-device dictation in a Linux terminal workflow, including the honest state of Wayland support.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://getwspr.com/blog/dictate-coding-agents-linux.html">
-    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:image" content="https://getwspr.com/images/og/dictate-coding-agents-linux.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:site_name" content="Wspr">
     <meta property="article:published_time" content="2026-09-15">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How to Dictate Prompts to Coding Agents on Linux">
     <meta name="twitter:description" content="On-device dictation for terminal agent workflows on Linux, with the honest state of Wayland support.">
-    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+    <meta name="twitter:image" content="https://getwspr.com/images/og/dictate-coding-agents-linux.png">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -31,7 +34,10 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/blog.css">
+    <script>document.documentElement.classList.add('js')</script>
 
     <script type="application/ld+json">
     {
@@ -55,168 +61,289 @@
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav scrolled">
-    <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="../index.html#features">Features</a>
-            <a href="../index.html#pricing">Pricing</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-            <a href="../privacy.html">Privacy</a>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
 
-<main class="page-container article-container">
-    <p class="article-date">September 15, 2026</p>
-    <h1>How to Dictate Prompts to Coding Agents on Linux</h1>
-    <p class="article-subtitle">A coding agent does about as well as the brief you hand it, and typing a proper brief is the slowest part of the loop. Here's how on-device voice to text fits into a terminal agent workflow on Linux: why pasting into a TUI is harder than it looks, the honest state of Wayland support, and which Whisper model to run for long prompts.</p>
-
-    <p>If you drive an agent from a terminal, you already know the shape of the problem. A good task description names the files that matter, the constraint you actually care about, what &ldquo;done&rdquo; looks like, and what the agent should leave alone. That is four or five sentences before you have said anything about the bug itself.</p>
-
-    <p>Typing all of that, every time, is tedious enough that most people stop doing it. They send &ldquo;fix the login bug&rdquo; and get back a confident change to the wrong file. Then they spend ten minutes explaining what they meant, which is longer than the brief would have taken in the first place.</p>
-
-    <h2>The brief is the bottleneck, not the model</h2>
-
-    <p>Agent quality has improved faster than anyone's typing speed. The models read a whole repository now; the limiting factor is how much of your intent makes it into the prompt box. Talking is faster than typing for anyone who isn't a competitive typist, and it's a lot faster for the kind of rambling, qualified, &ldquo;but be careful about X&rdquo; context that makes an agent run land.</p>
-
-    <p>Spoken briefs also tend to be <em>better</em>, not just longer. When you talk you naturally explain why, mention the thing you tried yesterday, and add the constraint you'd have skipped while typing because your hands were already tired.</p>
-
-    <h2>Cloud dictation undoes the reason you ran the agent locally</h2>
-
-    <p>Here's the catch, and it's the reason a lot of developers never bothered with dictation. If your agent works against a private repository, client code, or anything under NDA, you were deliberate about keeping that code on your own machine. Routing every spoken instruction through a speech vendor puts the same material on someone else's server by a different wire, and the prompts you dictate often describe the system in more detail than the diff does.</p>
-
-    <p>Cloud speech-to-text is a fine trade for a grocery list. It's a strange trade when the whole point of the setup was local control. (We wrote a longer piece on <a href="is-voice-typing-private.html">where dictation audio actually goes</a> if you want the app-by-app breakdown.)</p>
-
-    <p>The other advantage of local transcription is boring and comes up more often than the privacy one: it works on a plane, on hotel wifi, and while your VPN is having a bad day.</p>
-
-    <h2>Pasting into a terminal is where most tools fall over</h2>
-
-    <p>This is the part nobody warns you about. There are two ways to get text into a focused window on Linux: synthesize the keystrokes one character at a time, or put the text on the clipboard and send a single paste keystroke.</p>
-
-    <p>Character synthesis is what most DIY dictation scripts do, because <code>xdotool type</code> and <code>wtype</code> are right there. It's fine in a browser text field. It is genuinely bad in a terminal UI, because every character forces a re-render of the whole interface. A 200-word prompt is roughly 1,200 keystrokes, and a full-screen agent interface running inside tmux can freeze for several seconds in the middle of one, which is a memorable way to lose a dictation you just spent 40 seconds on.</p>
-
-    <p>Wspr does the other thing, on every platform. It saves whatever is on your clipboard, writes the transcript to both CLIPBOARD and PRIMARY, sends one <code>Shift+Insert</code>, then puts your original clipboard back. One keystroke and one re-render, whether you dictated eight words or eight hundred. Rapid-fire dictations don't clobber the clipboard either: only the most recent paste is allowed to restore it, so firing off three prompts in a row leaves your clipboard exactly as you found it instead of holding a stale transcript.</p>
-
-    <h2>The honest state of Wayland</h2>
-
-    <p>Linux dictation writeups usually get vague right here, so: the keystroke above has to come from somewhere, and which backend sends it depends on your session.</p>
-
-    <div class="compare-table-wrap">
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th>Session</th>
-                    <th>How the paste is injected</th>
-                    <th>Supported?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="highlight"><strong>X11</strong></td>
-                    <td class="highlight">Clipboard plus <code>xdotool key shift+Insert</code></td>
-                    <td class="highlight"><strong>Yes, tested daily</strong></td>
-                </tr>
-                <tr>
-                    <td class="highlight"><strong>Wayland with the RemoteDesktop portal (KDE Plasma 6, GNOME 45+)</strong></td>
-                    <td class="highlight">Native, through libei via <code>xdg-desktop-portal</code></td>
-                    <td class="highlight"><strong>Yes</strong></td>
-                </tr>
-                <tr>
-                    <td>Wayland without that portal (wlroots compositors such as Sway and Hyprland)</td>
-                    <td>Falls back to <code>xdotool</code>, so it needs XWayland present</td>
-                    <td>Usually, with XWayland</td>
-                </tr>
-                <tr>
-                    <td>Bare Wayland with no portal and no XWayland</td>
-                    <td>Nothing available to inject with</td>
-                    <td>Not yet</td>
-                </tr>
-            </tbody>
-        </table>
+<header class="art-top">
+  <div class="wrap">
+    <div class="art-head cat-linux">
+      <div class="crumb"><a href="/blog/">Blog</a><span>/</span><span>Linux</span></div>
+      <span class="tag-cat">Linux</span>
+      <h1>How to Dictate Prompts to Coding Agents on Linux</h1>
+      <p class="lede">A coding agent does about as well as the brief you hand it, and typing a proper brief is the slowest part of the loop. Here’s how on-device voice to text fits into a terminal agent workflow on Linux: why pasting into a TUI is harder than it looks, the honest state of Wayland support, and which Whisper model to run for long prompts.</p>
+      <div class="byline">
+        <span class="avatar" aria-hidden="true">MB</span>
+        <div><b>Mathieu-Philippe Bourgeois</b><span class="meta">SEP 15, 2026 · 8 MIN READ</span></div>
+      </div>
     </div>
+    <div class="art-cover cat-linux rv"><div class="cover lg" aria-hidden="true"><span class="cv-kick">Linux · Wayland</span><div class="cv-motif"><div class="cv-term"><u></u><u></u><b>&gt;_</b></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div></div>
+  </div>
+</header>
 
-    <p>The middle row is newer than most comparison articles think. Wspr used to force everything through XWayland, which meant a &ldquo;Control input devices&rdquo; permission prompt on <em>every single launch</em>. Since version 5.1.2 it holds one RemoteDesktop portal session for the life of the process and injects through libei, so the compositor remembers the grant: you see a single &ldquo;Started Remote Desktop&rdquo; notice per session and nothing afterwards. Details are in the <a href="../changelog.html">changelog</a>.</p>
+<div class="art-body">
+  <details class="toc-m">
+    <summary>On this page</summary>
+    <ol data-toc><li><a href="#the-brief-is-the-bottleneck-not-the-model">The brief is the bottleneck, not the model</a></li><li><a href="#cloud-dictation-undoes-the-reason-you-ran-the-agent-locally">Cloud dictation undoes the reason you ran the agent locally</a></li><li><a href="#pasting-into-a-terminal-is-where-most-tools-fall-over">Pasting into a terminal is where most tools fall over</a></li><li><a href="#the-honest-state-of-wayland">The honest state of Wayland</a></li><li><a href="#which-model-to-run-for-long-prompts">Which model to run for long prompts</a></li><li><a href="#the-workflow-which-is-deliberately-boring">The workflow, which is deliberately boring</a></li><li><a href="#recordings-as-context-not-just-prompts">Recordings as context, not just prompts</a></li><li><a href="#what-leaves-your-machine">What leaves your machine</a></li><li><a href="#try-it-on-your-own-desktop-first">Try it on your own desktop first</a></li></ol>
+  </details>
+  <nav class="toc" aria-label="On this page">
+    <h4>On this page</h4>
+    <ul data-toc><li><a href="#the-brief-is-the-bottleneck-not-the-model">The brief is the bottleneck, not the model</a></li><li><a href="#cloud-dictation-undoes-the-reason-you-ran-the-agent-locally">Cloud dictation undoes the reason you ran the agent locally</a></li><li><a href="#pasting-into-a-terminal-is-where-most-tools-fall-over">Pasting into a terminal is where most tools fall over</a></li><li><a href="#the-honest-state-of-wayland">The honest state of Wayland</a></li><li><a href="#which-model-to-run-for-long-prompts">Which model to run for long prompts</a></li><li><a href="#the-workflow-which-is-deliberately-boring">The workflow, which is deliberately boring</a></li><li><a href="#recordings-as-context-not-just-prompts">Recordings as context, not just prompts</a></li><li><a href="#what-leaves-your-machine">What leaves your machine</a></li><li><a href="#try-it-on-your-own-desktop-first">Try it on your own desktop first</a></li></ul>
+  </nav>
 
-    <p>The global hotkey goes through the same portal family on Wayland. Registering it the X11 way (grabbing the key) is blocked by GNOME's compositor by design, which would leave you with a dictation hotkey that only fires while a Wspr window is focused. Instead the hotkey is registered with the <code>GlobalShortcuts</code> portal, so it works from whatever you're actually looking at. The side effect worth knowing: your desktop owns that key binding, so you rebind it in your desktop's own settings (on GNOME, under Settings then Apps) rather than inside Wspr.</p>
+  <article class="art-main prose">
+<p>If you drive an agent from a terminal, you already know the shape of the problem. A good task description names the files that matter, the constraint you actually care about, what &ldquo;done&rdquo; looks like, and what the agent should leave alone. That is four or five sentences before you have said anything about the bug itself.</p>
 
-    <p>And the limit, stated plainly: a compositor with neither the RemoteDesktop portal nor XWayland has nothing for Wspr to paste through. If you run a minimal Sway or Hyprland session with XWayland stripped out, this isn't your tool yet.</p>
+<p>Typing all of that, every time, is tedious enough that most people stop doing it. They send &ldquo;fix the login bug&rdquo; and get back a confident change to the wrong file. Then they spend ten minutes explaining what they meant, which is longer than the brief would have taken in the first place.</p>
 
-    <h2>Which model to run for long prompts</h2>
+<h2 id="the-brief-is-the-bottleneck-not-the-model">The brief is the bottleneck, not the model</h2>
 
-    <p>Dictation for agent prompts is a different workload from dictating a chat message. The clips are longer, 30 to 90 seconds is typical, and they're full of file paths, library names, and identifiers that a small model will cheerfully mangle.</p>
+<p>Agent quality has improved faster than anyone’s typing speed. The models read a whole repository now; the limiting factor is how much of your intent makes it into the prompt box. Talking is faster than typing for anyone who isn’t a competitive typist, and it’s a lot faster for the kind of rambling, qualified, &ldquo;but be careful about X&rdquo; context that makes an agent run land.</p>
 
-    <p><strong>Large v3 Turbo</strong> is the model to pick for this. It's a 1.6 GB separate download under Settings then Models, and it reaches Large v3 accuracy at roughly Small's speed. Measured warm on an RTX 4060 Ti with Vulkan, a 45-second recording transcribes in 1.16 s, against 3.40 s for Large v3 and 1.93 s for Medium. Small (460 MB) remains the recommended default and it's perfectly good for short commands, but for a technical brief the accuracy of a Large-class model saves you the cleanup pass. Custom vocabulary hints handle the project names no Whisper model has ever heard.</p>
+<p>Spoken briefs also tend to be <em>better</em>, not just longer. When you talk you naturally explain why, mention the thing you tried yesterday, and add the constraint you’d have skipped while typing because your hands were already tired.</p>
 
-    <h2>The workflow, which is deliberately boring</h2>
+<h2 id="cloud-dictation-undoes-the-reason-you-ran-the-agent-locally">Cloud dictation undoes the reason you ran the agent locally</h2>
 
-    <ol>
-        <li>Focus the terminal your agent is running in.</li>
-        <li>Hold your hotkey and talk. Brief it the way you'd brief a colleague: goal, the files involved, the constraint, what done means.</li>
-        <li>Release. Transcription runs on your GPU and the text arrives at your cursor.</li>
-        <li>Send it.</li>
-    </ol>
+<aside class="callout"><span class="co-lab"><svg aria-hidden="true"><use href="#i-lock"/></svg>Privacy</span>
+<p>Here’s the catch, and it’s the reason a lot of developers never bothered with dictation. If your agent works against a private repository, client code, or anything under NDA, you were deliberate about keeping that code on your own machine. Routing every spoken instruction through a speech vendor puts the same material on someone else’s server by a different wire, and the prompts you dictate often describe the system in more detail than the diff does.</p></aside>
 
-    <p>Notice what isn't in that list: a step where you go back and repair the transcript. That's the part people expect from dictation and the reason they gave up on it, and two things remove it here.</p>
+<p>Cloud speech-to-text is a fine trade for a grocery list. It’s a strange trade when the whole point of the setup was local control. (We wrote a longer piece on <a href="/blog/is-voice-typing-private.html">where dictation audio actually goes</a> if you want the app-by-app breakdown.)</p>
 
-    <p><strong>Custom vocabulary hints</strong> teach Wspr the words a general-purpose model has no reason to know. Your repo names, your service names, the internal library nobody outside your stack has heard of, the colleague whose name Whisper insists is a verb. They come back spelled the way your codebase spells them, which is exactly the class of error that used to make dictated prompts more expensive than typed ones. Pair that with a Large-class model on a decent microphone and the raw transcript is usually already correct.</p>
+<p>The other advantage of local transcription is boring and comes up more often than the privacy one: it works on a plane, on hotel wifi, and while your VPN is having a bad day.</p>
 
-    <p>The second thing is the <strong>transcribe and rewrite hotkey</strong>, a separate binding that does both in one action. The rewrite pass drops the filler, the &ldquo;um, so, basically&rdquo; and the sentence you started over halfway through, and hands your agent a brief that reads like you wrote it on purpose. It's worth knowing where that text goes: rewrite is the one step that leaves your machine, through your own API key. For this workflow that's usually a non-issue, since the prompt was on its way to a hosted model anyway, and it stays off until you turn it on.</p>
+<h2 id="pasting-into-a-terminal-is-where-most-tools-fall-over">Pasting into a terminal is where most tools fall over</h2>
 
-    <p>One practical safeguard for this workflow: if a paste lands in the wrong window because you clicked away a second too early, the optional <strong>paste last transcription</strong> shortcut re-inserts your most recent transcript into whatever is focused now. You'll find it under Settings then General, and <code>Shift+Alt+V</code> is a reasonable choice. If your compositor wants to own the key itself, bind it to <code>wspr --paste-last</code> instead.</p>
+<p>This is the part nobody warns you about. There are two ways to get text into a focused window on Linux: synthesize the keystrokes one character at a time, or put the text on the clipboard and send a single paste keystroke.</p>
 
-    <h2>Recordings as context, not just prompts</h2>
+<p>Character synthesis is what most DIY dictation scripts do, because <code>xdotool type</code> and <code>wtype</code> are right there. It’s fine in a browser text field. It is genuinely bad in a terminal UI, because every character forces a re-render of the whole interface. A 200-word prompt is roughly 1,200 keystrokes, and a full-screen agent interface running inside tmux can freeze for several seconds in the middle of one, which is a memorable way to lose a dictation you just spent 40 seconds on.</p>
 
-    <p>The same local engine does file transcription, which turns out to pair well with agents. Drop in the recording of the call where the requirements were actually decided, or the voice memo where you thought out loud on the drive home, and hand the transcript to your agent as context instead of retyping the gist from memory. Whisper covers 99 languages with automatic detection, so a meeting that drifted between two of them still comes out readable.</p>
+<p>Wspr does the other thing, on every platform. It saves whatever is on your clipboard, writes the transcript to both CLIPBOARD and PRIMARY, sends one <span class="kc"><kbd>Shift</kbd><i>+</i><kbd>Insert</kbd></span>, then puts your original clipboard back. One keystroke and one re-render, whether you dictated eight words or eight hundred. Rapid-fire dictations don’t clobber the clipboard either: only the most recent paste is allowed to restore it, so firing off three prompts in a row leaves your clipboard exactly as you found it instead of holding a stale transcript.</p>
+<blockquote class="pull">One keystroke and one re-render, whether you dictated eight words or eight hundred.</blockquote>
 
-    <h2>What leaves your machine</h2>
+<h2 id="the-honest-state-of-wayland">The honest state of Wayland</h2>
 
-    <p>For transcription, nothing. The model sits on your disk, whisper.cpp runs it on your GPU with CPU fallback when there isn't one, and the temporary audio file is deleted the moment transcription finishes. No account, no telemetry, no crash reporting.</p>
+<p>Linux dictation writeups usually get vague right here, so: the keystroke above has to come from somewhere, and which backend sends it depends on your session.</p>
 
-    <p>The one exception is worth naming because vague privacy claims deserve suspicion: optional AI rewrite. If you turn it on, the <em>text</em> (never the audio) goes to OpenAI, Anthropic, or Gemini using your own API key, straight from your machine to the provider you picked. Leave it off and nothing touches a network. The full detail is in the <a href="../privacy.html">privacy policy</a>.</p>
+<div class="tbl-wrap">
+<table class="cmp">
+<thead>
+<tr>
+<th>Session</th>
+<th>How the paste is injected</th>
+<th>Supported?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X11</strong></td>
+<td>Clipboard plus <code>xdotool key shift+Insert</code></td>
+<td class="y"><strong>Yes, tested daily</strong></td>
+</tr>
+<tr>
+<td><strong>Wayland with the RemoteDesktop portal (KDE Plasma 6, GNOME 45+)</strong></td>
+<td>Native, through libei via <code>xdg-desktop-portal</code></td>
+<td class="y"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td>Wayland without that portal (wlroots compositors such as Sway and Hyprland)</td>
+<td>Falls back to <code>xdotool</code>, so it needs XWayland present</td>
+<td class="o">Usually, with XWayland</td>
+</tr>
+<tr>
+<td>Bare Wayland with no portal and no XWayland</td>
+<td>Nothing available to inject with</td>
+<td class="n">Not yet</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-    <h2>Try it on your own desktop first</h2>
+<p>The middle row is newer than most comparison articles think. Wspr used to force everything through XWayland, which meant a &ldquo;Control input devices&rdquo; permission prompt on <em>every single launch</em>. Since version 5.1.2 it holds one RemoteDesktop portal session for the life of the process and injects through libei, so the compositor remembers the grant: you see a single &ldquo;Started Remote Desktop&rdquo; notice per session and nothing afterwards. Details are in the <a href="/changelog.html">changelog</a>.</p>
 
-    <p>Linux input handling is too fragmented for anyone to promise your exact compositor will behave, so don't take our word for it. Wspr ships as an AppImage and a <code>.deb</code> for x86_64, and the free download includes 50 live transcriptions and 5 file transcriptions with no account and no card, which is plenty to find out whether the paste lands where you want it. Pro is <strong>$14.99</strong>, once, and it unlocks unlimited live and file transcription, custom rewrite styles, and unlimited history.</p>
+<p>The global hotkey goes through the same portal family on Wayland. Registering it the X11 way (grabbing the key) is blocked by GNOME’s compositor by design, which would leave you with a dictation hotkey that only fires while a Wspr window is focused. Instead the hotkey is registered with the <code>GlobalShortcuts</code> portal, so it works from whatever you’re actually looking at. The side effect worth knowing: your desktop owns that key binding, so you rebind it in your desktop’s own settings (on GNOME, under Settings then Apps) rather than inside Wspr.</p>
 
-    <p>If you want the wider Linux picture rather than the agent-specific slice, that lives in <a href="../linux-voice-to-text/">Voice-to-Text for Linux in 2026</a>.</p>
+<p>And the limit, stated plainly: a compositor with neither the RemoteDesktop portal nor XWayland has nothing for Wspr to paste through. If you run a minimal Sway or Hyprland session with XWayland stripped out, this isn’t your tool yet.</p>
 
-    <div class="cta-buttons" style="margin-top: 40px;">
-        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Wspr for Linux
-        </a>
-        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
-            Buy Pro, $14.99
-        </a>
+<h2 id="which-model-to-run-for-long-prompts">Which model to run for long prompts</h2>
+
+<p>Dictation for agent prompts is a different workload from dictating a chat message. The clips are longer, 30 to 90 seconds is typical, and they’re full of file paths, library names, and identifiers that a small model will cheerfully mangle.</p>
+
+<p><strong>Large v3 Turbo</strong> is the model to pick for this. It’s a 1.6 GB separate download under Settings then Models, and it reaches Large v3 accuracy at roughly Small’s speed. Measured warm on an RTX 4060 Ti with Vulkan, a 45-second recording transcribes in 1.16 s, against 3.40 s for Large v3 and 1.93 s for Medium. Small (460 MB) remains the recommended default and it’s perfectly good for short commands, but for a technical brief the accuracy of a Large-class model saves you the cleanup pass. Custom vocabulary hints handle the project names no Whisper model has ever heard.</p>
+
+<h2 id="the-workflow-which-is-deliberately-boring">The workflow, which is deliberately boring</h2>
+
+<ol>
+<li>Focus the terminal your agent is running in.</li>
+<li>Hold your hotkey and talk. Brief it the way you’d brief a colleague: goal, the files involved, the constraint, what done means.</li>
+<li>Release. Transcription runs on your GPU and the text arrives at your cursor.</li>
+<li>Send it.</li>
+</ol>
+
+<p>Notice what isn’t in that list: a step where you go back and repair the transcript. That’s the part people expect from dictation and the reason they gave up on it, and two things remove it here.</p>
+
+<p><strong>Custom vocabulary hints</strong> teach Wspr the words a general-purpose model has no reason to know. Your repo names, your service names, the internal library nobody outside your stack has heard of, the colleague whose name Whisper insists is a verb. They come back spelled the way your codebase spells them, which is exactly the class of error that used to make dictated prompts more expensive than typed ones. Pair that with a Large-class model on a decent microphone and the raw transcript is usually already correct.</p>
+
+<p>The second thing is the <strong>transcribe and rewrite hotkey</strong>, a separate binding that does both in one action. The rewrite pass drops the filler, the &ldquo;um, so, basically&rdquo; and the sentence you started over halfway through, and hands your agent a brief that reads like you wrote it on purpose. It’s worth knowing where that text goes: rewrite is the one step that leaves your machine, through your own API key. For this workflow that’s usually a non-issue, since the prompt was on its way to a hosted model anyway, and it stays off until you turn it on.</p>
+
+<p>One practical safeguard for this workflow: if a paste lands in the wrong window because you clicked away a second too early, the optional <strong>paste last transcription</strong> shortcut re-inserts your most recent transcript into whatever is focused now. You’ll find it under Settings then General, and <span class="kc"><kbd>Shift</kbd><i>+</i><kbd>Alt</kbd><i>+</i><kbd>V</kbd></span> is a reasonable choice. If your compositor wants to own the key itself, bind it to <code>wspr --paste-last</code> instead.</p>
+
+<h2 id="recordings-as-context-not-just-prompts">Recordings as context, not just prompts</h2>
+
+<p>The same local engine does file transcription, which turns out to pair well with agents. Drop in the recording of the call where the requirements were actually decided, or the voice memo where you thought out loud on the drive home, and hand the transcript to your agent as context instead of retyping the gist from memory. Whisper covers 99 languages with automatic detection, so a meeting that drifted between two of them still comes out readable.</p>
+
+<h2 id="what-leaves-your-machine">What leaves your machine</h2>
+
+<p>For transcription, nothing. The model sits on your disk, whisper.cpp runs it on your GPU with CPU fallback when there isn’t one, and the temporary audio file is deleted the moment transcription finishes. No account, no telemetry, no crash reporting.</p>
+
+<p>The one exception is worth naming because vague privacy claims deserve suspicion: optional AI rewrite. If you turn it on, the <em>text</em> (never the audio) goes to OpenAI, Anthropic, or Gemini using your own API key, straight from your machine to the provider you picked. Leave it off and nothing touches a network. The full detail is in the <a href="/privacy.html">privacy policy</a>.</p>
+
+<h2 id="try-it-on-your-own-desktop-first">Try it on your own desktop first</h2>
+
+<p>Linux input handling is too fragmented for anyone to promise your exact compositor will behave, so don’t take our word for it. Wspr ships as an AppImage and a <code>.deb</code> for x86_64, and the free download includes 50 live transcriptions and 5 file transcriptions with no account and no card, which is plenty to find out whether the paste lands where you want it. Pro is <strong>$14.99</strong>, once, and it unlocks unlimited live and file transcription, custom rewrite styles, and unlimited history.</p>
+
+<p>If you want the wider Linux picture rather than the agent-specific slice, that lives in <a href="/linux-voice-to-text/">Voice-to-Text for Linux in 2026</a>.</p>
+  </article>
+
+  <aside class="side">
+    <div class="side-card">
+      <svg class="lx" aria-hidden="true"><use href="#i-linux"/></svg>
+      <h4>Wspr runs on Linux</h4>
+      <p>Free to start. On-device. X11 and Wayland.</p>
+      <a class="btn btn-primary btn-sm" href="/#download">Download</a>
     </div>
+  </aside>
+</div>
 
-    <a href="../blog/" class="back-link">&larr; More articles</a>
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="../privacy.html">Privacy Policy</a>
-            <a href="../support.html">Support</a>
-            <a href="../changelog.html">Changelog</a>
-            <a href="../blog/">Blog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+<div class="art-after">
+  <section class="art-cta rv">
+    <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="h-3">Dictate your next brief.</h2>
+    <p>Hold a hotkey, talk it through, and the text lands in your terminal. Nothing leaves your machine.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/#download"><svg><use href="#i-linux"/></svg>Download for Linux</a>
+      <a class="btn btn-ghost" href="/#how">See how it works</a>
     </div>
+  </section>
+  <div class="author rv">
+    <span class="avatar" aria-hidden="true">MB</span>
+    <div><b>Mathieu-Philippe Bourgeois</b><p>Builds Wspr. Writes about on-device AI and the tools around it.</p></div>
+  </div>
+</div>
+
+<section class="more">
+  <div class="wrap">
+    <div class="more-head">
+      <h2 class="h-3" style="font-size:26px;letter-spacing:-.025em">Keep reading</h2>
+      <a class="go" href="/blog/">All posts <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="grid">
+<a class="card cat-linux rv" href="/linux-voice-to-text/" data-cat="Linux">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Linux · 2026</span><div class="cv-motif"><div class="cv-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".8"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Linux</span>
+    <h3>Voice-to-Text for Linux in 2026</h3>
+    <p>Linux has needed a real dictation app for years. Here’s how Wspr brings on-device, GPU-accelerated Whisper to Ubuntu, Fedora, Arch, Pop!_OS, and more.</p>
+    <span class="meta">APR 16, 2026 · 5 MIN READ</span>
+  </div>
+</a>
+<a class="card cat-models rv" href="/blog/best-speech-to-text-models-2026.html" data-cat="Models">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Models · 2026</span><div class="cv-motif"><div class="cv-chart"><i style="--h:26%"></i><i style="--h:40%"></i><i style="--h:58%"></i><i style="--h:80%"></i><i class=hi style="--h:100%"></i></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Models</span>
+    <h3>The 2026 Speech-to-Text Model Boom: Qwen3-ASR, Voxtral, Cohere Transcribe &amp; Why the Model Isn’t Your Bottleneck</h3>
+    <p>Six new open models beat Whisper on the Open ASR Leaderboard this year, and less than one WER point separates the top four. Here are the real numbers, and the honest reason a better model won’t make your dictation feel better.</p>
+    <span class="meta">JUL 30, 2026 · 7 MIN READ</span>
+  </div>
+</a>
+<a class="card cat-comparisons rv" href="/blog/dragon-naturallyspeaking-alternative-2026.html" data-cat="Comparisons">
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Vs · Dragon</span><div class="cv-motif"><div class="cv-price was"><b>$699.99</b><small>one license</small></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="card-body">
+    <span class="tag-cat">Comparisons</span>
+    <h3>Dragon NaturallySpeaking Is Dead: The Cheapest Private Replacement for Windows, Mac &amp; Linux</h3>
+    <p>Nuance retired the affordable consumer Dragon, dropped Mac years ago, and left individuals with a $699.99 Windows-only license. Here’s the $14.99 on-device alternative that runs everywhere.</p>
+    <span class="meta">JUN 17, 2026 · 6 MIN READ</span>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const links = [...document.querySelectorAll('[data-toc] a')];
+const heads = [...document.querySelectorAll('.prose h2')];
+const spy = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); });
+}, { rootMargin: '-90px 0px -65% 0px' });
+heads.forEach(h => spy.observe(h));
+</script>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
-
+<script src="/site.js" defer></script>
 </body>
 </html>

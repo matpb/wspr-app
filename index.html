@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wspr — Private Voice to Text | On-Device Transcription for macOS, Windows &amp; Linux</title>
+    <title>Wspr: Private Voice to Text | On-Device Transcription for macOS, Windows &amp; Linux</title>
     <meta name="description" content="Wspr is a privacy-first voice-to-text app for macOS, Windows, and Linux. Transcribe speech locally using whisper.cpp with GPU acceleration. AI text rewriting. No cloud, no accounts. One-time purchase.">
     <meta name="keywords" content="voice to text, speech to text, dictation app, voice typing, offline speech to text, ai dictation, transcription app, whisper speech to text, voice to text no subscription, privacy first dictation app, whisper.cpp, voice transcription app, dictation alternative, best free voice to text app, voice to text windows, voice to text linux, cross-platform dictation, local speech to text">
     <meta name="author" content="Mathieu-Philippe Bourgeois">
@@ -15,33 +15,26 @@
     <meta property="og:url" content="https://getwspr.com/">
     <meta property="og:site_name" content="Wspr">
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Wspr — Voice to Text, Privately.">
+    <meta property="og:title" content="Wspr: Voice to Text, Privately.">
     <meta property="og:description" content="On-device speech transcription for macOS, Windows &amp; Linux. Powered by whisper.cpp. AI rewriting. No cloud, no accounts, no subscription. $14.99 one-time.">
     <meta property="og:image" content="https://getwspr.com/images/og-card.png">
     <meta property="og:image:secure_url" content="https://getwspr.com/images/og-card.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Wspr — Voice to Text, Privately. On-device speech transcription for macOS, Windows and Linux. $14.99 one-time, no subscription.">
-    <!-- Secondary image: Telegram and a few clients animate GIFs in link previews. -->
-    <meta property="og:image" content="https://getwspr.com/images/wspr_demo.gif">
-    <meta property="og:image:type" content="image/gif">
-    <meta property="og:image:width" content="900">
-    <meta property="og:image:height" content="551">
-    <meta property="og:image:alt" content="Wspr push-to-talk demo: dictating into a Rust source file in vim.">
-    <!-- og:video: Facebook, Telegram, and some Slack previews render the demo inline. -->
-    <meta property="og:video" content="https://getwspr.com/images/wspr_demo.mp4">
-    <meta property="og:video:secure_url" content="https://getwspr.com/images/wspr_demo.mp4">
+    <meta property="og:image:alt" content="Wspr: Voice to Text, Privately. On-device speech transcription for macOS, Windows and Linux. $14.99 one-time, no subscription.">
+    <meta property="og:video" content="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-01-five-places-1080.mp4">
+    <meta property="og:video:secure_url" content="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-01-five-places-1080.mp4">
     <meta property="og:video:type" content="video/mp4">
-    <meta property="og:video:width" content="1400">
-    <meta property="og:video:height" content="858">
+    <meta property="og:video:width" content="1920">
+    <meta property="og:video:height" content="1080">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wspr — Voice to Text, Privately.">
+    <meta name="twitter:title" content="Wspr: Voice to Text, Privately.">
     <meta name="twitter:description" content="On-device speech transcription for macOS, Windows &amp; Linux. Powered by whisper.cpp. No cloud, no accounts, no subscription. $14.99 one-time.">
     <meta name="twitter:image" content="https://getwspr.com/images/og-card.png">
-    <meta name="twitter:image:alt" content="Wspr — Voice to Text, Privately. On-device speech transcription for macOS, Windows and Linux. $14.99 one-time, no subscription.">
+    <meta name="twitter:image:alt" content="Wspr: Voice to Text, Privately. On-device speech transcription for macOS, Windows and Linux. $14.99 one-time, no subscription.">
 
 
     <!-- Favicons -->
@@ -52,7 +45,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <script>document.documentElement.classList.add('js')</script>
 
     <!-- Structured Data: FAQPage -->
     <script type="application/ld+json">
@@ -65,47 +60,63 @@
                 "name": "Is Wspr really free to start?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Wspr includes 50 free live transcriptions, 5 file transcriptions, and built-in AI rewrite styles at no cost. No credit card or account required. Upgrade to Pro for $14.99 (one-time) to unlock unlimited everything."
+                    "text": "Yes. 50 live transcriptions, 5 file transcriptions and the built-in rewrite styles, with no card and no account. Pro unlocks everything for a single $14.99, paid once."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Does my voice data stay on my device?",
+                "name": "Does my voice stay on my device?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "100%. All speech-to-text transcription is processed locally on your device using whisper.cpp with GPU acceleration. Your audio never leaves your computer."
+                    "text": "Always. Transcription runs locally with whisper.cpp on your GPU, and your audio never leaves your computer. Rewrite is optional and, when on, sends only the text to the provider you picked, with your own API key."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What platforms does Wspr support?",
+                "name": "Which computers does it run on?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Wspr runs on macOS, Windows (x64), and Linux (x64). The same features are available on all platforms."
+                    "text": "macOS, Windows (x64) and Linux (x64). Every feature is on every platform."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Why pay $14.99 when competitors charge $10-15 per month?",
+                "name": "Does it work on Wayland?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Because one month of Wispr Flow costs the same as a lifetime of Wspr. Pay once, own it forever — no recurring charges."
+                    "text": "Yes on KDE Plasma 6 and GNOME 45+, through the desktop portal. Sway and Hyprland work with XWayland present."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How is Wspr different from built-in dictation?",
+                "name": "Why pay $14.99 when others charge $10 to $15 a month?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Built-in dictation has limited accuracy, no custom vocabulary, and can't rewrite your text with AI. Wspr uses OpenAI's Whisper models for superior accuracy across 99 languages, supports custom vocabulary hints, and offers AI-powered text rewriting with OpenAI, Anthropic, or Google Gemini."
+                    "text": "One month of Wispr Flow costs about the same as a lifetime of Wspr. Pay once, own it, no recurring charges, and you get on-device transcription, rewriting and unlimited use."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Does Wspr support push-to-talk?",
+                "name": "How is it different from built-in dictation?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Toggle push-to-talk in Settings → General. With it enabled, hold your transcribe hotkey to record and release to transcribe — radio-style. Quick taps still work as toggles. Available on macOS, Windows, and Linux."
+                    "text": "Built-in dictation has limited accuracy, no custom vocabulary and no AI rewrite. Wspr uses OpenAI's Whisper models across 99 languages, takes custom vocabulary hints, and can rewrite with OpenAI, Anthropic or Google Gemini."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it support push-to-talk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Turn it on in Settings → General, then hold your hotkey to record and release to transcribe. Quick taps still toggle. Same on macOS, Windows and Linux."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use it in French, Spanish, Japanese…?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "99 languages, detected automatically. Wspr writes in the language you speak."
                 }
             }
         ]
@@ -146,439 +157,435 @@
     </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
 
-<!-- Navigation -->
-<nav class="nav" id="nav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#compare">Compare</a>
-            <a href="#pricing">Pricing</a>
-            <a href="support.html">Support</a>
-            <a href="changelog.html">Changelog</a>
-            <a href="blog/">Blog</a>
-            <a href="privacy.html">Privacy</a>
-        </div>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
-    <div class="hero-icon">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-label="Wspr logo">
-            <rect x="8" y="30" width="9" height="20" rx="4.5" fill="#0071e3"/>
-            <rect x="22" y="16" width="9" height="48" rx="4.5" fill="#0071e3"/>
-            <rect x="36" y="8" width="9" height="64" rx="4.5" fill="#0071e3"/>
-            <rect x="50" y="18" width="9" height="44" rx="4.5" fill="#0071e3"/>
-            <rect x="64" y="32" width="9" height="16" rx="4.5" fill="#0071e3"/>
-        </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <a class="pill-meta" href="/changelog.html"><span class="dot"></span><b data-release>Version 5.8.8</b> · macOS, Windows &amp; Linux</a>
+      <h1 class="h-display"><span class="grad">Voice to text,</span><br><em class="acc green">privately.</em></h1>
+      <p class="lede">Press a hotkey, speak, and your words appear at your cursor, in any app. Transcription runs on your own computer. No cloud, no account, no tracking.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-os-cta href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" data-mac="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" data-win="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe" data-linux="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg aria-hidden="true"><use href="#i-apple"/></svg><span data-os-label>Download for macOS</span></a>
+        <a class="btn btn-ghost" href="#films"><svg aria-hidden="true"><use href="#i-play"/></svg>Watch the film <span class="mono dim" style="font-size:13px">1:46</span></a>
+      </div>
+      <div class="hero-note">
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Free to start</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>No card, no account</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Pro is $14.99, once</span>
+      </div>
+      <p style="margin-top:12px;font-size:14px;color:var(--ink-3)">Also for Windows and Linux. .deb and all builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
     </div>
-    <h1>Voice to Text, Privately.</h1>
-    <p class="tagline">On-device speech transcription for macOS, Windows &amp; Linux</p>
-    <p class="description">Press a hotkey, speak, and your words appear as text. All processing happens locally on your device using whisper.cpp. No cloud. No accounts. No tracking.</p>
 
-    <!-- Per-release URL bump: update v5.8.8 in the three hrefs below when shipping a new release. -->
-    <div class="hero-downloads platform-downloads">
-        <a href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" class="hero-cta platform-cta" data-platform="mac">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></svg>
-            <span class="platform-label"><span class="platform-name">Download for macOS</span><span class="platform-arch">DMG</span></span>
-        </a>
-        <a href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe" class="hero-cta platform-cta" data-platform="windows">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></svg>
-            <span class="platform-label"><span class="platform-name">Download for Windows</span><span class="platform-arch">x64 · Installer</span></span>
-        </a>
-        <a href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage" class="hero-cta platform-cta" data-platform="linux">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#fff"/><circle cx="13.6" cy="6" r="1.1" fill="#fff"/><circle cx="10.6" cy="6.2" r=".5" fill="#000"/><circle cx="13.4" cy="6.2" r=".5" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></svg>
-            <span class="platform-label"><span class="platform-name">Download for Linux</span><span class="platform-arch">x64 · AppImage</span></span>
-        </a>
+    <div class="scene" aria-hidden="true">
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span>New message</span></div>
+        <div class="win-fields">
+          <div><b>To</b> &nbsp;Jordan Lee</div>
+          <div><b>Subject</b> &nbsp;Re: Thursday</div>
+        </div>
+        <div class="win-body">
+          <span class="line">Hi Jordan, thanks for the quick reply.</span>
+          <span class="line l2">Thursday works for me. Let's say ten in</span>
+          <span class="line l3">the morning, and I'll bring the notes.<span class="caret"></span></span>
+        </div>
+      </div>
+      <div class="keys">
+        <div class="key">Ctrl</div><div class="key">Shift</div>
+        <div class="key space">Space</div>
+      </div>
+      <div class="rec"><div class="wave"><i></i><i></i><i></i><i></i><i></i></div><span class="lbl">Listening</span><span>00:04</span></div>
     </div>
-    <p class="hero-meta">Free to start · Also available as <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow">.deb for Debian/Ubuntu</a> · <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow">All downloads on GitHub</a></p>
-    <video class="hero-screenshot" width="700" autoplay loop muted playsinline preload="metadata" poster="images/wspr_demo_poster.jpg" aria-label="Wspr push-to-talk demo: dictating into a Rust source file in vim">
-        <source src="images/wspr_demo.mp4" type="video/mp4">
-        <img src="images/menu_bar.png" alt="Wspr system tray app showing voice transcription" width="700">
-    </video>
+  </div>
 </header>
 
-<!-- Features -->
-<section id="features" class="section-center">
-    <div class="container">
-        <p class="section-label">Features</p>
-        <h2 class="section-title">Everything you need to turn voice into text</h2>
-        <p class="section-desc">Wspr lives in your system tray and works with any app. Powered by whisper.cpp with GPU acceleration for fast, accurate, on-device transcription.</p>
+<div class="strip">
+  <div class="wrap">
+    <span class="lab">Types wherever your cursor is</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-doc"/></svg>Documents</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-chat"/></svg>Chat</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-globe"/></svg>Web forms</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-note"/></svg>Notes</span>
+    <span class="app"><svg aria-hidden="true"><use href="#i-term"/></svg>Terminals</span>
+  </div>
+</div>
 
-        <div class="features-grid">
-            <div class="feature-card fade-in">
-                <div class="feature-icon blue">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
-                </div>
-                <h3>Live Transcription</h3>
-                <p>Press a global hotkey from any app. Speak naturally and your words are transcribed in real time, then inserted at your cursor or copied to clipboard.</p>
-            </div>
-
-            <div class="feature-card fade-in">
-                <div class="feature-icon green">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/></svg>
-                </div>
-                <h3>Hotkey &amp; Push-to-Talk</h3>
-                <p>Ctrl+Shift+Space by default, fully customizable. Tap to toggle recording, or hold for push-to-talk — release and your transcription appears. Separate hotkey for transcribe + rewrite.</p>
-            </div>
-
-            <div class="feature-card fade-in">
-                <div class="feature-icon orange">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                </div>
-                <h3>AI Text Rewriting</h3>
-                <p>Polish transcriptions with AI. Built-in styles for minimal, professional, or concise output. Use OpenAI, Anthropic, or Google Gemini with your own API key.</p>
-            </div>
-
-            <div class="feature-card fade-in">
-                <div class="feature-icon blue">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                </div>
-                <h3>File Transcription</h3>
-                <p>Transcribe audio or video files alongside live dictation — file and voice pipelines run concurrently, so a 2-hour meeting transcript won't block your hotkey. MP3, WAV, M4A, MP4, MOV, MKV and more.</p>
-            </div>
-
-            <div class="feature-card fade-in">
-                <div class="feature-icon green">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                </div>
-                <h3>99 Languages</h3>
-                <p>Whisper models support 99 languages with automatic detection. Transcribe English, French, Spanish, Japanese, Arabic, and many more.</p>
-            </div>
-
-            <div class="feature-card fade-in">
-                <div class="feature-icon orange">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <h3>Cross-Platform</h3>
-                <p>Runs on macOS, Windows, and Linux. Same features, same privacy, everywhere you work.</p>
-            </div>
-        </div>
+<section id="films" class="sect">
+  <div class="aura blue"></div>
+  <div class="wrap">
+    <div class="sect-head center rv">
+      <span class="eyebrow blue">The film</span>
+      <h2 class="h-1">Five places. <em class="acc blue">One hotkey.</em></h2>
+      <p class="lede">An email, a chat, a whole chapter, a messy thought and a two hour lecture. Watch Wspr type all of it.</p>
     </div>
+    <div class="rv">
+      <div class="cinema" id="cinema">
+        <video id="film" preload="none" playsinline poster="/images/film-01-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-01-five-places-1080.mp4"></video>
+        <button class="play" id="playBtn" aria-label="Play film"><span class="b"><svg aria-hidden="true"><use href="#i-play"/></svg></span><span class="cap" id="filmCap" data-cap>Five places · 1:46 · sound on</span></button>
+      </div>
+      <div class="reel-tabs" role="tablist">
+        <button class="reel-tab" role="tab" aria-selected="true" data-src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-01-five-places-1080.mp4" data-poster="/images/film-01-poster.jpg" data-cap="Five places · 1:46 · sound on">
+          <img src="/images/film-01-poster.jpg" alt="Film 01 poster" width="1440" height="810" loading="lazy"><span><b>Five places, one hotkey</b><small>FILM 01 · 1:46</small></span>
+        </button>
+        <button class="reel-tab" role="tab" aria-selected="false" data-src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-02-stayed-home-1080.mp4" data-poster="/images/film-02-poster.jpg" data-cap="It stayed home · 1:52 · sound on">
+          <img src="/images/film-02-poster.jpg" alt="Film 02 poster" width="1440" height="810" loading="lazy"><span><b>Your voice stayed home</b><small>FILM 02 · 1:52</small></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Privacy -->
-<section id="privacy">
-    <div class="container">
-        <div class="split">
-            <img src="images/privacy.png" alt="Diagram of Wspr's on-device pipeline: audio captured by the microphone stays inside your device, with no cloud upload, no accounts, and zero tracking." class="split-image fade-in" width="440" loading="lazy">
-            <div class="split-text fade-in">
-                <p class="section-label">Privacy First</p>
-                <h2 class="section-title">Your data stays on your device</h2>
-                <p class="section-desc">Wspr processes everything locally. Your voice never leaves your computer. No servers, no accounts, no analytics, no tracking.</p>
-                <ul>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        On-device transcription via whisper.cpp with GPU acceleration
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Audio never leaves your computer
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        API keys stored securely in system keychain
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Zero third-party analytics or ad SDKs
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section id="how" class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h-2">Press. Speak. <em class="acc blue">It types.</em></h2>
     </div>
+    <div class="steps">
+      <div class="step rv">
+        <span class="n">01</span>
+        <div class="vis"><div class="kgrp"><div class="key">Ctrl</div><div class="key">Shift</div><div class="key space" style="border-color:rgba(61,155,255,.8)">Space</div></div></div>
+        <h3 class="h-3">Press your hotkey</h3>
+        <p>From any app. Tap to start and stop, or hold it down and let go when you're done.</p>
+      </div>
+      <div class="step rv">
+        <span class="n">02</span>
+        <div class="vis"><div class="wave" style="height:64px;gap:7px"><i style="width:8px"></i><i style="width:8px"></i><i style="width:8px"></i><i style="width:8px"></i><i style="width:8px"></i></div></div>
+        <h3 class="h-3">Say it naturally</h3>
+        <p>A small pill shows you're recording. Talk the way you would to a colleague.</p>
+      </div>
+      <div class="step rv">
+        <span class="n">03</span>
+        <div class="vis"><div class="out">Thursday works for me.<span class="caret"></span></div></div>
+        <h3 class="h-3">The words appear</h3>
+        <p>Your text lands at the cursor, or on the clipboard if there's nowhere to type.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- AI Rewrite -->
-<section id="rewrite">
-    <div class="container">
-        <div class="split reverse">
-            <img src="images/rewrite.png" alt="Wspr AI rewrite: a raw transcript with filler words on the left is transformed into a polished, professional sentence on the right, with style chips for Professional, Minimal, Concise, and Custom, powered by your OpenAI, Anthropic, or Gemini API key." class="split-image fade-in" width="480" loading="lazy">
-            <div class="split-text fade-in">
-                <p class="section-label">AI Rewriting</p>
-                <h2 class="section-title">Polish your words with AI</h2>
-                <p class="section-desc">Automatically clean up transcriptions with built-in rewrite styles, or create your own. Choose your preferred AI provider.</p>
-                <ul>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Minimal, Professional, and Concise built-in styles
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        OpenAI, Anthropic, and Google Gemini
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Toggle rewrite on/off from the recording overlay
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Custom rewrite styles with Pro
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section id="privacy" class="sect" style="padding-top:0">
+  <div class="aura green"></div>
+  <div class="wrap split">
+    <div class="rv">
+      <span class="eyebrow green">Privacy</span>
+      <h2 class="h-1" style="margin:18px 0">Your voice <em class="acc green">never leaves</em> your computer.</h2>
+      <p class="lede">Speech becomes text on your own machine, with the GPU you already own. Nothing is uploaded, so there's nothing to review, leak or sell.</p>
+      <ul class="checks green">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Works with the Wi‑Fi off.</b> On a plane, on hotel Wi‑Fi, behind a strict VPN.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>No account, no analytics.</b> Download it and talk. That's the whole setup.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Fine for confidential work.</b> Clinic notes, client files, code under NDA.</span></li>
+      </ul>
     </div>
+    <div class="rv">
+      <div class="device">
+        <span class="device-tag">YOUR COMPUTER</span>
+        <div class="flow">
+          <div class="node"><div class="ic"><svg aria-hidden="true"><use href="#i-mic"/></svg></div><b>Your voice</b><small>microphone</small></div>
+          <div class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+          <div class="node"><div class="ic"><svg aria-hidden="true"><use href="#i-chip"/></svg></div><b>Whisper</b><small>on your GPU</small></div>
+          <div class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+          <div class="node"><div class="ic"><svg aria-hidden="true"><use href="#i-text"/></svg></div><b>Your text</b><small>at the cursor</small></div>
+        </div>
+        <div class="device-foot">
+          <span class="chip g"><svg aria-hidden="true"><use href="#i-check"/></svg>100% local</span>
+          <span class="chip g"><svg aria-hidden="true"><use href="#i-check"/></svg>No accounts</span>
+          <span class="chip g"><svg aria-hidden="true"><use href="#i-check"/></svg>Zero tracking</span>
+        </div>
+      </div>
+      <div class="cloud-x"><svg aria-hidden="true"><use href="#i-cloudoff"/></svg><span><b>The cloud gets nothing.</b> No audio, no transcripts, no usage data.</span></div>
+    </div>
+  </div>
 </section>
 
-<!-- Models -->
-<section id="models">
-    <div class="container">
-        <div class="split">
-            <img src="images/models.png" alt="Whisper model picker showing speed and accuracy for Tiny (75 MB), Base (140 MB), Small (460 MB, recommended), Medium (1.5 GB), Large-v3 Turbo (1.6 GB), and Large-v3 (3 GB)." class="split-image fade-in" width="440" loading="lazy">
-            <div class="split-text fade-in">
-                <p class="section-label">Whisper Models</p>
-                <h2 class="section-title">Choose speed or accuracy</h2>
-                <p class="section-desc">Wspr includes six OpenAI Whisper models. Pick the one that fits your workflow — from lightning-fast to maximum accuracy.</p>
-                <ul>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Tiny</strong>&nbsp;(~75 MB) — Fastest, basic accuracy
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Base</strong>&nbsp;(~140 MB) — Fast, good accuracy
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Small</strong>&nbsp;(~460 MB) — Balanced, recommended
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Medium</strong>&nbsp;(~1.5 GB) — High accuracy
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Large&#x2011;v3&nbsp;Turbo</strong>&nbsp;(~1.6 GB): Near-best accuracy, much faster
-                    </li>
-                    <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Large-v3</strong>&nbsp;(~3 GB) — Best accuracy
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section id="rewrite" class="sect" style="padding-top:0">
+  <div class="aura orange"></div>
+  <div class="wrap split rev">
+    <div class="rv">
+      <span class="eyebrow orange">Rewrite</span>
+      <h2 class="h-1" style="margin:18px 0">Ramble in. <em class="acc orange">Clean sentence out.</em></h2>
+      <p class="lede">Turn on Rewrite and Wspr tidies the ums, the repeats and the half sentences before the text lands. Pick a style, or write your own.</p>
+      <ul class="checks orange">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Minimal, Professional, Concise</b> built in. Your own styles with Pro.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Your key, your provider.</b> OpenAI, Anthropic or Google Gemini.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Optional, and only text.</b> Rewrite sends the transcript, never your audio.</span></li>
+      </ul>
     </div>
+    <div class="rv">
+      <div class="rw">
+        <div class="rw-head">
+          <span class="lab">Style</span>
+          <div class="styles" id="styles">
+            <button aria-pressed="true" data-out="The meeting is at 3 PM tomorrow.">Minimal</button>
+            <button aria-pressed="false" data-out="Just a quick reminder that our meeting is tomorrow at 3 PM.">Professional</button>
+            <button aria-pressed="false" data-out="Meeting: tomorrow, 3 PM.">Concise</button>
+            <button aria-pressed="false" data-out="meeting's tomorrow at 3 👍">Your own</button>
+          </div>
+        </div>
+        <div class="rw-body">
+          <p class="raw">um, so like <s>i think</s> the meeting <s>uh</s> is at <s>three</s> 3 PM <s>tomorrow tomorrow</s> tomorrow <s>you know</s></p>
+          <div class="rw-arrow">Rewritten</div>
+          <p class="polished" id="polished">The meeting is at 3 PM tomorrow.</p>
+        </div>
+        <div class="rw-foot"><span>Separate hotkey for <b>transcribe + rewrite</b></span><span>Toggle from the recording pill</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Pricing -->
-<section id="pricing" class="section-center">
-    <div class="container">
-        <p class="section-label">Pricing</p>
-        <h2 class="section-title">One price. Yours forever.</h2>
-        <p class="section-desc">No subscription. No recurring fees. Pay once and own Wspr Pro for life.</p>
-
-        <div class="pricing-grid">
-            <div class="pricing-card fade-in">
-                <h3>Free</h3>
-                <p class="pricing-price">$0</p>
-                <p class="pricing-note">Get started instantly</p>
-                <ul class="pricing-features">
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        50 live transcriptions
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        5 file transcriptions
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Built-in rewrite styles
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Cloud AI rewrite (own API key)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="pricing-card pro fade-in">
-                <span class="pricing-badge">Recommended</span>
-                <h3>Pro</h3>
-                <p class="pricing-price">$14.99</p>
-                <p class="pricing-note">One-time purchase. No subscription.</p>
-                <ul class="pricing-features">
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Unlimited</strong> live transcriptions
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Unlimited</strong> file transcriptions
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Custom rewrite styles
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <strong>Unlimited</strong> history
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">Everything else</span>
+      <h2 class="h-2">Small app. <span class="muted">Quietly complete.</span></h2>
     </div>
+    <div class="bento">
+      <div class="cell c4 rv">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-file"/></svg></div>
+        <h3 class="h-3">Transcribe files, while you keep dictating</h3>
+        <p>Drop in a lecture, an interview or a voice memo. MP3, WAV, M4A, MP4, MOV, MKV and more. A two hour recording never blocks your hotkey.</p>
+        <div class="vis">
+          <div class="file-job"><div class="fi"><svg aria-hidden="true"><use href="#i-file"/></svg></div><div class="meta"><b>Lecture 4, cell biology.m4a</b><small>1:12:40 of 1:54:02 · running on GPU</small><div class="bar"><i></i></div></div></div>
+        </div>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-lang"/></svg></div>
+        <h3 class="h-3">99 languages</h3>
+        <p>Detected automatically. Wspr writes in the language you speak.</p>
+        <div class="vis langs"><span class="on">English</span><span>Français</span><span>Español</span><span>Deutsch</span><span>日本語</span><span>Português</span><span>+93</span></div>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico o"><svg aria-hidden="true"><use href="#i-key"/></svg></div>
+        <h3 class="h-3">Push to talk</h3>
+        <p>Hold the hotkey, talk, let go. Ctrl+Shift+Space by default, yours to change.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico g"><svg aria-hidden="true"><use href="#i-clock"/></svg></div>
+        <h3 class="h-3">History you keep</h3>
+        <p>Every transcript kept, and stored only on your machine.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div>
+        <h3 class="h-3">Your vocabulary</h3>
+        <p>Hint the names and jargon you use, so they come out spelled right.</p>
+      </div>
+      <div class="cell c3 rv">
+        <h3 class="h-3">At home on every desktop</h3>
+        <p>The same app, the same features, on the computer you already have.</p>
+        <div class="vis os-row">
+          <div><svg aria-hidden="true"><use href="#i-apple"/></svg>macOS</div>
+          <div><svg aria-hidden="true"><use href="#i-win"/></svg>Windows</div>
+          <div><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux</div>
+        </div>
+      </div>
+      <div class="cell c3 rv">
+        <h3 class="h-3">Lives in your tray</h3>
+        <p>No window to manage. Wspr waits in the menu bar or system tray until you press the key, and plays a soft tone when it starts listening.</p>
+        <div class="vis"><div class="rec" style="position:static;transform:none;display:inline-flex"><div class="wave"><i></i><i></i><i></i><i></i><i></i></div><span class="lbl">Listening</span><span>00:02</span></div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Why Wspr — Comparison -->
-<section id="compare" class="section-center">
-    <div class="container">
-        <p class="section-label">Why Wspr</p>
-        <h2 class="section-title">The best value in voice-to-text</h2>
-        <p class="section-desc">Most voice-to-text apps charge monthly subscriptions, skip Linux entirely, or cost 2&ndash;5x more up front. Wspr gives you everything &mdash; on-device, cross-platform, AI rewriting &mdash; for a single $14.99 payment, forever.</p>
-
-        <div class="compare-table-wrap fade-in">
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th class="highlight">Wspr</th>
-                        <th>Wispr Flow</th>
-                        <th>Superwhisper</th>
-                        <th>MacWhisper</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Price</td>
-                        <td class="highlight"><strong>$14.99 lifetime</strong></td>
-                        <td>$12&ndash;$15/mo</td>
-                        <td>Subscription / Lifetime</td>
-                        <td>$29&ndash;$80</td>
-                    </tr>
-                    <tr>
-                        <td>Platforms</td>
-                        <td class="highlight"><strong>macOS, Win, Linux</strong></td>
-                        <td>macOS, Win, iOS, Android</td>
-                        <td>macOS, Win, iOS</td>
-                        <td>macOS</td>
-                    </tr>
-                    <tr>
-                        <td>On-device transcription</td>
-                        <td class="highlight">&#10003;</td>
-                        <td>Cloud</td>
-                        <td>&#10003;</td>
-                        <td>&#10003;</td>
-                    </tr>
-                    <tr>
-                        <td>AI rewrite with your own key</td>
-                        <td class="highlight">OpenAI, Anthropic, Gemini</td>
-                        <td>Proprietary</td>
-                        <td>Multiple (BYO key)</td>
-                        <td>OpenAI / Claude</td>
-                    </tr>
-                    <tr>
-                        <td>Live / system-wide dictation</td>
-                        <td class="highlight">&#10003;</td>
-                        <td>&#10003;</td>
-                        <td>&#10003;</td>
-                        <td>&#10003;</td>
-                    </tr>
-                    <tr>
-                        <td>File transcription</td>
-                        <td class="highlight">&#10003;</td>
-                        <td>Not advertised</td>
-                        <td>&#10003;</td>
-                        <td>&#10003;</td>
-                    </tr>
-                    <tr>
-                        <td>One-time purchase available</td>
-                        <td class="highlight"><strong>&#10003;</strong></td>
-                        <td>&#10007;</td>
-                        <td>&#10003; (Lifetime tier)</td>
-                        <td>&#10003;</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<section id="models" class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">Models</span>
+      <h2 class="h-2">Choose speed or accuracy. <span class="muted">Six Whisper models, one click.</span></h2>
     </div>
+    <div class="models rv">
+      <div class="model head"><span>Model</span><span>Download</span><span>Speed</span><span>Accuracy</span></div>
+      <div class="model"><b>Tiny</b><span class="size">75 MB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="model"><b>Base</b><span class="size">140 MB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+      <div class="model is-rec"><b>Small<span class="tag">RECOMMENDED</span></b><span class="size">460 MB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      <div class="model"><b>Medium</b><span class="size">1.5 GB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="model"><b>Large v3 Turbo<span class="tag new">NEW</span></b><span class="size">1.6 GB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="model"><b>Large v3</b><span class="size">3 GB</span><div class="meter sp" data-l="SPEED"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="meter ac" data-l="ACC"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+    </div>
+  </div>
 </section>
 
-<!-- FAQ on Landing Page -->
-<section id="faq" class="section-center">
-    <div class="container">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-title">Common questions about Wspr</h2>
-        <div class="faq landing-faq fade-in">
-            <details>
-                <summary>Is Wspr really free to start?</summary>
-                <p>Yes. Wspr includes 50 free live transcriptions, 5 file transcriptions, and built-in AI rewrite styles at no cost. No credit card or account required. Upgrade to Pro for $14.99 (one-time) to unlock unlimited everything.</p>
-            </details>
-            <details>
-                <summary>Does my voice data stay on my device?</summary>
-                <p>100%. All speech-to-text transcription is processed locally on your device using whisper.cpp with GPU acceleration. Your audio never leaves your computer. Cloud AI is only used for optional text rewriting — and only if you choose to enable it with your own API key.</p>
-            </details>
-            <details>
-                <summary>What platforms does Wspr support?</summary>
-                <p>Wspr runs on macOS, Windows (x64), and Linux (x64). All features are available on every platform.</p>
-            </details>
-            <details>
-                <summary>Why pay $14.99 when competitors charge $10&ndash;15 per month?</summary>
-                <p>Because one month of Wispr Flow costs the same as a lifetime of Wspr. Pay once, own it forever — no recurring charges. You get on-device transcription, AI rewriting, and unlimited usage for a single payment.</p>
-            </details>
-            <details>
-                <summary>How is Wspr different from built-in dictation?</summary>
-                <p>Built-in dictation has limited accuracy, no custom vocabulary, and can't rewrite your text with AI. Wspr uses OpenAI's Whisper models for superior accuracy across 99 languages, supports custom vocabulary hints, and offers AI-powered text rewriting with OpenAI, Anthropic, or Google Gemini.</p>
-            </details>
-            <details>
-                <summary>Does Wspr support push-to-talk?</summary>
-                <p>Yes. Toggle push-to-talk in <strong>Settings → General</strong>. With it enabled, hold your transcribe hotkey to record and release to transcribe — radio-style. Quick taps still work as toggles, and the same flow works on macOS, Windows, and Linux.</p>
-            </details>
-        </div>
+<section class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head center rv">
+      <span class="eyebrow blue">Shorts</span>
+      <h2 class="h-2">Thirty seconds each.</h2>
+      <p class="lede">One idea per short. Made to be shared.</p>
     </div>
+    <div class="shorts">
+      <figure class="short rv"><video muted loop playsinline preload="none" data-auto poster="/images/short-11-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/short-11-press-speak-720.mp4"></video><button class="snd" aria-label="Toggle sound"><svg class="off" aria-hidden="true"><use href="#i-mute"/></svg><svg class="on" aria-hidden="true"><use href="#i-vol"/></svg></button><figcaption><b>Press. Speak. It types.</b><small>0:28</small></figcaption></figure>
+      <figure class="short rv"><video muted loop playsinline preload="none" data-auto poster="/images/short-12-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/short-12-um-so-like-720.mp4"></video><button class="snd" aria-label="Toggle sound"><svg class="off" aria-hidden="true"><use href="#i-mute"/></svg><svg class="on" aria-hidden="true"><use href="#i-vol"/></svg></button><figcaption><b>“um, so like…”</b><small>0:30</small></figcaption></figure>
+      <figure class="short rv"><video muted loop playsinline preload="none" data-auto poster="/images/short-13-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/short-13-wifi-off-720.mp4"></video><button class="snd" aria-label="Toggle sound"><svg class="off" aria-hidden="true"><use href="#i-mute"/></svg><svg class="on" aria-hidden="true"><use href="#i-vol"/></svg></button><figcaption><b>Works with the Wi‑Fi off</b><small>0:30</small></figcaption></figure>
+    </div>
+  </div>
 </section>
 
-<!-- Final CTA -->
-<section class="cta-section">
-    <h2 class="section-title">Try Wspr for free.</h2>
-    <p class="section-desc">Download now and get 50 free transcriptions. Upgrade to Pro for $14.99 — one-time, forever.</p>
-    <div class="cta-buttons">
-        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Wspr
-        </a>
-        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
-            Buy Pro — $14.99
-        </a>
+<section id="pricing" class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head center rv">
+      <span class="eyebrow orange">Pricing</span>
+      <h2 class="h-1">One price. <em class="acc orange">Yours forever.</em></h2>
+      <p class="lede">No subscription, no renewals. Start free, and pay once when it earns it.</p>
     </div>
+    <div class="prices">
+      <div class="price rv">
+        <div class="nm">Free</div>
+        <div class="amt">$0</div>
+        <p class="note">Everything you need to try it properly.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>50</b> live transcriptions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>5</b> file transcriptions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Built-in rewrite styles</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>No card, no account</span></li>
+        </ul>
+        <a class="btn btn-ghost" href="#download">Download free</a>
+      </div>
+      <div class="price pro rv">
+        <div class="nm">Pro <span class="badge">Pay once</span></div>
+        <div class="amt">$14.99<small>USD, one time</small></div>
+        <p class="note">About what one month of a dictation subscription costs.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Unlimited</b> live transcriptions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Unlimited</b> file transcriptions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Custom</b> rewrite styles</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Unlimited</b> history</span></li>
+        </ul>
+        <a class="btn btn-orange" href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Get Wspr Pro</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="support.html">Support</a>
-            <a href="changelog.html">Changelog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+<section id="compare" class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">Compare</span>
+      <h2 class="h-2">How Wspr stacks up.</h2>
     </div>
+    <div class="cmp-wrap rv">
+      <table class="cmp">
+        <thead><tr><th>Feature</th><th class="us">Wspr</th><th>Wispr Flow</th><th>Superwhisper</th><th>MacWhisper</th></tr></thead>
+        <tbody>
+          <tr><td>Price</td><td class="us"><b>$14.99 lifetime</b></td><td>$12 to $15 / month</td><td>Subscription or lifetime</td><td>$29 to $80</td></tr>
+          <tr><td>Platforms</td><td class="us">macOS, Windows, Linux</td><td>macOS, Windows, iOS, Android</td><td>macOS, Windows, iOS</td><td>macOS</td></tr>
+          <tr><td>On-device transcription</td><td class="us y">✓</td><td class="n">Cloud</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>AI rewrite with your own key</td><td class="us">OpenAI, Anthropic, Gemini</td><td>Proprietary</td><td>Multiple (your key)</td><td>OpenAI, Claude</td></tr>
+          <tr><td>Live, system-wide dictation</td><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>File transcription</td><td class="us y">✓</td><td class="n">Not advertised</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>One-time purchase available</td><td class="us y">✓</td><td class="n">✗</td><td class="y">✓ (lifetime tier)</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-2">Questions, answered.</h2>
+    </div>
+    <div class="faq">
+      <div>
+        <details open><summary>Is Wspr really free to start?</summary><p>Yes. 50 live transcriptions, 5 file transcriptions and the built-in rewrite styles, with no card and no account. Pro unlocks everything for a single $14.99, paid once.</p></details>
+        <details><summary>Does my voice stay on my device?</summary><p>Always. Transcription runs locally with whisper.cpp on your GPU, and your audio never leaves your computer. Rewrite is optional and, when on, sends only the text to the provider you picked, with your own API key.</p></details>
+        <details><summary>Which computers does it run on?</summary><p>macOS, Windows (x64) and Linux (x64). Every feature is on every platform.</p></details>
+        <details><summary>Does it work on Wayland?</summary><p>Yes on KDE Plasma 6 and GNOME 45+, through the desktop portal. Sway and Hyprland work with XWayland present.</p></details>
+      </div>
+      <div>
+        <details><summary>Why pay $14.99 when others charge $10 to $15 a month?</summary><p>One month of Wispr Flow costs about the same as a lifetime of Wspr. Pay once, own it, no recurring charges, and you get on-device transcription, rewriting and unlimited use.</p></details>
+        <details><summary>How is it different from built-in dictation?</summary><p>Built-in dictation has limited accuracy, no custom vocabulary and no AI rewrite. Wspr uses OpenAI's Whisper models across 99 languages, takes custom vocabulary hints, and can rewrite with OpenAI, Anthropic or Google Gemini.</p></details>
+        <details><summary>Does it support push-to-talk?</summary><p>Yes. Turn it on in <b>Settings → General</b>, then hold your hotkey to record and release to transcribe. Quick taps still toggle. Same on macOS, Windows and Linux.</p></details>
+        <details><summary>Can I use it in French, Spanish, Japanese…?</summary><p>99 languages, detected automatically. Wspr writes in the language you speak.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="download">
+  <div class="wrap">
+    <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="h-1"><span class="grad">Say it.</span> <em class="acc blue">It's written.</em></h2>
+    <p class="lede" style="margin:18px auto 0">Free to start on macOS, Windows and Linux.</p>
+    <div class="cta-row" data-os-order>
+      <a class="btn btn-primary" data-os="mac" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg"><svg aria-hidden="true"><use href="#i-apple"/></svg>macOS <span class="sub">Universal</span></a>
+      <a class="btn btn-ghost" data-os="win" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Windows <span class="sub">x64</span></a>
+      <a class="btn btn-ghost" data-os="linux" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux <span class="sub">AppImage</span></a>
+    </div>
+    <p style="margin-top:18px;font-size:14px;color:var(--ink-3)">Linux .deb, checksums and older builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
-
-<!-- Minimal JS: nav scroll effect + fade-in animations -->
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, { threshold: 0.15 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-
+<script src="/site.js" defer></script>
 </body>
 </html>

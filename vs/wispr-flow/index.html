@@ -11,17 +11,17 @@
     <link rel="canonical" href="https://getwspr.com/vs/wispr-flow/">
 
     <meta property="og:title" content="Wspr vs Wispr Flow: On-Device, Linux-Friendly, One-Time Purchase">
-    <meta property="og:description" content="Wspr is a private, on-device alternative to Wispr Flow — runs on Linux, one-time purchase instead of a monthly subscription.">
+    <meta property="og:description" content="Wspr is a private, on-device alternative to Wispr Flow : runs on Linux, one-time purchase instead of a monthly subscription.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://getwspr.com/vs/wispr-flow/">
-    <meta property="og:image" content="https://getwspr.com/images/intro.png">
+    <meta property="og:image" content="https://getwspr.com/images/og/vs-wispr-flow.png">
     <meta property="og:site_name" content="Wspr">
     <meta property="article:published_time" content="2026-04-16">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Wspr vs Wispr Flow: On-Device, Linux-Friendly, One-Time Purchase">
-    <meta name="twitter:description" content="A private, on-device alternative to Wispr Flow — including Linux support.">
-    <meta name="twitter:image" content="https://getwspr.com/images/intro.png">
+    <meta name="twitter:description" content="A private, on-device alternative to Wispr Flow : including Linux support.">
+    <meta name="twitter:image" content="https://getwspr.com/images/og/vs-wispr-flow.png">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -30,8 +30,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="theme-color" content="#000000">
-
-    <link rel="stylesheet" href="../../style.css">
 
     <script type="application/ld+json">
     {
@@ -52,189 +50,390 @@
         "mainEntityOfPage": "https://getwspr.com/vs/wispr-flow/"
     }
     </script>
+
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pages.css">
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Wspr a Wispr Flow alternative that works offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wspr runs OpenAI's Whisper models on your machine using whisper.cpp with GPU acceleration. No audio is ever uploaded, no account is required, and the app works on a plane or an air-gapped machine. Wispr Flow's own documentation states that transcription always happens in the cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Wspr cost compared with Wispr Flow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wspr is $14.99, once. Per Wispr Flow's pricing page, Flow Pro is $15/month on the monthly plan or $12/month billed annually, so $144 to $180 per year. Over five years that is roughly $720 to $900 on Flow against a flat $14.99 on Wspr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Wspr run on Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wspr runs on macOS, Windows (x64) and Linux (x64) with the same feature set on every platform. Wispr Flow does not support Linux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Wspr have iOS or Android apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wspr is desktop only. Wispr Flow has real mobile apps on iOS and Android, so if you want dictation on your phone, Flow covers that and Wspr does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Wspr transcribe audio and video files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow advertises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI providers can Wspr use to rewrite my dictation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI, Anthropic (Claude) or Google Gemini, using your own API key. You pick the provider, you pay only the direct per-token cost, and you can switch providers any time. Wispr Flow uses its own proprietary pipeline."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav scrolled">
-    <div class="nav-inner">
-        <a href="../../index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="18" width="5" height="12" rx="2.5" fill="#0071e3"/>
-                <rect x="14" y="10" width="5" height="28" rx="2.5" fill="#0071e3"/>
-                <rect x="22" y="6" width="5" height="36" rx="2.5" fill="#0071e3"/>
-                <rect x="30" y="12" width="5" height="24" rx="2.5" fill="#0071e3"/>
-                <rect x="38" y="20" width="5" height="8" rx="2.5" fill="#0071e3"/>
-            </svg>
-            Wspr
-        </a>
-        <div class="nav-links">
-            <a href="../../index.html#features">Features</a>
-            <a href="../../index.html#pricing">Pricing</a>
-            <a href="../../support.html">Support</a>
-            <a href="../../changelog.html">Changelog</a>
-            <a href="../../blog/">Blog</a>
-            <a href="../../privacy.html">Privacy</a>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.91 2.38-4.31 2.49-4.38-1.36-1.99-3.48-2.26-4.23-2.29-1.8-.18-3.51 1.06-4.43 1.06-.92 0-2.32-1.04-3.82-1.01-1.96.03-3.78 1.14-4.79 2.9-2.04 3.54-.52 8.78 1.47 11.66.97 1.41 2.13 2.99 3.65 2.93 1.46-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.7zM14.27 3.5c.81-.98 1.35-2.34 1.2-3.7-1.16.05-2.57.78-3.41 1.75-.75.86-1.41 2.25-1.23 3.58 1.3.1 2.62-.66 3.44-1.63z"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.45L9.8 2.1v9.45H0V3.45zm0 17.1l9.8 1.35v-9.3H0v7.95zm10.875 1.5L24 24V12.6H10.875v9.45zM10.875 2.1V11.55H24V0L10.875 2.1z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="14.5" rx="6" ry="7.5"/><circle cx="12" cy="6" r="4"/><circle cx="10.4" cy="6" r="1.1" fill="#000"/><circle cx="13.6" cy="6" r="1.1" fill="#000"/><path d="M11 8.4 L12 9.6 L13 8.4 Z" fill="#ff9f0a"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cloudoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20M5.8 8.6A5 5 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-1.3A7 7 0 0 0 9.4 5.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12v5M13 11v7M16 13v3M7 14v1"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 48 48"><rect x="6" y="18" width="5" height="12" rx="2.5" fill="#3d9bff"/><rect x="14" y="10" width="5" height="28" rx="2.5" fill="#3d9bff"/><rect x="22" y="6" width="5" height="36" rx="2.5" fill="#3d9bff"/><rect x="30" y="12" width="5" height="24" rx="2.5" fill="#3d9bff"/><rect x="38" y="20" width="5" height="8" rx="2.5" fill="#3d9bff"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Wspr home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#films">Films</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/changelog.html">Changelog</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="/#download">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-shut" aria-hidden="true"><use href="#i-close"/></svg></summary>
+      <div class="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#films">Films</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </details>
+  </div>
 </nav>
 
-<main class="page-container article-container">
-    <p class="article-date">Updated April 16, 2026</p>
-    <h1>Wspr vs Wispr Flow</h1>
-    <p class="article-subtitle">Two different philosophies: Wispr Flow is a polished cloud service; Wspr runs entirely on your device. Here's how they actually compare on price, privacy, platform support, and features.</p>
-
-    <p>Wispr Flow is one of the best-known AI dictation products in 2026. It's polished, context-aware, and genuinely fast. It also happens to be cloud-first by design &mdash; every word you dictate is transmitted to their servers for transcription. Wspr takes the opposite approach: everything runs locally on your machine, and you pay once.</p>
-
-    <p>This page is the honest head-to-head, based on the public claims each company makes on their own sites. Where Wspr wins, where Wispr Flow still has an edge, and which one actually fits the way you work.</p>
-
-    <h2>The 60-Second Summary</h2>
-
-    <div class="compare-table-wrap">
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th class="highlight">Wspr</th>
-                    <th>Wispr Flow</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Price (paid tier)</td>
-                    <td class="highlight"><strong>$14.99 once</strong></td>
-                    <td>$15/mo monthly, $12/mo annual</td>
-                </tr>
-                <tr>
-                    <td>Year 1 cost (paid)</td>
-                    <td class="highlight"><strong>$14.99</strong></td>
-                    <td>$144&ndash;$180</td>
-                </tr>
-                <tr>
-                    <td>5-year cost (paid)</td>
-                    <td class="highlight"><strong>$14.99</strong></td>
-                    <td>$720&ndash;$900</td>
-                </tr>
-                <tr>
-                    <td>Transcription</td>
-                    <td class="highlight">On-device (whisper.cpp + GPU)</td>
-                    <td>Cloud (always)</td>
-                </tr>
-                <tr>
-                    <td>Works offline</td>
-                    <td class="highlight">&#10003;</td>
-                    <td>&#10007;</td>
-                </tr>
-                <tr>
-                    <td>macOS</td>
-                    <td class="highlight">&#10003;</td>
-                    <td>&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Windows</td>
-                    <td class="highlight">&#10003;</td>
-                    <td>&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Linux</td>
-                    <td class="highlight">&#10003;</td>
-                    <td>&#10007;</td>
-                </tr>
-                <tr>
-                    <td>iOS / Android</td>
-                    <td>&#10007;</td>
-                    <td class="highlight">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>File transcription (audio/video)</td>
-                    <td class="highlight">&#10003;</td>
-                    <td>Not advertised</td>
-                </tr>
-                <tr>
-                    <td>AI rewriting model</td>
-                    <td class="highlight">OpenAI, Anthropic, or Gemini (your key)</td>
-                    <td>Proprietary pipeline</td>
-                </tr>
-                <tr>
-                    <td>Languages</td>
-                    <td class="highlight">99</td>
-                    <td>100+</td>
-                </tr>
-                <tr>
-                    <td>Free tier</td>
-                    <td class="highlight">50 live transcriptions, no account</td>
-                    <td>2,000 words/week (Mac/Win), 14-day Pro trial</td>
-                </tr>
-            </tbody>
-        </table>
+<main>
+<header class="hero lander">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill-meta"><span class="dot"></span>Updated <b>April 16, 2026</b></span>
+      <h1 class="h-1"><span class="grad">The Wispr Flow alternative</span> <em class="acc green">that stays on your device.</em></h1>
+      <p class="lede">Two different philosophies: Wispr Flow is a polished cloud service; Wspr runs entirely on your device. Here is how they actually compare on price, privacy, platform support, and features.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-os-cta href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" data-mac="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg" data-win="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe" data-linux="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg><use href="#i-apple"/></svg><span data-os-label>Download for macOS</span></a>
+        <a class="btn btn-ghost" href="#compare">Compare in detail</a>
+      </div>
+      <div class="hero-note">
+        <span><svg><use href="#i-check"/></svg>Free to start</span>
+        <span><svg><use href="#i-check"/></svg>No card, no account</span>
+        <span><svg><use href="#i-check"/></svg>Pro is $14.99, once</span>
+      </div>
     </div>
-
-    <p class="article-subtitle" style="font-size: 0.9rem; opacity: 0.7;">Sources: <a href="https://wisprflow.ai/pricing">wisprflow.ai/pricing</a>, <a href="https://wisprflow.ai/">wisprflow.ai</a>, <a href="https://docs.wisprflow.ai/articles/1922179110-data-security-encryption">Wispr Flow Data Security docs</a>, <a href="https://getwspr.com/">getwspr.com</a>. Checked April 2026.</p>
-
-    <h2>1. Price: One-Time vs Subscription</h2>
-
-    <p>Per Wispr Flow's pricing page, Flow Pro is $15/month on the monthly plan or $12/month billed annually &mdash; so $144&ndash;$180 per year depending on billing cycle. Wspr is $14.99, once. There's no annual renewal and no yearly upgrade fee.</p>
-
-    <p>For someone who uses dictation every day, that's a meaningful gap. Over five years you're looking at roughly $720&ndash;$900 on Flow vs a flat $14.99 on Wspr. Wispr Flow does include a generous 2,000 words/week free tier on Mac and Windows, so if your usage is light you may never hit the paywall &mdash; worth knowing.</p>
-
-    <h2>2. Privacy: On-Device vs Cloud</h2>
-
-    <p>This is the biggest architectural difference and it's confirmed by both companies.</p>
-
-    <p>Wispr Flow's own documentation states that transcription always happens in the cloud and there is no on-device option. Their <em>Privacy Mode</em> setting ensures nothing is retained server-side after transcription, which is a real privacy feature &mdash; but the audio itself still has to travel to their servers to be processed. They're SOC 2 Type 2 compliant and encrypt in transit and at rest.</p>
-
-    <p>Wspr runs OpenAI's Whisper models directly on your machine using whisper.cpp with GPU acceleration. No audio is ever uploaded anywhere, no account is required, and the app works on a plane or an air-gapped machine. If you work under NDA or handle client material you can't leak, that architectural difference matters.</p>
-
-    <h2>3. Platform Support: Different Coverage Maps</h2>
-
-    <p>Wispr Flow runs natively on Mac, Windows, iOS, and Android &mdash; their mobile apps are real, not companion remotes. That's broader consumer coverage than Wspr.</p>
-
-    <p>Wspr runs on macOS, Windows (x64), and Linux (x64) with the same feature set on every platform. Linux is the one Flow doesn't support at all, and it's the platform most underserved by commercial dictation vendors generally. If you're on Linux &mdash; or you want one tool that covers Linux and your Mac/Windows machines &mdash; Wspr is your only option of the two. If you want dictation on your phone, Flow has that and Wspr doesn't.</p>
-
-    <h2>4. File Transcription</h2>
-
-    <p>Wspr handles both live dictation and batch transcription of audio and video files &mdash; interviews, podcast recordings, meeting captures. Wispr Flow's marketing centers on live in-app dictation; file transcription isn't a feature they advertise. If you need to transcribe recorded files, Wspr covers it; double-check Flow's current docs if that's your primary need.</p>
-
-    <h2>5. AI Rewriting: Proprietary vs Bring-Your-Own-Key</h2>
-
-    <p>Both apps can clean up and rewrite your dictation with AI. Wispr Flow uses its own proprietary pipeline &mdash; you don't pick the model, and inference is bundled into the subscription.</p>
-
-    <p>Wspr lets you bring your own API key for OpenAI (GPT-4/GPT-5), Anthropic (Claude), or Google Gemini. You pick the provider, you pay only the direct per-token cost (typically pennies per day), and you can switch providers any time. When a new frontier model ships, Wspr picks it up the day the provider's API does.</p>
-
-    <h2>When Wispr Flow Might Still Be the Right Choice</h2>
-
-    <p>To be fair: Wispr Flow's context-aware AI and polished product are legitimately impressive. If you want dictation on iOS or Android too, Flow has real mobile apps and Wspr doesn't. If you're fine with cloud processing and specifically want Flow's contextual AI flavor, it's a solid product.</p>
-
-    <p>But for anyone who wants on-device privacy, Linux support, or a one-time purchase instead of a recurring bill, Wspr is the better fit.</p>
-
-    <h2>The Bottom Line</h2>
-
-    <p>Wspr is the Wispr Flow alternative for people who'd rather not route their voice through a cloud service &mdash; or who work on Linux &mdash; or who'd rather pay once than subscribe forever. The free tier gives you 50 live transcriptions to try it without handing over a credit card.</p>
-
-    <div class="cta-buttons" style="margin-top: 40px;">
-        <a href="https://github.com/matpb/wspr-app/releases/latest" class="hero-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Wspr Free
-        </a>
-        <a href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0" class="hero-cta hero-cta-secondary">
-            Buy Pro &mdash; $14.99
-        </a>
+    <div class="vs-card rv" aria-hidden="true">
+      <div class="vs-head"><span></span><span class="us">Wspr</span><span>Wispr Flow</span></div>
+      <div class="vs-row"><span>Transcription</span><b class="us">On-device</b><b>Cloud, always</b></div>
+      <div class="vs-row"><span>Price</span><b class="us">$14.99 once</b><b>$15/mo or $12/mo annual</b></div>
+      <div class="vs-row"><span>Offline</span><b class="us ok">Works offline</b><b>Needs a connection</b></div>
+      <div class="vs-row"><span>Linux</span><b class="us ok">Yes</b><b>No</b></div>
+      <div class="vs-row"><span>iOS and Android</span><b class="us">No</b><b class="ok">Yes</b></div>
     </div>
+  </div>
+</header>
 
-    <a href="../../index.html" class="back-link">&larr; Back to Wspr</a>
+<section id="compare" class="sect">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow blue">The 60-second summary</span>
+      <h2 class="h-2">Wspr vs Wispr Flow, <em class="acc blue">side by side.</em></h2>
+    </div>
+    <div class="prose-2 rv">
+      <p>Wispr Flow is one of the best-known AI dictation products in 2026. It's polished, context-aware, and genuinely fast. It also happens to be cloud-first by design: every word you dictate is transmitted to their servers for transcription. Wspr takes the opposite approach: everything runs locally on your machine, and you pay once.</p>
+      <p>This page is the honest head-to-head, based on the public claims each company makes on their own sites. Where Wspr wins, where Wispr Flow still has an edge, and which one actually fits the way you work.</p>
+    </div>
+    <div class="cmp-wrap rv">
+      <table class="cmp">
+        <thead><tr><th>Feature</th><th class="us">Wspr</th><th>Wispr Flow</th></tr></thead>
+        <tbody>
+          <tr><td>Price (paid tier)</td><td class="us"><b>$14.99 once</b></td><td>$15/mo monthly, $12/mo annual</td></tr>
+          <tr><td>Year 1 cost (paid)</td><td class="us"><b>$14.99</b></td><td>$144 to $180</td></tr>
+          <tr><td>5-year cost (paid)</td><td class="us"><b>$14.99</b></td><td>$720 to $900</td></tr>
+          <tr><td>Transcription</td><td class="us">On-device (whisper.cpp + GPU)</td><td>Cloud (always)</td></tr>
+          <tr><td>Works offline</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">No</td></tr>
+          <tr><td>macOS</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td></tr>
+          <tr><td>Windows</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td></tr>
+          <tr><td>Linux</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">No</td></tr>
+          <tr><td>iOS / Android</td><td class="us n">No</td><td class="y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td></tr>
+          <tr><td>File transcription (audio/video)</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">Not advertised</td></tr>
+          <tr><td>AI rewriting model</td><td class="us">OpenAI, Anthropic, or Gemini (your key)</td><td>Proprietary pipeline</td></tr>
+          <tr><td>Languages</td><td class="us">99</td><td>100+</td></tr>
+          <tr><td>Free tier</td><td class="us">50 live transcriptions, no account</td><td>2,000 words/week (Mac/Win), 14-day Pro trial</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src rv">Sources: <a href="https://wisprflow.ai/pricing">wisprflow.ai/pricing</a>, <a href="https://wisprflow.ai/">wisprflow.ai</a>, <a href="https://docs.wisprflow.ai/articles/1922179110-data-security-encryption">Wispr Flow Data Security docs</a>, <a href="https://getwspr.com/">getwspr.com</a>. Checked April 2026.</p>
+  </div>
+</section>
+
+<section id="price" class="sect tight">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-text rv prose">
+        <span class="eyebrow orange">Price</span>
+        <h2 class="h-2">One-time vs <em class="acc orange">subscription.</em></h2>
+        <p>Per Wispr Flow's pricing page, Flow Pro is $15/month on the monthly plan or $12/month billed annually, so $144 to $180 per year depending on billing cycle. Wspr is $14.99, once. There's no annual renewal and no yearly upgrade fee.</p>
+        <p>For someone who uses dictation every day, that's a meaningful gap. Over five years you're looking at roughly $720 to $900 on Flow vs a flat $14.99 on Wspr. Wispr Flow does include a generous 2,000 words/week free tier on Mac and Windows, so if your usage is light you may never hit the paywall, which is worth knowing.</p>
+      </div>
+      <div class="cost rv">
+        <div>
+          <h4>Year 1 cost (paid)</h4>
+          <div class="cost-row us"><div class="top"><span>Wspr</span><b>$14.99</b></div><div class="track"><i style="width:8.3%"></i></div></div>
+          <div class="cost-row"><div class="top"><span>Wispr Flow</span><b>$144 to $180</b></div><div class="track"><i></i></div></div>
+        </div>
+        <div>
+          <h4>5-year cost (paid)</h4>
+          <div class="cost-row us"><div class="top"><span>Wspr</span><b>$14.99</b></div><div class="track"><i style="width:1.7%"></i></div></div>
+          <div class="cost-row"><div class="top"><span>Wispr Flow</span><b>$720 to $900</b></div><div class="track"><i></i></div></div>
+        </div>
+        <p class="fine">Bars are drawn to scale within each group. Flow figures from its public pricing page, checked April 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="sect tight">
+  <div class="aura green"></div>
+  <div class="wrap">
+    <div class="split rev">
+      <div class="rv">
+        <div class="device">
+          <span class="device-tag">YOUR COMPUTER</span>
+          <div class="flow">
+            <div class="node"><div class="ic"><svg><use href="#i-mic"/></svg></div><b>Your voice</b><small>Microphone</small></div>
+            <span class="arrow"><svg><use href="#i-arrow"/></svg></span>
+            <div class="node"><div class="ic"><svg><use href="#i-chip"/></svg></div><b>whisper.cpp</b><small>On your GPU</small></div>
+            <span class="arrow"><svg><use href="#i-arrow"/></svg></span>
+            <div class="node"><div class="ic"><svg><use href="#i-text"/></svg></div><b>Your text</b><small>At the cursor</small></div>
+          </div>
+          <div class="device-foot">
+            <span class="chip g"><svg><use href="#i-check"/></svg>No audio uploaded</span>
+            <span class="chip g"><svg><use href="#i-check"/></svg>No account</span>
+            <span class="chip g"><svg><use href="#i-check"/></svg>Works offline</span>
+          </div>
+        </div>
+        <div class="cloud-x"><svg><use href="#i-cloudoff"/></svg><span><b>Wispr Flow</b> transcribes in the cloud, always. Its Privacy Mode retains nothing server-side after transcription.</span></div>
+      </div>
+      <div class="split-text rv prose">
+        <span class="eyebrow green">Privacy</span>
+        <h2 class="h-2">On-device vs <em class="acc green">cloud.</em></h2>
+        <p>This is the biggest architectural difference and it's confirmed by both companies.</p>
+        <p>Wispr Flow's own documentation states that transcription always happens in the cloud and there is no on-device option. Their <em>Privacy Mode</em> setting ensures nothing is retained server-side after transcription, which is a real privacy feature, but the audio itself still has to travel to their servers to be processed. They're SOC 2 Type 2 compliant and encrypt in transit and at rest.</p>
+        <p>Wspr runs OpenAI's Whisper models directly on your machine using whisper.cpp with GPU acceleration. No audio is ever uploaded anywhere, no account is required, and the app works on a plane or an air-gapped machine. If you work under NDA or handle client material you can't leak, that architectural difference matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="film" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head center rv">
+      <span class="eyebrow green">The film</span>
+      <h2 class="h-2">Your voice <em class="acc green">stayed home.</em></h2>
+      <p class="lede">A short film on what on-device dictation means for your audio.</p>
+    </div>
+    <div class="rv">
+      <div class="cinema" id="cinema">
+        <video preload="none" playsinline poster="/images/film-02-poster.jpg" src="https://matpb-storage.tor1.cdn.digitaloceanspaces.com/wspr/site/v1/film-02-stayed-home-1080.mp4"></video>
+        <button class="play" aria-label="Play film"><span class="b"><svg><use href="#i-play"/></svg></span><span class="cap" data-cap>Your voice stayed home · 1:52 · sound on</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="details" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">More differences</span>
+      <h2 class="h-2">Platforms, files and <em class="acc blue">rewriting.</em></h2>
+    </div>
+    <div class="bento">
+      <div class="cell c2 rv">
+        <div class="ico"><svg><use href="#i-globe"/></svg></div>
+        <h3 class="h-3">Platform support: different coverage maps</h3>
+        <p>Wispr Flow runs natively on Mac, Windows, iOS, and Android. Their mobile apps are real, not companion remotes. That's broader consumer coverage than Wspr.</p>
+        <p style="margin-top:12px">Wspr runs on macOS, Windows (x64), and Linux (x64) with the same feature set on every platform. Linux is the one Flow doesn't support at all, and it's the platform most underserved by commercial dictation vendors generally. If you're on Linux, or you want one tool that covers Linux and your Mac/Windows machines, Wspr is your only option of the two. If you want dictation on your phone, Flow has that and Wspr doesn't.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico"><svg><use href="#i-file"/></svg></div>
+        <h3 class="h-3">File transcription</h3>
+        <p>Wspr handles both live dictation and batch transcription of audio and video files: interviews, podcast recordings, meeting captures.</p>
+        <p style="margin-top:12px">Wispr Flow's marketing centers on live in-app dictation; file transcription isn't a feature they advertise. If you need to transcribe recorded files, Wspr covers it; double-check Flow's current docs if that's your primary need.</p>
+      </div>
+      <div class="cell c2 rv">
+        <div class="ico o"><svg><use href="#i-spark"/></svg></div>
+        <h3 class="h-3">AI rewriting: proprietary vs bring your own key</h3>
+        <p>Both apps can clean up and rewrite your dictation with AI. Wispr Flow uses its own proprietary pipeline: you don't pick the model, and inference is bundled into the subscription.</p>
+        <p style="margin-top:12px">Wspr lets you bring your own API key for OpenAI, Anthropic (Claude), or Google Gemini. You pick the provider, you pay only the direct per-token cost (typically pennies per day), and you can switch providers any time. When a new frontier model ships, Wspr picks it up the day the provider's API does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="choose" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">When to choose which</span>
+      <h2 class="h-2">When Wispr Flow might still be <em class="acc blue">the right choice.</em></h2>
+    </div>
+    <div class="duo">
+      <div class="cell rv">
+        <div class="lab">Wispr Flow</div>
+        <h3 class="h-3">Pick Flow if</h3>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg><span>You want dictation on <b>iOS or Android</b> too. Flow has real mobile apps and Wspr doesn't.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>You're fine with cloud processing and specifically want <b>Flow's contextual AI</b> flavor. It's a solid product.</span></li>
+        </ul>
+        <p style="margin-top:20px">Wispr Flow's context-aware AI and polished product are legitimately impressive.</p>
+      </div>
+      <div class="cell on rv">
+        <div class="lab" style="color:var(--blue-hi)">Wspr</div>
+        <h3 class="h-3">Pick Wspr if</h3>
+        <ul class="checks green">
+          <li><svg><use href="#i-check"/></svg><span>You want <b>on-device privacy</b>.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>You need <b>Linux support</b>.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>You'd rather pay <b>one time</b> than get a recurring bill.</span></li>
+        </ul>
+        <p style="margin-top:20px">Wspr is the better fit for anyone who wants on-device privacy, Linux support, or a one-time purchase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="sect tight">
+  <div class="wrap">
+    <div class="callout rv">
+      <div>
+        <span class="eyebrow orange">Pricing</span>
+        <h2 class="h-2">One price. <em class="acc orange">Once.</em></h2>
+        <p>Wspr is the Wispr Flow alternative for people who'd rather not route their voice through a cloud service, or who work on Linux, or who'd rather pay once than subscribe forever. The free tier gives you 50 live transcriptions to try it without handing over a credit card.</p>
+      </div>
+      <div class="buy">
+        <div class="amt">$14.99<small>USD, one time</small></div>
+        <a class="btn btn-orange" href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Buy Pro, $14.99</a>
+        <a class="btn btn-ghost" href="https://github.com/matpb/wspr-app/releases/latest">Download free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sect tight">
+  <div class="wrap">
+    <div class="sect-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-2">Questions, <em class="acc blue">answered.</em></h2>
+    </div>
+    <div class="faq rv">
+      <div>
+        <details open><summary>Is Wspr a Wispr Flow alternative that works offline?</summary><p>Yes. Wspr runs OpenAI's Whisper models on your machine using whisper.cpp with GPU acceleration. No audio is ever uploaded, no account is required, and the app works on a plane or an air-gapped machine. Wispr Flow's own documentation states that transcription always happens in the cloud.</p></details>
+        <details><summary>How much does Wspr cost compared with Wispr Flow?</summary><p>Wspr is $14.99, once. Per Wispr Flow's pricing page, Flow Pro is $15/month on the monthly plan or $12/month billed annually, so $144 to $180 per year. Over five years that is roughly $720 to $900 on Flow against a flat $14.99 on Wspr.</p></details>
+        <details><summary>Does Wspr run on Linux?</summary><p>Yes. Wspr runs on macOS, Windows (x64) and Linux (x64) with the same feature set on every platform. Wispr Flow does not support Linux.</p></details>
+      </div>
+      <div>
+        <details><summary>Does Wspr have iOS or Android apps?</summary><p>No. Wspr is desktop only. Wispr Flow has real mobile apps on iOS and Android, so if you want dictation on your phone, Flow covers that and Wspr does not.</p></details>
+        <details><summary>Can Wspr transcribe audio and video files?</summary><p>Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow advertises.</p></details>
+        <details><summary>Which AI providers can Wspr use to rewrite my dictation?</summary><p>OpenAI, Anthropic (Claude) or Google Gemini, using your own API key. You pick the provider, you pay only the direct per-token cost, and you can switch providers any time. Wispr Flow uses its own proprietary pipeline.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="download">
+  <div class="wrap">
+    <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="h-1"><span class="grad">Keep your voice</span> <em class="acc green">on your device.</em></h2>
+    <p class="lede" style="margin:18px auto 0">Free to start on macOS, Windows and Linux. No card, no account.</p>
+    <div class="cta-row" data-os-order>
+      <a class="btn btn-primary" data-os="mac" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_universal.dmg"><svg><use href="#i-apple"/></svg>macOS <span class="sub">Universal</span></a>
+      <a class="btn btn-ghost" data-os="win" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_x64-setup.exe"><svg><use href="#i-win"/></svg>Windows <span class="sub">x64</span></a>
+      <a class="btn btn-ghost" data-os="linux" href="https://github.com/matpb/wspr-app/releases/download/v5.8.8/Wspr_5.8.8_amd64.AppImage"><svg><use href="#i-linux"/></svg>Linux <span class="sub">AppImage</span></a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="../../privacy.html">Privacy Policy</a>
-            <a href="../../support.html">Support</a>
-            <a href="../../changelog.html">Changelog</a>
-            <a href="../../blog/">Blog</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a>. All rights reserved.</p>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Wspr</a>
+        <p class="tagline">On-device voice to text for macOS, Windows and Linux.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/changelog.html">Changelog</a></li><li><a href="/#download">Download</a></li></ul></div>
+      <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
     </div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+  </div>
 </footer>
+<script src="/site.js" defer></script>
 
 </body>
 </html>

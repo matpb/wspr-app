@@ -1,0 +1,15 @@
+[
+  {"slug":"og-card","out":"images/og-card.png","cat":"home","kicker":"VOICE TO TEXT","headline":"Voice to text, *privately.*","motif":"pill"},
+  {"slug":"blog","out":"images/og/blog.png","cat":"models","kicker":"BLOG","headline":"Notes on talking *to your computer.*","motif":"wave"},
+  {"slug":"dictate-coding-agents-linux","out":"images/og/dictate-coding-agents-linux.png","cat":"linux","kicker":"LINUX","headline":"How to Dictate Prompts to *Coding Agents on Linux*","motif":"term"},
+  {"slug":"best-speech-to-text-models-2026","out":"images/og/best-speech-to-text-models-2026.png","cat":"models","kicker":"MODELS","headline":"The 2026 Speech-to-Text Model Boom: And Why the *Model Isn't Your Bottleneck*","motif":"chart"},
+  {"slug":"is-voice-typing-private","out":"images/og/is-voice-typing-private.png","cat":"privacy","kicker":"PRIVACY","headline":"Does Voice Typing Send *Your Voice to the Cloud?*","motif":"cloud"},
+  {"slug":"private-dictation-mac","out":"images/og/private-dictation-mac.png","cat":"privacy","kicker":"PRIVACY","headline":"How to Dictate on Mac *Without Sending Your Voice to the Cloud*","motif":"lock"},
+  {"slug":"best-voice-to-text-mac-2026","out":"images/og/best-voice-to-text-mac-2026.png","cat":"comparisons","kicker":"COMPARISONS","headline":"Best Voice-to-Text Apps for Mac in 2026: *A Complete Comparison*","motif":"chart2"},
+  {"slug":"best-dictation-apps-mac","out":"images/og/best-dictation-apps-mac.png","cat":"comparisons","kicker":"COMPARISONS","headline":"Best Dictation Apps for Mac in 2026: *Tested & Compared*","motif":"chart2"},
+  {"slug":"dragon-naturallyspeaking-alternative-2026","out":"images/og/dragon-naturallyspeaking-alternative-2026.png","cat":"comparisons","kicker":"COMPARISONS","headline":"Dragon NaturallySpeaking Is Dead: *The Cheapest Private Replacement* for Windows, Mac & Linux","motif":"was"},
+  {"slug":"no-subscription-dictation","out":"images/og/no-subscription-dictation.png","cat":"guides","kicker":"GUIDES","headline":"Why I Stopped Paying $15/Month *for Mac Dictation*","motif":"price"},
+  {"slug":"vs-wispr-flow","out":"images/og/vs-wispr-flow.png","cat":"comparisons","kicker":"COMPARISON","headline":"Wspr vs *Wispr Flow*","motif":"vs"},
+  {"slug":"vs-superwhisper","out":"images/og/vs-superwhisper.png","cat":"comparisons","kicker":"COMPARISON","headline":"Wspr vs *Superwhisper*","motif":"vs"},
+  {"slug":"linux-voice-to-text","out":"images/og/linux-voice-to-text.png","cat":"linux","kicker":"LINUX","headline":"Voice to text *on Linux*","motif":"term"}
+]
