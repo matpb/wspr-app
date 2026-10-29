@@ -91,6 +91,23 @@
 <div class="timeline">
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.10.0 <span class="changelog-date">October 28, 2026</span></h2>
+        <p>Share one transcription engine with your other apps.</p>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Share one transcription engine with your other apps.</strong> Wspr can now send dictation and file transcription to an external OpenAI-compatible service, such as hark running on your own computer, so several apps share one Whisper model instead of each loading its own copy. Pick it under Settings, General, Transcription engine. If the service stops answering, Wspr falls back to its built-in engine and no recording is lost. Built-in stays the default. A service running without a graphics card gets the extra time it needs, and a single slow request moves to built-in on its own while your file keeps going on the service.</li>
+            <li>Settings offers to switch to hark once when it is running on this computer.</li>
+        </ul>
+
+        <h3 class="changelog-label fixed">Fixed</h3>
+        <ul>
+            <li><strong>Accessibility tools can read Wspr on Linux.</strong> The AppImage now uses your desktop's own accessibility services, so screen readers and other assistive tools can read Wspr's windows and dialogs.</li>
+            <li><strong>A cleaner Rewrite tab.</strong> The form for a new custom style now appears only when you add or edit a style.</li>
+            <li><strong>The upgrade screen lists exactly what Pro includes</strong>, matching getwspr.com.</li>
+        </ul>
+    </section>
+    <section class="changelog-entry">
         <h2>5.9.0 <span class="changelog-date">October 21, 2026</span></h2>
         <p>Never dictate into a dead mic again.</p>
 
