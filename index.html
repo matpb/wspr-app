@@ -57,10 +57,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "Is Wspr the same as Wispr Flow?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Wspr is an independent app by Mathieu-Philippe Bourgeois, sold since early 2026. Wispr Flow is a different product from a different company, and it transcribes in the cloud. Similar names, unrelated apps."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can it transcribe a voice message or a recording?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Save the voice message or recording to your computer, then choose Transcribe File… from Wspr's menu bar or tray icon and pick it. MP3, M4A, OGG, OPUS (WhatsApp voice notes), AAC, WAV, MP4 and more. The text lands in Wspr's history, ready to copy. It writes one block of text and doesn't label who is speaking."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Wspr open source?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, Wspr is closed source: one developer builds and sells it, which is how it stays a one-time purchase. Your audio still never leaves your computer, and you can check that yourself: transcription works with the Wi‑Fi off. Wspr only goes online to download the speech model you pick, check for updates, activate a Pro licence, and send text to your Rewrite provider if you turn Rewrite on. The GitHub page holds this website and the downloads, not the app's code."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why pay when free dictation apps exist?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If a free app already does what you need, keep it. Wspr is worth $14.99 if you want the same app on Mac, Windows and Linux, or want to transcribe voice messages and recordings while you keep dictating."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "Is Wspr really free to start?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. 50 live transcriptions, 5 file transcriptions and the built-in rewrite styles, with no card and no account. Pro unlocks everything for a single $14.99, paid once."
+                    "text": "Yes. 50 dictations in total, each up to an hour long, plus 5 file transcriptions and the built-in rewrite styles, with no card and no account. The count never resets. Pro unlocks everything for a single $14.99, paid once."
                 }
             },
             {
@@ -81,7 +113,7 @@
             },
             {
                 "@type": "Question",
-                "name": "Does it work on Wayland?",
+                "name": "Linux only: does it work on Wayland?",
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yes on KDE Plasma 6 and GNOME 45+, through the desktop portal. Sway and Hyprland work with XWayland present."
@@ -219,7 +251,7 @@
     <div>
       <a class="pill-meta" href="/changelog.html"><span class="dot"></span><b data-release>Version 5.10.0</b> · macOS, Windows &amp; Linux</a>
       <h1 class="h-display"><span class="grad">Voice to text,</span><br><em class="acc green">privately.</em></h1>
-      <p class="lede">Press a hotkey, speak, and your words appear at your cursor, in any app. Transcription runs on your own computer. No cloud, no account, no tracking.</p>
+      <p class="lede">Press a keyboard shortcut, speak, and your words appear at your cursor, in any app. Or hand it a voice message or recording and get the text. It all runs on your own computer. No cloud, no account, no tracking.</p>
       <div class="cta-row">
         <a class="btn btn-primary" data-os-cta href="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_universal.dmg" data-mac="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_universal.dmg" data-win="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_x64-setup.exe" data-linux="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_amd64.AppImage"><svg aria-hidden="true"><use href="#i-apple"/></svg><span data-os-label>Download for macOS</span></a>
         <a class="btn btn-ghost" href="#films"><svg aria-hidden="true"><use href="#i-play"/></svg>Watch the film <span class="mono dim" style="font-size:13px">1:46</span></a>
@@ -229,7 +261,7 @@
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>No card, no account</span>
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>Pro is $14.99, once</span>
       </div>
-      <p style="margin-top:12px;font-size:14px;color:var(--ink-3)">Runs on macOS, Windows and Linux. .deb and all builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
+      <p style="margin-top:12px;font-size:14px;color:var(--ink-3)">Runs on macOS, Windows and Linux. Looking for Wispr Flow? This is a different app: Wspr is made by an independent developer and is not Wispr Flow. .deb and all builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
     </div>
 
     <div class="scene" aria-hidden="true">
@@ -326,7 +358,7 @@
     <div class="rv">
       <span class="eyebrow green">Privacy</span>
       <h2 class="h-1" style="margin:18px 0">Your voice <em class="acc green">never leaves</em> your computer.</h2>
-      <p class="lede">Speech becomes text on your own machine, with the GPU you already own. Nothing is uploaded, so there's nothing to review, leak or sell.</p>
+      <p class="lede">Speech becomes text on your own machine, using its own graphics chip (GPU). Nothing is uploaded, so there's nothing to review, leak or sell.</p>
       <ul class="checks green">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Works with the Wi‑Fi off.</b> On a plane, on hotel Wi‑Fi, behind a strict VPN.</span></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>No account, no analytics.</b> Download it and talk. That's the whole setup.</span></li>
@@ -363,7 +395,7 @@
       <p class="lede">Turn on Rewrite and Wspr tidies the ums, the repeats and the half sentences before the text lands. Pick a style, or write your own.</p>
       <ul class="checks orange">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Minimal, Professional, Concise</b> built in. Your own styles with Pro.</span></li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Your key, your provider.</b> OpenAI, Anthropic or Google Gemini.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Your key, your provider.</b> A key from OpenAI, Anthropic or Google Gemini, needed only if you turn Rewrite on.</span></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Optional, and only text.</b> Rewrite sends the transcript, never your audio.</span></li>
       </ul>
     </div>
@@ -398,8 +430,8 @@
     <div class="bento">
       <div class="cell c4 rv">
         <div class="ico"><svg aria-hidden="true"><use href="#i-file"/></svg></div>
-        <h3 class="h-3">Transcribe files, while you keep dictating</h3>
-        <p>Drop in a lecture, an interview or a voice memo. MP3, WAV, M4A, MP4, MOV, MKV and more. A two hour recording never blocks your hotkey.</p>
+        <h3 class="h-3">Transcribe voice messages and recordings</h3>
+        <p>Save a voice message from WhatsApp or Messenger, a voice memo, a lecture or an interview, and open it with Transcribe File… in Wspr's menu. MP3, M4A, OGG, OPUS, WAV, MP4 and more. A two hour recording never blocks your dictation shortcut.</p>
         <div class="vis">
           <div class="file-job"><div class="fi"><svg aria-hidden="true"><use href="#i-file"/></svg></div><div class="meta"><b>Lecture 4, cell biology.m4a</b><small>1:12:40 of 1:54:02 · running on GPU</small><div class="bar"><i></i></div></div></div>
         </div>
@@ -489,10 +521,10 @@
         <div class="amt">$0</div>
         <p class="note">Everything you need to try it properly.</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>50</b> live transcriptions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>50</b> dictations, up to an hour each</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>5</b> file transcriptions</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Built-in rewrite styles</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>No card, no account</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>No card, no account, no reset</span></li>
         </ul>
         <a class="btn btn-ghost" href="#download">Download free</a>
       </div>
@@ -507,6 +539,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Unlimited</b> history</span></li>
         </ul>
         <a class="btn btn-orange" href="https://buy.polar.sh/polar_cl_7vszvspw3QzfTB7Vn9p44DBcjupI4uZgyTslP18ITW0">Get Wspr Pro</a>
+        <p class="note" style="margin-top:8px">Secure checkout by Polar. Your licence key arrives by email.</p>
       </div>
     </div>
   </div>
@@ -523,7 +556,7 @@
         <thead><tr><th>Feature</th><th class="us">Wspr</th><th>Wispr Flow</th><th>Superwhisper</th><th>MacWhisper</th></tr></thead>
         <tbody>
           <tr><td>Price</td><td class="us"><b>$14.99 lifetime</b></td><td>$12 to $15 / month</td><td>Subscription or lifetime</td><td>$29 to $80</td></tr>
-          <tr><td>Platforms</td><td class="us">macOS, Windows, Linux</td><td>macOS, Windows, iOS, Android</td><td>macOS, Windows, iOS</td><td>macOS</td></tr>
+          <tr><td>Platforms</td><td class="us">macOS, Windows, Linux</td><td>macOS, Windows, iOS, Android</td><td>macOS, Windows, iOS, Android</td><td>macOS</td></tr>
           <tr><td>On-device transcription</td><td class="us y">✓</td><td class="n">Cloud</td><td class="y">✓</td><td class="y">✓</td></tr>
           <tr><td>AI rewrite with your own key</td><td class="us">OpenAI, Anthropic, Gemini</td><td>Proprietary</td><td>Multiple (your key)</td><td>OpenAI, Claude</td></tr>
           <tr><td>Live, system-wide dictation</td><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
@@ -543,10 +576,14 @@
     </div>
     <div class="faq">
       <div>
-        <details open><summary>Is Wspr really free to start?</summary><p>Yes. 50 live transcriptions, 5 file transcriptions and the built-in rewrite styles, with no card and no account. Pro unlocks everything for a single $14.99, paid once.</p></details>
+        <details open><summary>Is Wspr really free to start?</summary><p>Yes. 50 dictations in total, each up to an hour long, plus 5 file transcriptions and the built-in rewrite styles, with no card and no account. The count never resets. Pro unlocks everything for a single $14.99, paid once.</p></details>
+        <details><summary>Is Wspr the same as Wispr Flow?</summary><p>No. Wspr is an independent app by Mathieu-Philippe Bourgeois, sold since early 2026. Wispr Flow is a different product from a different company, and it transcribes in the cloud. Similar names, unrelated apps.</p></details>
+        <details><summary>Can it transcribe a voice message or a recording?</summary><p>Yes. Save the voice message or recording to your computer, then choose Transcribe File… from Wspr's menu bar or tray icon and pick it. MP3, M4A, OGG, OPUS (WhatsApp voice notes), AAC, WAV, MP4 and more. The text lands in Wspr's history, ready to copy. It writes one block of text and doesn't label who is speaking.</p></details>
+        <details><summary>Is Wspr open source?</summary><p>No, Wspr is closed source: one developer builds and sells it, which is how it stays a one-time purchase. Your audio still never leaves your computer, and you can check that yourself: transcription works with the Wi‑Fi off. Wspr only goes online to download the speech model you pick, check for updates, activate a Pro licence, and send text to your Rewrite provider if you turn Rewrite on. The GitHub page holds this website and the downloads, not the app's code.</p></details>
+        <details><summary>Why pay when free dictation apps exist?</summary><p>If a free app already does what you need, keep it. Wspr is worth $14.99 if you want the same app on Mac, Windows and Linux, or want to transcribe voice messages and recordings while you keep dictating.</p></details>
         <details><summary>Does my voice stay on my device?</summary><p>Always. Transcription runs locally with whisper.cpp on your GPU, and your audio never leaves your computer. Rewrite is optional and, when on, sends only the text to the provider you picked, with your own API key.</p></details>
         <details><summary>Which computers does it run on?</summary><p>macOS, Windows (x64) and Linux (x64). Every feature is on every platform.</p></details>
-        <details><summary>Does it work on Wayland?</summary><p>Yes on KDE Plasma 6 and GNOME 45+, through the desktop portal. Sway and Hyprland work with XWayland present.</p></details>
+        <details><summary>Linux only: does it work on Wayland?</summary><p>This only matters on Linux. Yes on KDE Plasma 6 and GNOME 45+, through the desktop portal. Sway and Hyprland work with XWayland present.</p></details>
       </div>
       <div>
         <details><summary>Why pay $14.99 when others charge $10 to $15 a month?</summary><p>One month of Wispr Flow costs about the same as a lifetime of Wspr. Pay once, own it, no recurring charges, and you get on-device transcription, rewriting and unlimited use.</p></details>
@@ -568,7 +605,7 @@
       <a class="btn btn-ghost" data-os="win" href="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_x64-setup.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Windows <span class="sub">x64</span></a>
       <a class="btn btn-ghost" data-os="linux" href="https://github.com/matpb/wspr-app/releases/download/v5.10.0/Wspr_5.10.0_amd64.AppImage"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux <span class="sub">AppImage</span></a>
     </div>
-    <p style="margin-top:18px;font-size:14px;color:var(--ink-3)">Linux .deb, checksums and older builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
+    <p style="margin-top:18px;font-size:14px;color:var(--ink-3)">Linux .deb and older builds on <a href="https://github.com/matpb/wspr-app/releases/latest" rel="nofollow" style="text-decoration:underline">GitHub</a></p>
   </div>
 </section>
 
@@ -583,7 +620,7 @@
       <div><h4>Compare</h4><ul><li><a href="/vs/wispr-flow/">vs Wispr Flow</a></li><li><a href="/vs/superwhisper/">vs Superwhisper</a></li><li><a href="/linux-voice-to-text/">Voice to text on Linux</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></div>
     </div>
-    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com</span><span>Made for people who think out loud.</span></div>
+    <div class="foot-base"><span>&copy; 2026 <a href="https://matpb.com" target="_blank" rel="noopener">Mathieu-Philippe Bourgeois</a> &middot; matpb.com &middot; Closed source, built independently, not affiliated with Wispr Flow.</span><span>Made for people who think out loud.</span></div>
   </div>
 </footer>
 <script src="/site.js?v=20260930" defer></script>
