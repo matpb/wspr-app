@@ -91,6 +91,22 @@
 <div class="timeline">
     <!-- CHANGELOG:START -->
     <section class="changelog-entry">
+        <h2>5.11.0 <span class="changelog-date">November 11, 2026</span></h2>
+        <p>Choose the AI model that rewrites your dictation.</p>
+
+        <h3 class="changelog-label added">Added</h3>
+        <ul>
+            <li><strong>Choose the AI model that rewrites your dictation.</strong> The Rewrite tab now has a Model menu for OpenAI, Anthropic and Google Gemini, filled with the models your own API key can use. Pick a faster, cheaper or smarter one whenever you like.</li>
+            <li><strong>Automatic keeps rewrites working.</strong> Leave the menu on Automatic and Wspr follows each provider's current fast, low-cost model, moving to the next one on its own when a provider retires a model. If a model you picked goes away, Wspr rewrites with the Automatic one instead of dropping your text.</li>
+        </ul>
+
+        <h3 class="changelog-label changed">Changed</h3>
+        <ul>
+            <li>OpenAI rewrites now run on OpenAI's current low-cost model by default.</li>
+            <li>A rewrite that gets no answer from the provider within 45 seconds inserts your original transcription instead of keeping you waiting.</li>
+        </ul>
+    </section>
+    <section class="changelog-entry">
         <h2>5.10.0 <span class="changelog-date">October 28, 2026</span></h2>
         <p>Share one transcription engine with your other apps.</p>
 
