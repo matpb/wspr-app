@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qwen3-ASR, Voxtral, Cohere Transcribe: The 2026 Speech-to-Text Model Boom (And Why the Model Isn&rsquo;t Your Bottleneck) | Wspr</title>
-    <meta name="description" content="Six new open speech-recognition models beat Whisper on the Open ASR Leaderboard in 2026, Cohere Transcribe, Granite Speech 4.1, Qwen3-ASR, Parakeet TDT, Voxtral, ARK-ASR. Here are the real WER numbers, and the honest reason a better model won't make your dictation feel better.">
+    <title>Best Speech-to-Text Models in 2026: Whisper vs Qwen3-ASR, Parakeet, Cohere and Nemotron | Wspr</title>
+    <meta name="description" content="Open speech-to-text models compared: Cohere Transcribe, Granite Speech, Qwen3-ASR, Parakeet, Nemotron 3.5 and Whisper, with WER numbers updated in November 2026, and the honest reason a better model won't make your dictation feel better.">
     <meta name="keywords" content="best speech to text model 2026, Qwen3-ASR, Voxtral, Cohere Transcribe, Granite Speech 4.1, Parakeet TDT, open ASR leaderboard, Whisper alternative 2026, open source speech recognition, on-device speech to text, WER benchmark 2026">
     <meta name="author" content="Mathieu-Philippe Bourgeois">
     <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The 2026 Speech-to-Text Model Boom">
-    <meta name="twitter:description" content="Six open models beat Whisper on the leaderboard this year. Less than one WER point separates the top. Here's what actually matters instead.">
+    <meta name="twitter:description" content="A long list of open models beat Whisper on the leaderboard this year. Less than one WER point separates the top. Here's what actually matters instead.">
     <meta name="twitter:image" content="https://getwspr.com/images/og/best-speech-to-text-models-2026.png">
 
     <!-- Favicons -->
@@ -44,8 +44,9 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Qwen3-ASR, Voxtral, Cohere Transcribe: The 2026 Speech-to-Text Model Boom (And Why the Model Isn't Your Bottleneck)",
-        "description": "Six new open speech-recognition models beat Whisper on the Open ASR Leaderboard in 2026. Here are the real WER numbers, and the honest reason a better model won't make your dictation feel better.",
+        "description": "A long list of open speech-recognition models beat Whisper on the Open ASR Leaderboard in 2026. Here are the real WER numbers, and the honest reason a better model won't make your dictation feel better.",
         "datePublished": "2026-07-30",
+        "dateModified": "2026-11-18",
         "author": {
             "@type": "Person",
             "name": "Mathieu-Philippe Bourgeois"
@@ -124,10 +125,10 @@
       <div class="crumb"><a href="/blog/">Blog</a><span>/</span><span>Models</span></div>
       <span class="tag-cat">Models</span>
       <h1>The 2026 Speech-to-Text Model Boom</h1>
-      <p class="lede">Cohere Transcribe. IBM Granite Speech 4.1. Qwen3-ASR. Voxtral. Parakeet TDT. ARK-ASR. In about six months, open speech recognition went from &ldquo;Whisper and some also-rans&rdquo; to a leaderboard where six models beat Whisper and the top four are separated by less than one percentage point. Here&rsquo;s what actually shipped, and the uncomfortable thing those benchmarks don&rsquo;t measure.</p>
+      <p class="lede">Cohere Transcribe. IBM Granite Speech 4.1. Qwen3-ASR. Voxtral. Parakeet TDT. ARK-ASR. In about six months, open speech recognition went from &ldquo;Whisper and some also-rans&rdquo; to a leaderboard where a long list of models beat Whisper and the leaders are separated by less than one percentage point. Here&rsquo;s what actually shipped, and the uncomfortable thing those benchmarks don&rsquo;t measure.</p>
       <div class="byline">
         <span class="avatar" aria-hidden="true">MB</span>
-        <div><b>Mathieu-Philippe Bourgeois</b><span class="meta">JUL 30, 2026 · 7 MIN READ</span></div>
+        <div><b>Mathieu-Philippe Bourgeois</b><span class="meta">JUL 30, 2026 · 7 MIN READ · UPDATED NOV 18, 2026</span></div>
       </div>
     </div>
     <div class="art-cover cat-models rv"><div class="cover lg" aria-hidden="true"><span class="cv-kick">Models · 2026</span><div class="cv-motif"><div class="cv-chart"><i style="--h:26%"></i><i style="--h:40%"></i><i style="--h:58%"></i><i style="--h:80%"></i><i class=hi style="--h:100%"></i></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div></div>
@@ -137,11 +138,11 @@
 <div class="art-body">
   <details class="toc-m">
     <summary>On this page</summary>
-    <ol data-toc><li><a href="#what-actually-shipped-in-2026">What Actually Shipped in 2026</a></li><li><a href="#the-catch-everyone-skips">The Catch Everyone Skips</a></li><li><a href="#what-actually-decides-whether-dictation-feels-good">What Actually Decides Whether Dictation Feels Good</a></li><li><a href="#where-wspr-sits-including-what-it-doesn-t-do">Where Wspr Sits: Including What It Doesn&rsquo;t Do</a></li><li><a href="#try-it-without-paying">Try It Without Paying</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ol>
+    <ol data-toc><li><a href="#what-actually-shipped-in-2026">What Actually Shipped in 2026</a></li><li><a href="#november-2026-update">November 2026 Update</a></li><li><a href="#the-catch-everyone-skips">The Catch Everyone Skips</a></li><li><a href="#what-actually-decides-whether-dictation-feels-good">What Actually Decides Whether Dictation Feels Good</a></li><li><a href="#where-wspr-sits-including-what-it-doesn-t-do">Where Wspr Sits: Including What It Doesn&rsquo;t Do</a></li><li><a href="#try-it-without-paying">Try It Without Paying</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ol>
   </details>
   <nav class="toc" aria-label="On this page">
     <h4>On this page</h4>
-    <ul data-toc><li><a href="#what-actually-shipped-in-2026">What Actually Shipped in 2026</a></li><li><a href="#the-catch-everyone-skips">The Catch Everyone Skips</a></li><li><a href="#what-actually-decides-whether-dictation-feels-good">What Actually Decides Whether Dictation Feels Good</a></li><li><a href="#where-wspr-sits-including-what-it-doesn-t-do">Where Wspr Sits: Including What It Doesn&rsquo;t Do</a></li><li><a href="#try-it-without-paying">Try It Without Paying</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ul>
+    <ul data-toc><li><a href="#what-actually-shipped-in-2026">What Actually Shipped in 2026</a></li><li><a href="#november-2026-update">November 2026 Update</a></li><li><a href="#the-catch-everyone-skips">The Catch Everyone Skips</a></li><li><a href="#what-actually-decides-whether-dictation-feels-good">What Actually Decides Whether Dictation Feels Good</a></li><li><a href="#where-wspr-sits-including-what-it-doesn-t-do">Where Wspr Sits: Including What It Doesn&rsquo;t Do</a></li><li><a href="#try-it-without-paying">Try It Without Paying</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ul>
   </nav>
 
   <article class="art-main prose">
@@ -151,7 +152,7 @@
 
 <h2 id="what-actually-shipped-in-2026">What Actually Shipped in 2026</h2>
 
-<p>Here is the current picture on the <strong>Hugging Face Open ASR Leaderboard</strong>, the most-cited public benchmark for English speech recognition. Lower WER (word error rate) is better.</p>
+<p>Here are the scores these models posted on the <strong>Hugging Face Open ASR Leaderboard</strong>, the most-cited public benchmark for English speech recognition, as of late July 2026. The November numbers are further down. Lower WER (word error rate) is better.</p>
 
 <div class="tbl-wrap">
 <table class="cmp wide">
@@ -214,19 +215,32 @@
 <p>A few that don’t fit neatly in a WER column but matter:</p>
 
 <ul>
-<li><strong>Voxtral</strong> (Mistral, February 2026): a 3.4B Apache&nbsp;2.0 model built for <em>streaming</em>, with 80 to 1200&nbsp;ms latency and 13 languages. Its headline accuracy numbers usually come from a different benchmark than the one above, so I’m deliberately not dropping it into the same column. Its real story is real-time, not leaderboard rank.</li>
-<li><strong>Meta Omnilingual ASR</strong>: 300M to 7B, Apache&nbsp;2.0, and the number that stops you: <strong>1,600+ languages</strong> supported, with zero-shot extension to 5,400+. Nothing else is close on coverage.</li>
-<li><strong>Moonshine</strong> (Useful Sensors): the smallest model is about 27&nbsp;MB, aimed at Raspberry Pi-class hardware where Whisper simply won’t fit.</li>
+<li><strong>Voxtral Mini 4B Realtime</strong> (Mistral, early 2026): an Apache&nbsp;2.0 model of about 4.4B parameters built for <em>streaming</em>, with 13 languages. Its headline accuracy numbers usually come from a different benchmark than the one above, so I’m deliberately not dropping it into the same column. Its real story is real-time, not leaderboard rank.</li>
+<li><strong>Meta Omnilingual ASR</strong>: 300M to 7B, Apache&nbsp;2.0, and the number that stops you: <strong>1,600+ languages</strong> supported. Nothing else is close on coverage.</li>
+<li><strong>Moonshine</strong> (Useful Sensors): the smallest model has about 27 million parameters (roughly 108&nbsp;MB on disk), aimed at Raspberry Pi-class hardware where Whisper simply won’t fit.</li>
 </ul>
 
 <aside class="callout"><span class="co-lab"><svg aria-hidden="true"><use href="#i-note"/></svg>Straight talk</span>
-<p>So: Whisper large-v3 is now, on English benchmarks, in sixth place or worse. I’d rather say that plainly than have you find out from someone else’s comparison table.</p></aside>
+<p>So: Whisper large-v3 is now, on English benchmarks, outside the top 20 of the live leaderboard. I’d rather say that plainly than have you find out from someone else’s comparison table.</p></aside>
+
+<h2 id="november-2026-update">November 2026 Update</h2>
+
+<p>I checked the live leaderboard again on November 18, 2026. It now lists 69 models, and the names near the top have changed again.</p>
+
+<ul>
+<li><strong>The best open-weight scores</strong> on the live table are Musci-ASR (5.70% average WER), Salesforce SOV-Transcribe-1 (5.96%), NVIDIA Nemotron 3.5 Transcribe (6.12%) and Qwen3-ASR-1.7B (6.15%). The four lowest scores overall belong to closed models.</li>
+<li><strong>NVIDIA Nemotron 3.5 Transcribe</strong>, released October 28, is the headline arrival: open weights, up to 40 languages, and a model in the 30B-parameter class. It is built for recorded audio, not live speech, and at that size it is a server model, not something a dictation app can ship to a laptop.</li>
+<li><strong>Whisper large-v3</strong> no longer appears in the top 20.</li>
+<li><strong>Live scores drift.</strong> Qwen3-ASR-1.7B, listed at 5.76% when this article was written, shows 6.15% on the live table today.</li>
+</ul>
+
+<p>None of this changes the argument below. A leaderboard where the leader changes every few weeks is one more reason not to pick a dictation app by its model’s rank.</p>
 
 <h2 id="the-catch-everyone-skips">The Catch Everyone Skips</h2>
 
 <p>Read that leaderboard again. The gap between first place and fourth place is <strong>0.72 of a percentage point</strong>. On a 500-word dictation, that’s the difference between about 25 wrong words and about 29 wrong words. You would not notice which model you were using. You would notice, immediately, if either one took four seconds to give you the first word.</p>
 
-<p>This is the actual consensus among people benchmarking these models, not a convenient excuse: with the top of the leaderboard compressed into a single WER point, <em>rank has stopped being the deciding variable.</em> License, language coverage, streaming support, hardware requirements, and cost per audio-hour now matter more than which model is nominally #1 this month, and #1 has changed hands at least four times since March.</p>
+<p>This is the actual consensus among people benchmarking these models, not a convenient excuse: with the top of the leaderboard compressed into a single WER point, <em>rank has stopped being the deciding variable.</em> License, language coverage, streaming support, hardware requirements, and cost per audio-hour now matter more than which model is nominally #1 this month, and the model at #1 keeps changing.</p>
 <blockquote class="pull">With the top of the leaderboard compressed into a single WER point, rank has stopped being the deciding variable.</blockquote>
 
 <p>There’s a second thing worth knowing about WER benchmarks. They’re mostly scored on clean, read English: audiobooks, curated podcasts, prepared speech. Your dictation is not that. Your dictation is you, mid-thought, with a fan running, saying &ldquo;um&rdquo; and restarting the sentence twice, using your coworker’s name and three acronyms from your industry. The leaderboard has very little to say about that, which is why the model that wins on LibriSpeech is often not the one that feels best in your editor.</p>
@@ -255,10 +269,10 @@
 <ul>
 <li><strong>Wspr does not run the #1 model.</strong> It ships Whisper tiny, base, small, medium and large-v3 (Large v3 Turbo was added after this article). On English WER benchmarks, Cohere Transcribe and Granite Speech 4.1 beat large-v3 by roughly two percentage points.</li>
 <li><strong>Wspr doesn’t do streaming.</strong> If you need words appearing as you speak them, Voxtral’s architecture is built for that and Whisper’s isn’t.</li>
-<li><strong>whisper.cpp is a Whisper runtime, not a universal one.</strong> Its supported-model list is Whisper variants: tiny through large-v3-turbo. You’ll see claims that it has become a general ggml hub for Parakeet, Voxtral and friends; as of this writing its own documentation doesn’t say that. Adopting a non-Whisper architecture is a real engineering project, not a config change.</li>
+<li><strong>whisper.cpp is a Whisper runtime, not a universal one.</strong> Its model list is the Whisper family: tiny through large-v3-turbo, plus distilled and fine-tuned Whisper conversions. You’ll see claims that it has become a general ggml hub for Parakeet, Voxtral and friends; as of this writing its own documentation doesn’t say that. Adopting a non-Whisper architecture is a real engineering project, not a config change.</li>
 </ul>
 
-<p>What Wspr does have is everything above WER on that list. Whisper large-v3 supports <strong>99 languages</strong>: more than every model that beats it on English except Meta’s Omnilingual, and roughly seven times Cohere Transcribe’s 14 or Granite’s 6. It’s MIT-licensed. It runs entirely offline. Your audio never touches a server, because there is no server. There’s no account, no subscription, and no meter.</p>
+<p>What Wspr does have is everything above WER on that list. Whisper large-v3 supports <strong>99 languages</strong>: more than every model that beats it on English except Meta’s Omnilingual, and roughly seven times Cohere Transcribe’s 14 or Granite’s 6. It’s MIT-licensed. Transcription runs entirely offline. Your audio never touches a server, because there is no server. There’s no account, no subscription, and no meter.</p>
 
 <p>And if you want the speed end of the tradeoff, that’s a dropdown: Whisper Small (~460&nbsp;MB) is dramatically faster than large-v3 (3.1&nbsp;GB) and, for clear speech into a decent microphone, close enough that most people leave it there.</p>
 
@@ -285,7 +299,7 @@
 </tr>
 <tr>
 <td>Raspberry Pi or embedded hardware</td>
-<td>Moonshine (~27 MB) or Parakeet TDT 0.6B.</td>
+<td>Moonshine (~108 MB on disk) or Parakeet TDT 0.6B.</td>
 </tr>
 <tr>
 <td class="us">Press a key, speak, text appears in your app, privately, offline, on any desktop OS, no subscription</td>
@@ -318,7 +332,7 @@
 
 <p>That’s the part I work on.</p>
 
-<p class="src">Sources: Hugging Face Open ASR Leaderboard figures as reported by Cohere’s Transcribe announcement (March 26, 2026) and MarkTechPost’s open-ASR comparison (July 23, 2026); whisper.cpp project documentation for supported-model list. Figures checked July 30, 2026. Leaderboard positions in this field change monthly, so verify before making decisions on them.</p>
+<p class="src">Sources: Hugging Face Open ASR Leaderboard figures as reported by Cohere’s Transcribe announcement (March 26, 2026) and MarkTechPost’s open-ASR comparison (July 23, 2026); whisper.cpp project documentation for supported-model list. Figures checked July 30, 2026. Leaderboard positions in this field change monthly, so verify before making decisions on them. Updated November 18, 2026 against the live leaderboard, the models’ own cards and TechCrunch’s coverage of Nemotron 3.5 Transcribe (October 28, 2026).</p>
   </article>
 
   <aside class="side">
@@ -364,11 +378,11 @@
   </div>
 </a>
 <a class="card cat-comparisons rv" href="/blog/dragon-naturallyspeaking-alternative-2026.html" data-cat="Comparisons">
-  <div class="cover" aria-hidden="true"><span class="cv-kick">Vs · Dragon</span><div class="cv-motif"><div class="cv-price was"><b>$699.99</b><small>one license</small></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
+  <div class="cover" aria-hidden="true"><span class="cv-kick">Vs · Dragon</span><div class="cv-motif"><div class="cv-price was"><b>$699</b><small>one license</small></div></div><svg class="cv-logo"><use href="#i-logo"/></svg></div>
   <div class="card-body">
     <span class="tag-cat">Comparisons</span>
     <h3>Dragon NaturallySpeaking Is Dead: The Cheapest Private Replacement for Windows, Mac &amp; Linux</h3>
-    <p>Nuance retired the affordable consumer Dragon, dropped Mac years ago, and left individuals with a $699.99 Windows-only license. Here’s the $14.99 on-device alternative that runs everywhere.</p>
+    <p>Nuance retired the affordable consumer Dragon, dropped Mac years ago, and left individuals with a $699 Windows-only license. Here’s the $14.99 on-device alternative that runs everywhere.</p>
     <span class="meta">JUN 17, 2026 · 6 MIN READ</span>
   </div>
 </a>

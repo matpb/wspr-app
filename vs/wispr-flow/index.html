@@ -38,6 +38,7 @@
         "headline": "Wspr vs Wispr Flow: On-Device, Linux-Friendly, One-Time Purchase",
         "description": "Honest side-by-side comparison of Wspr and Wispr Flow on price, privacy, platform support, and features.",
         "datePublished": "2026-04-16",
+        "dateModified": "2026-11-18",
         "author": {
             "@type": "Person",
             "name": "Mathieu-Philippe Bourgeois"
@@ -97,7 +98,7 @@
       "name": "Can Wspr transcribe audio and video files?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow advertises."
+        "text": "Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow offers."
       }
     },
     {
@@ -175,7 +176,7 @@
 <header class="hero lander">
   <div class="wrap hero-grid">
     <div>
-      <span class="pill-meta"><span class="dot"></span>Updated <b>April 16, 2026</b></span>
+      <span class="pill-meta"><span class="dot"></span>Updated <b>November 18, 2026</b></span>
       <h1 class="h-1"><span class="grad">The Wispr Flow alternative</span> <em class="acc green">that stays on your device.</em></h1>
       <p class="lede">First, they are not the same app: Wspr is an independent app, unrelated to Wispr Flow despite the similar name. Two different philosophies: Wispr Flow is a polished cloud service; Wspr runs entirely on your device. Here is how they actually compare on price, privacy, platform support, and features.</p>
       <div class="cta-row">
@@ -222,14 +223,14 @@
           <tr><td>Windows</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td></tr>
           <tr><td>Linux</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">No</td></tr>
           <tr><td>iOS / Android</td><td class="us n">No</td><td class="y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td></tr>
-          <tr><td>File transcription (audio/video)</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">Not advertised</td></tr>
+          <tr><td>File transcription (audio/video)</td><td class="us y"><svg aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Yes</span></td><td class="n">No (live dictation only)</td></tr>
           <tr><td>AI rewriting model</td><td class="us">OpenAI, Anthropic, or Gemini (your key)</td><td>Proprietary pipeline</td></tr>
           <tr><td>Languages</td><td class="us">99</td><td>100+</td></tr>
-          <tr><td>Free tier</td><td class="us">50 live transcriptions, no account</td><td>2,000 words/week (Mac/Win), 14-day Pro trial</td></tr>
+          <tr><td>Free tier</td><td class="us">50 live transcriptions, no account</td><td>2,000 words/week standard allowance (Mac/Win)</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="src rv">Sources: <a href="https://wisprflow.ai/pricing">wisprflow.ai/pricing</a>, <a href="https://wisprflow.ai/">wisprflow.ai</a>, <a href="https://docs.wisprflow.ai/articles/3467817258-security-and-compliance-faq">Wispr Flow security and privacy docs</a>, <a href="https://getwspr.com/">getwspr.com</a>. Checked April 2026.</p>
+    <p class="src rv">Sources: <a href="https://wisprflow.ai/pricing">wisprflow.ai/pricing</a>, <a href="https://wisprflow.ai/">wisprflow.ai</a>, <a href="https://docs.wisprflow.ai/articles/3467817258-security-and-compliance-faq">Wispr Flow security and privacy docs</a>, <a href="https://getwspr.com/">getwspr.com</a>. Checked November 2026.</p>
   </div>
 </section>
 
@@ -285,7 +286,7 @@
         <span class="eyebrow green">Privacy</span>
         <h2 class="h-2">On-device vs <em class="acc green">cloud.</em></h2>
         <p>This is the biggest architectural difference and it's confirmed by both companies.</p>
-        <p>Wispr Flow's own documentation states that transcription always happens in the cloud and there is no on-device option. Their <em>Privacy Mode</em> setting ensures nothing is retained server-side after transcription, which is a real privacy feature, but the audio itself still has to travel to their servers to be processed. They're SOC 2 Type 2 compliant and encrypt in transit and at rest.</p>
+        <p>Wispr Flow's own documentation states that transcription always happens in the cloud and there is no on-device option. Their <em>Privacy Mode</em> setting ensures nothing is retained server-side after transcription, which is a real privacy feature, but the audio itself still has to travel to their servers to be processed. They're SOC 2 Type II compliant on every plan and encrypt in transit and at rest.</p>
         <p>Wspr runs OpenAI's Whisper models directly on your machine using whisper.cpp with GPU acceleration. No audio is ever uploaded anywhere, no account is required, and the app works on a plane or an air-gapped machine. If you work under NDA or handle client material you can't leak, that architectural difference matters.</p>
       </div>
     </div>
@@ -325,7 +326,7 @@
         <div class="ico"><svg><use href="#i-file"/></svg></div>
         <h3 class="h-3">File transcription</h3>
         <p>Wspr handles both live dictation and batch transcription of audio and video files: interviews, podcast recordings, meeting captures.</p>
-        <p style="margin-top:12px">Wispr Flow's marketing centers on live in-app dictation; file transcription isn't a feature they advertise. If you need to transcribe recorded files, Wspr covers it; double-check Flow's current docs if that's your primary need.</p>
+        <p style="margin-top:12px">Wispr Flow's marketing centers on live in-app dictation; file transcription isn't a feature they offer. If you need to transcribe recorded files, Wspr covers it; double-check Flow's current docs if that's your primary need.</p>
       </div>
       <div class="cell c2 rv">
         <div class="ico o"><svg><use href="#i-spark"/></svg></div>
@@ -399,7 +400,7 @@
       </div>
       <div>
         <details><summary>Does Wspr have iOS or Android apps?</summary><p>No. Wspr is desktop only. Wispr Flow has real mobile apps on iOS and Android, so if you want dictation on your phone, Flow covers that and Wspr does not.</p></details>
-        <details><summary>Can Wspr transcribe audio and video files?</summary><p>Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow advertises.</p></details>
+        <details><summary>Can Wspr transcribe audio and video files?</summary><p>Yes. Wspr handles live dictation and batch transcription of audio and video files, such as interviews, podcast recordings and meeting captures. File transcription is not a feature Wispr Flow offers.</p></details>
         <details><summary>Which AI providers can Wspr use to rewrite my dictation?</summary><p>OpenAI, Anthropic (Claude) or Google Gemini, using your own API key. You pick the provider, you pay only the direct per-token cost, and you can switch providers any time. Wispr Flow uses its own proprietary pipeline.</p></details>
       </div>
     </div>
